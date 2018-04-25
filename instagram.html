@@ -40,12 +40,28 @@
         </header>
         <hr>
         <div id= "main"><canvas id="meter" width="100%" height="50"></canvas></div>
+
+        <div id = "gallery">
+            <script type="text/javascript" src="js/instafeed.js"></script>
+            <script type="text/javascript">
+                var feed = new Instafeed({
+                    get: 'tagged',
+                    tagName: 'awesome',
+                    clientId: 'ec8fe25c9d094b86bee403ab599f1dd5'
+                });
+                feed.run();
+            </script>
+                             
+
+
+        </div>
+
         <div class="footer">
             <p align="center"><a href = "https://Facebook.com/Joe.Pittsy">Facebook</a>&nbsp;&nbsp;
             <a href = "https://twitter.com/JoePittsy">Twitter</a>&nbsp;&nbsp;<a href = "https://instagram.com/JoePittsy">Instagram</a>&nbsp;&nbsp;<a href = " https://github.com/Pittsy24">GitHub</a></p>
         </div>
 
-        <script src = js/game.js></script>
+
 
 </div>
 
