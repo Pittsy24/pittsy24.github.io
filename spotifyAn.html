@@ -37,11 +37,27 @@
                     <a href = "index.html"><h1>&nbsp;Joe Pitts</h1></a>
                 </div>
             </div>        
-            <aside>
-                <form action="index.html"> <button>| Home |</button></form><form action="micDemo.html"> <button>Mic Demo / Game |</button></form><form action="instagram.html"> <button>Photography |</button></form>
+             <aside>
+                <form style="display: inline;" action="index.html"> <button>| Home |</button></form><form style="display: inline;" action="demos.html"> <button> Demos |</button></form><form style="display: inline;" action="instagram.html"> <button>Photography |</button></form>
             </aside>
         </header>
         <hr>
+        <div id="login" style="">
+        	<form class="form-container" >
+			<div class="form-title"><h2>Spotify Visualizer</h2></div>
+			<div class="form-title">Time-Frame</div>
+		 	<select id="time" style="width: 100%">
+			  <option value="short_term">Short-Term</option>
+			  <option value="medium_term">Medium-Term</option>
+			  <option value="long_term">Long-Term</option>
+			</select> <br />
+			
+			<div class="submit-container">
+				<button type = button id="login-button" class="btn">Log in with Spotify</button>				
+			</div>
+			</form>
+
+        </div>
     </div>
     <style>
 		#mynetwork {
@@ -56,12 +72,12 @@
 		}
 
     </style>
-     <div class="container">
+<!--      <div class="container">
       <div id="login">
         <button id="login-button" class="btn btn-primary">Log in with Spotify</button>
       </div>
     </div>
-
+ -->
 
 
     <script id="oauth-template" type="text/x-handlebars-template">
@@ -169,7 +185,7 @@
 		var spotifyApi = new SpotifyWebApi();
 		spotifyApi.setAccessToken(access_token);
 		options = {
-			time_range: "long_term",
+			time_range: document.getElementById('time').value,
 			limit: 50,
 			offset: 0
 		}
@@ -209,7 +225,7 @@
 	  artistsID = []
 	  for (x = 0; x < data.items.length; x++){
 	  	// nodes[x] = [(data.items[x].images[2].url), data.items[x].popularity]
-	  	nodes[x]  = {id: x,  shape: 'circularImage', image: data.items[x].images[2].url, size: data.items[x].popularity, label: data.items[x].name, mass: (data.items[x].popularity / 25)}
+	  	nodes[x]  = {id: x,  shape: 'circularImage', image: data.items[x].images[2].url, size: data.items[x].popularity / 2, label: data.items[x].name, mass: (data.items[x].popularity / 25)}
 	  	artistsID[x] = data.items[x].id
 	  }
 
@@ -241,7 +257,7 @@
 				spotifyApi.setAccessToken(access_token);
 				currentArtist = artistsID[y]
 				console.log(y)
-				if (y === 50){
+				if (y === artistsID.length){
 					window.setTimeout(callback, 1000, edges);					
 				}
 				spotifyApi.getArtistRelatedArtists(artistsID[y]).then(worker.bind(null, y))
