@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114382787-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114382787-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-      gtag('config', 'UA-114382787-1');
-    </script>
+		gtag('config', 'UA-114382787-1');
+	</script>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="resources/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon-16x16.png">
-    <link rel="manifest" href="resources/site.webmanifest">
-    <link rel="mask-icon" href="resources/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>Joe Pitts</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="resources/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="resources/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="resources/favicon-16x16.png">
+	<link rel="manifest" href="resources/site.webmanifest">
+	<link rel="mask-icon" href="resources/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<title>Joe Pitts</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="js/vis.min.js"></script>
 	<script type="text/javascript" src="js/spotify-web-api.js"></script>
 	<link href="vis.min.css" rel="stylesheet" type="text/css" />
 
-    <meta name = "description" content = "The personal website for Joe Pitts, Programmer, Photographer, England, UK, Coding!">
+	<meta name = "description" content = "The personal website for Joe Pitts, Programmer, Photographer, England, UK, Coding!">
 </head>
 <body link = "black">
-    <div id = "content" class="content">
-        <header>
-            <div id="containter">
-                <img src = "resources/logo.jpg", height:10%, width=10%, style="border-radius: 50%">
-                <div >
-                    <a href = "index.html"><h1>&nbsp;Joe Pitts</h1></a>
-                </div>
-            </div>        
-             <aside>
-                <form style="display: inline;" action="index.html"> <button>| Home |</button></form><form style="display: inline;" action="demos.html"> <button> Demos |</button></form><form style="display: inline;" action="instagram.html"> <button>Photography |</button></form>
-            </aside>
-        </header>
-        <hr>
-        <div id="login" style="">
-        	<form class="form-container" >
+	<div id = "content" class="content">
+		<header>
+			<div id="containter">
+				<img src = "resources/logo.jpg", height:10%, width=10%, style="border-radius: 50%">
+				<div >
+					<a href = "index.html"><h1>&nbsp;Joe Pitts</h1></a>
+				</div>
+			</div>		
+			 <aside>
+				<form style="display: inline;" action="index.html"> <button>| Home |</button></form><form style="display: inline;" action="demos.html"> <button> Demos |</button></form><form style="display: inline;" action="instagram.html"> <button>Photography |</button></form>
+			</aside>
+		</header>
+		<hr>
+		<div id="login" style="">
+			<form class="form-container" >
 			<div class="form-title"><h2>Spotify Visualizer</h2></div>
 			<div class="form-title">Time-Frame</div>
 		 	<select id="time" style="width: 100%">
-			  <option value="short_term">Short-Term</option>
-			  <option value="medium_term">Medium-Term</option>
-			  <option value="long_term">Long-Term</option>
+				<option value="short_term">Short-Term</option>
+				<option value="medium_term">Medium-Term</option>
+				<option value="long_term">Long-Term</option>
 			</select> <br />
 			
 			<div class="submit-container">
@@ -57,9 +57,9 @@
 			</div>
 			</form>
 
-        </div>
-    </div>
-    <style>
+		</div>
+	</div>
+	<style>
 		#mynetwork {
 			width: 100%;
 			height: 100%;
@@ -71,117 +71,112 @@
 			background-color:#9ACD32;
 		}
 
-    </style>
-<!--      <div class="container">
-      <div id="login">
-        <button id="login-button" class="btn btn-primary">Log in with Spotify</button>
-      </div>
-    </div>
- -->
+	</style>
 
 
-    <script id="oauth-template" type="text/x-handlebars-template">
-      <h2>oAuth info</h2>
-      <dl class="dl-horizontal">
-        <dt>Access token</dt><dd class="text-overflow">{{access_token}}</dd>
-      </dl>
-    </script>
+	<script id="oauth-template" type="text/x-handlebars-template">
+		<h2>oAuth info</h2>
+		<dl class="dl-horizontal">
+		<dt>Access token</dt><dd class="text-overflow">{{access_token}}</dd>
+		</dl>
+	</script>
 
-    <script src="js/handlebars.min.js"></script>
-    <script src="js/jquery-1.10.1.min.js"></script>
-    <script>
-    function formatParams( params ){
-	  return "?" + Object
-	        .keys(params)
-	        .map(function(key){
-	          return key+"="+encodeURIComponent(params[key])
-	        })
-	        .join("&")
+	<script src="js/handlebars.min.js"></script>
+	<script src="js/jquery-1.10.1.min.js"></script>
+	<script>
+
+	function formatParams( params ){
+		return "?" + Object
+			.keys(params)
+			.map(function(key){
+				return key+"="+encodeURIComponent(params[key])
+			})
+			.join("&")
 	}
 	function getJSONP(url, success) {
 
-	    var ud = '_' + +new Date,
-	        script = document.createElement('script'),
-	        head = document.getElementsByTagName('head')[0] 
-	               || document.documentElement;
+		var ud = '_' + +new Date,
+			script = document.createElement('script'),
+			head = document.getElementsByTagName('head')[0] 
+					 || document.documentElement;
 
-	    window[ud] = function(data) {
-	        head.removeChild(script);
-	        success && success(data);
-	    };
+		window[ud] = function(data) {
+			head.removeChild(script);
+			success && success(data);
+		};
 
-	    script.src = url.replace('callback=?', 'callback=' + ud);
-	    head.appendChild(script);
+		script.src = url.replace('callback=?', 'callback=' + ud);
+		head.appendChild(script);
 
 	}
-      (function() {
-        var stateKey = 'spotify_auth_state';
-        /**
-         * Obtains parameters from the hash of the URL
-         * @return Object
-         */
-        function getHashParams() {
-          var hashParams = {};
-          var e, r = /([^&;=]+)=?([^&;]*)/g,
-              q = window.location.hash.substring(1);
-          while ( e = r.exec(q)) {
-             hashParams[e[1]] = decodeURIComponent(e[2]);
-          }
-          return hashParams;
-        }
-        /**
-         * Generates a random string containing numbers and letters
-         * @param  {number} length The length of the string
-         * @return {string} The generated string
-         */
-        function generateRandomString(length) {
-          var text = '';
-          var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-          for (var i = 0; i < length; i++) {
-            text += possible.charAt(Math.floor(Math.random() * possible.length));
-          }
-          return text;
-        };
+		(function() {
+		var stateKey = 'spotify_auth_state';
+		/**
+		 * Obtains parameters from the hash of the URL
+		 * @return Object
+		 */
+		function getHashParams() {
+			var hashParams = {};
+			var e, r = /([^&;=]+)=?([^&;]*)/g,
+				q = window.location.hash.substring(1);
+			while ( e = r.exec(q)) {
+			 hashParams[e[1]] = decodeURIComponent(e[2]);
+			}
+			return hashParams;
+		}
+		/**
+		 * Generates a random string containing numbers and letters
+		 * @param	{number} length The length of the string
+		 * @return {string} The generated string
+		 */
+		function generateRandomString(length) {
+			var text = '';
+			var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+			for (var i = 0; i < length; i++) {
+			text += possible.charAt(Math.floor(Math.random() * possible.length));
+			}
+			return text;
+		};
 
-        var params = getHashParams();
-        access_token = params.access_token,
-            state = params.state,
-            storedState = localStorage.getItem(stateKey);
-        if (access_token && (state == null || state !== storedState)) {
-          alert('There was an error during the authentication');
-        } else {
-          localStorage.removeItem(stateKey);
-          if (access_token) {
-            $.ajax({
-                url: 'https://api.spotify.com/v1/me',
-                headers: {
-                  'Authorization': 'Bearer ' + access_token
-                },
-                success: function(response) {                  
-                  $('#login').hide();
-                  fetchData()
-                }
-            });
-          } 
-          console.log(access_token)
-          document.getElementById('login-button').addEventListener('click', function() {
-            var client_id = '63650de8718241e5bafdfcab9dc1a256'; // Your client id
-            var redirect_uri = 'https://joepittsy.gq/spotifyAn.html'; // Your redirect uri
-            var state = generateRandomString(16);
-            localStorage.setItem(stateKey, state);
-            var scope = 'user-top-read';
-            var url = 'https://accounts.spotify.com/authorize';
-            url += '?response_type=token';
-            url += '&client_id=' + encodeURIComponent(client_id);
-            url += '&scope=' + encodeURIComponent(scope);
-            url += '&redirect_uri=' + encodeURIComponent(redirect_uri);
-            url += '&state=' + encodeURIComponent(state);
-            window.location = url;
-          }, false);
-        }
-      })();
+		var params = getHashParams();
+		access_token = params.access_token,
+			state = params.state,
+			storedState = localStorage.getItem(stateKey);
+		if (access_token && (state == null || state !== storedState)) {
+			alert('There was an error during the authentication');
+		} else {
+			localStorage.removeItem(stateKey);
+			if (access_token) {
+			$.ajax({
+				url: 'https://api.spotify.com/v1/me',
+				headers: {
+					'Authorization': 'Bearer ' + access_token
+				},
+				success: function(response) {					
+					$('#login').hide();
+					fetchData()
+				}
+			});
+			} 
+			console.log(access_token)
+			document.getElementById('login-button').addEventListener('click', function() {
+			var client_id = '63650de8718241e5bafdfcab9dc1a256'; // Your client id
+			var redirect_uri = 'https://joepittsy.gq/spotifyAn.html'; // Your redirect uri
+			var state = generateRandomString(16);
+			localStorage.setItem(stateKey, state);
+			var scope = 'user-top-read';
+			var url = 'https://accounts.spotify.com/authorize';
+				url += '?response_type=token';
+				url += '&client_id=' + encodeURIComponent(client_id);
+				url += '&scope=' + encodeURIComponent(scope);
+				url += '&redirect_uri=' + encodeURIComponent(redirect_uri);
+				url += '&state=' + encodeURIComponent(state);
+			window.location = url;
+			}, false);
+		}
+		})();
 
-      function fetchData(){
+		function fetchData(){
 		var spotifyApi = new SpotifyWebApi();
 		spotifyApi.setAccessToken(access_token);
 		options = {
@@ -192,75 +187,70 @@
 		spotifyApi.getMyTopArtists(options).then(function(data) {
 			jsonData = data
 			draw();
-		    console.log(data);
-		  }, function(err) {
-		    console.error(err);
-		  });
-      }
+			console.log(data);
+			}, function(err) {
+			console.error(err);
+			});
+		}
 
 
-    	
+		
 	app.get('/login', function(req, res) {
 	var scopes = 'user-top-read';
 	res.redirect('https://accounts.spotify.com/authorize' +
-	  '?response_type=code' +
-	  '&client_id=' + my_client_id +
-	  (scopes ? '&scope=' + encodeURIComponent(scopes) : '') +
-	  '&redirect_uri=' + encodeURIComponent(redirect_uri));
+		'?response_type=code' +
+		'&client_id=' + my_client_id +
+		(scopes ? '&scope=' + encodeURIComponent(scopes) : '') +
+		'&redirect_uri=' + encodeURIComponent(redirect_uri));
 	});
 
 
 
-	var nodes = null;
-	var edges = null;
-	var network = null;
+	var nodes;
+	var edges;
+	var network;
 
 	// Called when the Visualization API is loaded.
 	function draw() {
-	  // create people.
-	  // value corresponds with the age of the person
-	  var DIR = '../img/indonesia/';
-	  nodes = []
-	  data = jsonData;
-	  artistsID = []
-	  for (x = 0; x < data.items.length; x++){
-	  	// nodes[x] = [(data.items[x].images[2].url), data.items[x].popularity]
-		try{
-	  		nodes[x]  = {id: x,  shape: 'circularImage', image: data.items[x].images[2].url, size: data.items[x].popularity / 2, label: data.items[x].name, mass: (data.items[x].popularity / 25)}
-		}catch{
-			nodes[x]  = {id: x,  shape: 'circularImage', image: "defaut.jpeg", size: data.items[x].popularity / 2, label: data.items[x].name, mass: (data.items[x].popularity / 25)}
+		// create people.
+		// value corresponds with the age of the person
+		nodes = []
+		data = jsonData;
+		artistsID = []
+		for (x = 0; x < data.items.length; x++){
+		try{ // Use the artist image
+			nodes[x] = {id: x, shape: 'circularImage', image: data.items[x].images[2].url, size: data.items[x].popularity / 2, label: data.items[x].name, mass: (data.items[x].popularity / 25)}
+			}
+		catch{ // If theres not an image hust use a default image 
+			nodes[x] = {id: x, shape: 'circularImage', image: "defaut.jpeg", size: data.items[x].popularity / 2, label: data.items[x].name, mass: (data.items[x].popularity / 25)}
 		}
-			artistsID[x] = data.items[x].id
-	  }
+		artistsID[x] = data.items[x].id
 
-	  foundCons = []
 
-	  	function worker(index, data){
-			console.log(index)
-			foundCons[index] = data
-			for (z = 0; z < data.artists.length; z++){
-				// console.log(currentArtist)
-				target = artistsID.indexOf(data.artists[z].id)
-				if (target >= 0){
-					if (index < target ){											
-						edges.push({from: index , to: target})
-					} else {
-						edges.push({from: target , to: index})
+		foundCons = []
+
+		function worker(index, data){
+		console.log(index)
+		foundCons[index] = data
+		for (z = 0; z < data.artists.length; z++){
+			// console.log(currentArtist)
+			target = artistsID.indexOf(data.artists[z].id)
+			if (target >= 0){
+				if (index < target ){											
+					edges.push({from: index , to: target})
+				} else {
+					edges.push({from: target , to: index})
 					}
 				}
 			}
+		}
 
-	  	}
-
-		function sortEdges(callback) {
-		
-		    edges = []
-
-			for (y = 0; y-1 <  artistsID.length; y++){
+		function sortEdges(callback) {		
+			edges = []
+			for (y = 0; y-1 <	artistsID.length; y++){
 				var spotifyApi = new SpotifyWebApi();
 				spotifyApi.setAccessToken(access_token);
 				currentArtist = artistsID[y]
-				console.log(y)
 				if (y === artistsID.length){
 					window.setTimeout(callback, 1000, edges);					
 				}
@@ -272,11 +262,9 @@
 			}
 		}
 
+		sortEdges(buildGraph)
 
-
-	    sortEdges(buildGraph)
-
-	    function buildGraph(edges){
+		function buildGraph(edges){
 
 
 			var container = document.getElementById('mynetwork');
@@ -290,52 +278,44 @@
 				nodes: {
 					borderWidth:4,
 					color: {
-				    	border: '#222222',
-				    	background: '#666666'
-				  },
-				  font:{color:'#000000'}
+						border: '#222222',
+						background: '#666666'
+					},
+					font:{color:'#000000'}
 				},
-			  "edges": {
-			    "smooth": {
-			      "forceDirection": "none"			    
-			    },
-			    color: 'lightgray'
-			  },
-			  "physics": {
-			    "barnesHut": {
-			      "centralGravity": 1,
-			      "springLength": 110,
-			      "springConstant": 0.05,
-			      "damping": 0.94
-			    },
-			    "minVelocity": 0.75
-			  }
+				"edges": {
+				"smooth": {
+					"forceDirection": "none"				
+				},
+				color: 'lightgray'
+				},
+				"physics": {
+				"barnesHut": {
+					"centralGravity": 1,
+					"springLength": 110,
+					"springConstant": 0.05,
+					"damping": 0.94
+				},
+				"minVelocity": 0.75
+				}
 			}
 			options.height = window.top.innerHeight - document.getElementById("footer").clientHeight - document.getElementById("content").clientHeight + 'px';
 			network = new vis.Network(container, data, options);
 				
 
-		     }
-		}
+			}
+	
+
+	</script>
+
+	<div id = "gallery">
+		<div id="mynetwork"></div>
+	</div>a
 
 
-
-
-
-    </script>
-    <!-- <body onload="draw()"> -->
-
-
-
-    <div id = "gallery">
-    	<div id="mynetwork"></div>
-    </div>
-
-
-
-    <div class="footer" id = "footer">
-        <p align="center"><a href = "https://Facebook.com/Joe.Pittsy">Facebook</a>&nbsp;&nbsp;
-        <a href = "https://twitter.com/JoePittsy">Twitter</a>&nbsp;&nbsp;<a href = "https://instagram.com/JoePittsy">Instagram</a>&nbsp;&nbsp;<a href = " https://github.com/Pittsy24">GitHub</a></p>
-    </div>
+	<div class="footer" id = "footer">
+		<p align="center"><a href = "https://Facebook.com/Joe.Pittsy">Facebook</a>&nbsp;&nbsp;
+		<a href = "https://twitter.com/JoePittsy">Twitter</a>&nbsp;&nbsp;<a href = "https://instagram.com/JoePittsy">Instagram</a>&nbsp;&nbsp;<a href = " https://github.com/Pittsy24">GitHub</a></p>
+	</div>
 </body>
 </html>
