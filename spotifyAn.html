@@ -218,14 +218,14 @@
 		data = jsonData;
 		artistsID = []
 		for (x = 0; x < data.items.length; x++){
-		try{ // Use the artist image
-			nodes[x] = {id: x, shape: 'circularImage', image: data.items[x].images[2].url, size: data.items[x].popularity / 2, label: data.items[x].name, mass: (data.items[x].popularity / 25)}
+			try{ // Use the artist image
+				nodes[x] = {id: x, shape: 'circularImage', image: data.items[x].images[2].url, size: data.items[x].popularity / 2, label: data.items[x].name, mass: (data.items[x].popularity / 25)}
+				}
+			catch{ // If theres not an image hust use a default image 
+				nodes[x] = {id: x, shape: 'circularImage', image: "defaut.jpeg", size: data.items[x].popularity / 2, label: data.items[x].name, mass: (data.items[x].popularity / 25)}
 			}
-		catch{ // If theres not an image hust use a default image 
-			nodes[x] = {id: x, shape: 'circularImage', image: "defaut.jpeg", size: data.items[x].popularity / 2, label: data.items[x].name, mass: (data.items[x].popularity / 25)}
+			artistsID[x] = data.items[x].id
 		}
-		artistsID[x] = data.items[x].id
-
 
 		foundCons = []
 
