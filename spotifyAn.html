@@ -224,6 +224,7 @@
 	  data = jsonData;
 	  artistsID = []
 	  for (x = 0; x < data.items.length; x++){
+		console.log(x);
 	  	// nodes[x] = [(data.items[x].images[2].url), data.items[x].popularity]
 	  	nodes[x]  = {id: x,  shape: 'circularImage', image: data.items[x].images[2].url, size: data.items[x].popularity / 2, label: data.items[x].name, mass: (data.items[x].popularity / 25)}
 	  	artistsID[x] = data.items[x].id
