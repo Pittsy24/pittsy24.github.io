@@ -227,7 +227,7 @@
 	  	// nodes[x] = [(data.items[x].images[2].url), data.items[x].popularity]
 		try{
 	  		nodes[x]  = {id: x,  shape: 'circularImage', image: data.items[x].images[2].url, size: data.items[x].popularity / 2, label: data.items[x].name, mass: (data.items[x].popularity / 25)}
-		}except{
+		}catch{
 			nodes[x]  = {id: x,  shape: 'circularImage', size: data.items[x].popularity / 2, label: data.items[x].name, mass: (data.items[x].popularity / 25)}
 		}
 			artistsID[x] = data.items[x].id
