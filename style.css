@@ -40,13 +40,13 @@ body {
 h1,
 h2,
 h3 {
-    line-height: 1.2
+    line-height: 1.2;
 }
 
 #containter {
     height: 10%;
     display: flex;
-    align-items: center
+    align-items: center;
 }
 
 a:visited {
@@ -56,13 +56,13 @@ a:visited {
 
 html {
     height: 100%;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 *,
 :after,
 :before {
-    box-sizing: inherit
+    box-sizing: inherit;
 }
 
 .content {
@@ -78,10 +78,10 @@ html {
     margin-right: auto;
     width: 50%;
 }
-.center:hover {
+/*.center:hover {
     transform: scale(1.1);
 }
-
+*/
 .footer {
     position: absolute;
     right: 0;
@@ -89,7 +89,7 @@ html {
     left: 0;
     padding: 1rem;
     background-color: var(--footer-color-normal);
-    text-align: center
+    text-align: center;
 }
 
 button {
