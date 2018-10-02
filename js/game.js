@@ -7,6 +7,7 @@ var myGamePiece;
 var myObstacles = [];
 var myScore;
 
+
 function startGame() {
     myGamePiece = new component(15, 15, "red", 10, 120);
     myGamePiece.gravity = 0.05;

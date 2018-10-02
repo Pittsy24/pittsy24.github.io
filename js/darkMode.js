@@ -42,7 +42,7 @@ function nightModeOff(){
 
 
 function createNightCookie(){
-	document.cookie = "night=false";
+	document.cookie = "night=true";
 }
 function nightCookieOn(){
 	document.cookie = "night=true";
