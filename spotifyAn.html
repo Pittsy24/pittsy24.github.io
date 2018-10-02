@@ -141,7 +141,7 @@
 			state = params.state,
 			storedState = localStorage.getItem(stateKey);
 		if (access_token && (state == null || state !== storedState)) {
-		  alert('There was an error during the authentication');
+		  window.location.replace("joepittsy.gq/spotifyAn.html");
 		} else {
 		  localStorage.removeItem(stateKey);
 		  if (access_token) {
