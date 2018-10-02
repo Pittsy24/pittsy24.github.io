@@ -8,7 +8,7 @@ html[data-theme='dark'] {
 
 html{
   --text-color-normal: #000;
-  --background-color-normal: #fff;
+  --background-color-normal: var(--background-color-normal);
   --link-normal: #454545;
   --link-visited-normal:#353535;
   --footer-color-normal: #ececec;
@@ -120,7 +120,7 @@ button::-moz-focus-inner {
   -moz-border-radius: 28 !important;
   border-radius: 28px !important;
   font-family: Arial !important;
-  color: #ffffff !important;
+  color: var(--background-color-normal)fff !important;
   font-size: 20px !important;
   padding: 10px 20px 10px 20px !important;
   text-decoration: none !important;
@@ -136,14 +136,14 @@ button::-moz-focus-inner {
   text-decoration: none !important;
 }
 .form-container {
-   border: 1px solid #ffffff;
-   background: #ffffff;
-   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff));
-   background: -webkit-linear-gradient(top, #ffffff, #ffffff);
-   background: -moz-linear-gradient(top, #ffffff, #ffffff);
-   background: -ms-linear-gradient(top, #ffffff, #ffffff);
-   background: -o-linear-gradient(top, #ffffff, #ffffff);
-   background-image: -ms-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+   border: 1px solid var(--background-color-normal)fff;
+   background: var(--background-color-normal)fff;
+   background: -webkit-gradient(linear, left top, left bottom, from(var(--background-color-normal)fff), to(var(--background-color-normal)fff));
+   background: -webkit-linear-gradient(top, var(--background-color-normal)fff, var(--background-color-normal)fff);
+   background: -moz-linear-gradient(top, var(--background-color-normal)fff, var(--background-color-normal)fff);
+   background: -ms-linear-gradient(top, var(--background-color-normal)fff, var(--background-color-normal)fff);
+   background: -o-linear-gradient(top, var(--background-color-normal)fff, var(--background-color-normal)fff);
+   background-image: -ms-linear-gradient(top, var(--background-color-normal)fff 0%, var(--background-color-normal)fff 100%);
    -webkit-border-radius: 6px;
    -moz-border-radius: 6px;
    border-radius: 6px;
@@ -161,12 +161,12 @@ button::-moz-focus-inner {
    width:300px;
    }
 .form-field {
-   border: 1px solid #000000;
-   background: #ffffff;
+   border: 1px solid var(--text-color-normal);
+   background: var(--background-color-normal)fff;
    -webkit-border-radius: 4px;
    -moz-border-radius: 4px;
    border-radius: 4px;
-   color: #000000;
+   color: var(--text-color-normal);
    -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
    -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
    box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
@@ -175,7 +175,7 @@ button::-moz-focus-inner {
    width:280px;
    }
 .form-field:focus {
-   background: #fff;
+   background: var(--background-color-normal);
    color: #3dff6a;
    }
 .form-container h2 {
@@ -187,7 +187,7 @@ button::-moz-focus-inner {
     }
 .form-title {
    margin-bottom:10px;
-   color: #000000;
+   color: var(--text-color-normal);
    text-shadow: #ffecd4 0 1px 0;
    }
 .submit-container {
@@ -227,7 +227,7 @@ button::-moz-focus-inner {
    background: -ms-linear-gradient(top, #8dc059, #6aa436);
    background: -o-linear-gradient(top, #8dc059, #6aa436);
    background-image: -ms-linear-gradient(top, #8dc059 0%, #6aa436 100%);
-   color: #fff;
+   color: var(--background-color-normal);
    }
 .submit-button:active {
    text-shadow: #31540c 0 1px 0;
@@ -239,7 +239,7 @@ button::-moz-focus-inner {
    background: -ms-linear-gradient(top, #6aa436, #8dc059);
    background: -o-linear-gradient(top, #6aa436, #8dc059);
    background-image: -ms-linear-gradient(top, #6aa436 0%, #8dc059 100%);
-   color: #fff;
+   color: var(--background-color-normal);
    }
 
 
