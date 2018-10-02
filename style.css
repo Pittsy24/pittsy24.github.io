@@ -78,10 +78,12 @@ html {
     margin-right: auto;
     width: 50%;
 }
-/*.center:hover {
-    transform: scale(1.1);
+.center:hover {
+    -ms-transform: scale(1.1);  /* IE 9 */
+    -webkit-transform: scale(1.1);  /* Chrome, Safari, Opera */
+    transform: scale(1.1); 
 }
-*/
+
 .footer {
     position: absolute;
     right: 0;
