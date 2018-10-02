@@ -1,5 +1,25 @@
+html[data-theme='dark'] {
+  --text-color-normal: #e1e1e1;
+  --background-color-normal: #121212;
+  --link-normal: #d9d9d9;
+  --link-visited-normal:#d0d0d0;
+  --footer-color-normal: #0a0a0a;
+
+}
+
+html{
+  --text-color-normal: #000;
+  --background-color-normal: #fff;
+  --link-normal: #454545;
+  --link-visited-normal:#353535;
+  --footer-color-normal: #ececec;
+
+}
+
+
+
 a:link {
-    color: #454545;
+    color: var(--link-normal);
     text-decoration: none;
 }
 
@@ -15,7 +35,9 @@ body {
     line-height: 1.6;
     font: 18px/1.5 -apple-system, BlinkMacSystemFont, "avenir next", avenir, "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans", roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu, "franklin gothic medium", "century gothic", "Liberation Sans", sans-serif;
     font-size: 18px;
-    padding: 0 10px 8rem
+    color: var(--text-color-normal);
+    padding: 0 10px 8rem;
+    background-color: var(--background-color-normal); 
 }
 
 h1,
@@ -31,7 +53,7 @@ h3 {
 }
 
 a:visited {
-    color: #353535;
+    color: var(--link-visited-normal);
     text-decoration: none;
 }
 
@@ -53,13 +75,23 @@ html {
     width: 94%
 }
 
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.center:hover {
+    transform: scale(1.1);
+}
+
 .footer {
     position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
     padding: 1rem;
-    background-color: #ececec;
+    background-color: var(--footer-color-normal);
     text-align: center
 }
 

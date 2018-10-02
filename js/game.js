@@ -10,7 +10,12 @@ var myScore;
 function startGame() {
     myGamePiece = new component(15, 15, "red", 10, 120);
     myGamePiece.gravity = 0.05;
-    myScore = new component("30px", "Consolas", "black", 380, 40, "text");
+    if (nightCookie[1] === "false"){
+        myScore = new component("30px", "Consolas", "black", 380, 40, "text");
+    }else{
+        myScore = new component("30px", "Consolas", "white", 380, 40, "text");
+    }
+    
     myGameArea.start();
     console.log(myGameArea)
 }
