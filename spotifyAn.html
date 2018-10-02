@@ -285,6 +285,11 @@
 				"minVelocity": 0.75
 			  }
 			}
+			if (nightCookie[1] === "true"){
+				options["edges"].color = "d9d9d9";
+				options.nodes.font.color = "white";
+
+			}
 			options.height = window.top.innerHeight - document.getElementById("footer").clientHeight - document.getElementById("content").clientHeight + 'px';
 			network = new vis.Network(container, data, options);
 				
