@@ -141,7 +141,7 @@
 			state = params.state,
 			storedState = localStorage.getItem(stateKey);
 		if (access_token && (state == null || state !== storedState)) {
-		  window.location.replace("joepittsy.gq/spotifyAn.html");
+		  window.location.replace("spotifyAn.html");
 		} else {
 		  localStorage.removeItem(stateKey);
 		  if (access_token) {
