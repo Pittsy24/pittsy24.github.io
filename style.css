@@ -65,6 +65,9 @@ html {
     box-sizing: inherit;
 }
 
+.thumbnail{
+  width:100%;
+}
 .content {
     margin: 0 auto;
     padding-top: 2%;
@@ -314,11 +317,11 @@ button::-moz-focus-inner {
 .column {
     flex: 33%;
     max-width: 33%;
-    padding: 0 4px;
+    padding: 0 2px;
 }
 
 .column img {
-    margin-top: 8px;
+    margin-top: 4px;
     vertical-align: middle;
 }
 
