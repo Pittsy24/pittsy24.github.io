@@ -29,13 +29,45 @@
     <div id = "content" class="content">
         <header>
             <div id="containter">
-                <img src = "resources/logo.jpg", height:10%, width=10%, style="border-radius: 50%">
-                <div >
-                    <a href = "index.html"><h1>&nbsp;Joe Pitts</h1></a>
+
+                <div>
+                    <img id = "logo" src="resources/logo.jpg" ,="" height:10%,="" width="10%,">
+                    <a id = "title" href="index.html">
+                        <h1>&nbsp;Joe Pitts</h1>
+                    </a>
+                    <div class="burger" onclick="document.getElementById('drop').click();">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
-            </div>        
-             <aside>
-                <form style="display: inline;" action="index.html"> <button>| Home |</button></form><form style="display: inline;" action="demos.html"> <button> Demos |</button></form><form style="display: inline;" action="instagram.html"> <button>Photography |</button></form><form style="display: inline;" onsubmit="toggleNightMode(); return false;" return false"> <button> Toggle Dark Mode|</button></form>
+
+            </div>
+            <aside>
+                <nav>
+                    <label class="toggle" for="drop" style="pointer-events: none;"></label>
+                    <input id="drop" type="checkbox">
+                    <ul class="menu">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="demos.html">Demos</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/joepittsy/">Linkedin</a>
+                        </li>
+                        <li>
+                            <a href="instagram.html">Photography</a>
+                        </li>
+
+                    </ul>
+                </nav>
+                <!-- <form style="display: inline;" action="index.html"> <button>| Home |</button></form>
+                    <form style="display: inline;" action="demos.html"> <button> Demos |</button></form>
+                    <form style="display: inline;" action="instagram.html"> <button>Photography |</button></form>
+                    <form style="display: inline;" onsubmit="toggleNightMode(); return false;" return false"> <button>
+                            Toggle Dark Mode|</button></form> -->
             </aside>
         </header>
         <hr>

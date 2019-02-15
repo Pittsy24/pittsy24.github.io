@@ -47,6 +47,18 @@ h3 {
     height: 10%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    
+}
+
+#logo{
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+#title{
+    display:inline-block;
+    vertical-align: middle;
 }
 
 a:visited {
@@ -324,4 +336,198 @@ button::-moz-focus-inner {
     margin-top: 4px;
     vertical-align: middle;
 }
+nav {
+    line-height: 2rem;
+}
+nav a {
+    color: #252525;
+}
+.toggle, [id^=drop] {
+    display: none;
+}
+/* Giving a background-color to the nav container. */
 
+nav {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+}
+/* Since we'll have the "ul li" "float:left"
+* we need to add a clear after the container. */
+
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Removing padding, margin and "list-style" from the "ul",
+* and adding "position:reltive" */
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+/* Positioning the navigation items inline */
+
+nav ul li {
+    margin: 0px;
+    display: inline-block;
+    float: left;
+    background-color: #FFF;
+}
+/* Styling the links */
+
+nav a {
+    display: block;
+    padding-left: 1rem;
+    color: #252525;
+    font-size: 1rem;
+    text-decoration: none;
+    outline: none;
+}
+nav ul li ul li:hover {
+    text-decoration: underline;
+}
+/* Background color change on Hover */
+
+nav a:hover {
+    text-decoration: underline;
+}
+/* Hide Dropdowns by Default
+* and giving it a position of absolute */
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    /* has to be the same number as the "line-height" of "nav a" */
+    top: 2.8rem;
+}
+/* Display Dropdowns on Hover */
+
+nav ul li:hover>ul {
+    display: inherit;
+}
+/* Fisrt Tier Dropdown */
+
+nav ul ul li {
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+/* Second, Third and more Tiers	
+* We move the 2nd and 3rd etc tier dropdowns to the left
+* by the amount of the width of the first tier.
+*/
+
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    /* has to be the same number as the "width" of "nav ul ul li" */
+    left: 170px;
+}
+/* Change ' +' in order to change the Dropdown symbol */
+
+li>a:after {
+    content: ' +';
+}
+li>a:only-child:after {
+    content: '';
+}   
+
+.burger {
+    display: none;
+    padding: 0.8rem 1.5rem;
+    padding-left: 0.3rem;
+    padding-top: 0px;
+    justify-content: flex-end;
+    vertical-align: middle;
+    padding-top: 1.6rem;
+    float: right;
+    
+    
+}
+.burger div {
+    width: 35px;
+    height: 5px;
+    background-color: #353535;
+    margin: 6px 0;
+}
+
+@media all and (max-width: 462px) {
+    .burger{ 
+        display: inline-block;
+    }
+    #logo{
+        width: 15%;
+    }
+    nav {
+        margin: 0;
+        padding-right: 3.5rem;
+    }
+    /* Hide the navigation menu by default */
+    /* Also hide the  */
+    .toggle+a, .menu {
+        display: none;
+    }
+    /* Stylinf the toggle lable */
+    .toggle {
+        display: block;
+        background-color: #FFF;
+        padding: 0.8rem 1.5rem;
+        padding-top: 0px;
+        color: #252525;
+        /*font-size:17px;*/
+        text-decoration: none;
+        border: none;
+    }
+
+    /* Display Dropdown when clicked on Parent Lable */
+    [id^=drop]:checked+ul {
+        display: block;
+    }
+    /* Change menu item's width to 100% */
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+    nav ul ul .toggle, nav ul ul a {
+        padding: 0 40px;
+    }
+    nav ul ul ul a {
+        padding: 0 80px;
+    }
+    nav ul li ul li .toggle, nav ul ul a, nav ul ul ul a {
+        padding: 0.8rem 1.5rem;
+        color: #FFF;
+        /*font-size:17px; */
+    }
+    nav ul li ul li .toggle, nav ul ul a {
+        background-color: #00AEEF;
+    }
+
+    /* Hide Dropdowns by Default */
+    nav ul ul {
+        float: none;
+        position: static;
+        color: #ffffff;
+        /* has to be the same number as the "line-height" of "nav a" */
+    }
+    /* Hide menus on hover */
+    nav ul ul li:hover>ul, nav ul li:hover>ul {
+        display: none;
+    }
+    /* Fisrt Tier Dropdown */
+    nav ul ul li {
+        display: block;
+        width: 100%;
+    }
+    nav ul ul ul li {
+        position: static;
+        /* has to be the same number as the "width" of "nav ul ul li" */
+    }
+
+}
