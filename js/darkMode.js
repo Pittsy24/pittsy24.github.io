@@ -1,25 +1,4 @@
-var x = document.cookie; 
-console.log(x);
-console.log("Cookies Fetched");
-
-
 var nightCookie;
-
-x = x.split("; ");
-for (var i = x.length - 1; i >= 0; i--) {
-	var cook = x[i].split("=");
-	if (cook[0] === "night"){
-		nightCookie = cook;
-		if (cook[1] === 'true'){
-			nightModeOn();
-		}
-	}
-}
-if (nightCookie === undefined){
-	createNightCookie();
-}
-
-
 function toggleNightMode(){
 	if (nightCookie[1] === 'true'){
 		nightModeOff();
@@ -42,11 +21,36 @@ function nightModeOff(){
 
 
 function createNightCookie(){
-	document.cookie = "night=false";
+	document.cookie = "night=false; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+	console.log("Cookie created!");
 }
 function nightCookieOn(){
-	document.cookie = "night=true";
+	document.cookie = "night=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
 }
 function nightCookieOff(){
-	document.cookie = "night=false";
+	document.cookie = "night=false; expires=Fri, 31 Dec 9999 23:59:59 GMT";
 }
+
+
+function loadCookies(){
+	var x = document.cookie; 
+	x = x.split("; ");
+	for (var i = x.length - 1; i >= 0; i--) {
+		var cook = x[i].split("=");
+		if (cook[0] === "night"){
+			nightCookie = cook;
+			if (cook[1] === 'true'){
+				nightModeOn();
+			}
+		}
+	}
+
+}
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+	loadCookies();	
+	if (nightCookie === undefined){
+		createNightCookie();
+		loadCookies();	
+	}
+});
