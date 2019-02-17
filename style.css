@@ -4,6 +4,8 @@ html[data-theme='dark'] {
   --link-normal: #d9d9d9;
   --link-visited-normal:#d0d0d0;
   --footer-color-normal: #0a0a0a;
+  --blog-background: #101010;
+  --blog-shadow: rgba(255, 255, 255, .1);
 }
 
 html{
@@ -12,6 +14,8 @@ html{
   --link-normal: #454545;
   --link-visited-normal:#353535;
   --footer-color-normal: #ececec;
+  --blog-background: #fffffe;
+  --blog-shadow: rgba(0, 0, 0, .1);
 
 }
 
@@ -49,6 +53,98 @@ h3 {
     align-items: center;
     justify-content: space-between;
     
+}
+.blog-container {
+    background: var(--blog-background);
+    border-radius: 5px;
+    box-shadow: var(--blog-shadow) 4px 4px 2px -2px;
+    font-family: "adelle-sans", sans-serif;
+    font-weight: 100;
+    margin: 24px auto;
+    /* width: 20rem; */
+    position: relative;
+
+}
+.blog-summary p{
+    margin-top: 0px;
+    margin-bottom: 0px
+}
+.blog-body {
+    margin: 0 auto;
+    width: 80%;
+    padding-bottom: 0.5rem;
+}
+.blog-title h1 a {
+    /* color: #333; */
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-top: 1rem;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.blog-title h1{
+    margin-bottom: 1rem;
+    padding-bottom: 0px; 
+    line-height: 0.8;
+
+}
+
+.blog-footer {
+    border-top: 1px solid var(--text-color-normal);
+    margin: 0 auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 80%;
+}
+.blog-footer ul {
+    list-style: none;
+    display: flex;
+    flex: row wrap;
+    justify-content: flex-end;
+    padding-left: 0;
+}
+
+.blog-footer li+li {
+    margin-left: 0.5rem;
+}
+.blog-footer li {
+    font-size: 0.75rem;
+    height: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    white-space: nowrap;
+}
+
+
+.lang{
+    
+    border-radius: 3px;
+    padding: 0 0.5rem;
+    font-weight: 100;
+}
+
+.python {
+    background-color: #3572a5;
+    color: #FFF;    
+}
+.shell {
+    background-color: #89e051;
+    color: #FFF;    
+}
+.html{
+    background-color: #e34c26;
+    color: #FFF;
+}
+.css{
+    background-color: #563d7c;
+    color: #FFF;
+}
+.js{
+    background-color: #f1e05a;
+    color: #000;
 }
 
 #logo{
@@ -350,7 +446,7 @@ nav a {
 nav {
     margin: 0;
     padding: 0;
-    background-color: #FFF;
+    background-color: unset;
 }
 /* Since we'll have the "ul li" "float:left"
 * we need to add a clear after the container. */
@@ -376,7 +472,6 @@ nav ul li {
     margin: 0px;
     display: inline-block;
     float: left;
-    background-color: #FFF;
 }
 /* Styling the links */
 
@@ -453,11 +548,11 @@ li>a:only-child:after {
 .burger div {
     width: 35px;
     height: 5px;
-    background-color: #353535;
+    background-color: var(--text-color-normal);
     margin: 6px 0;
 }
 
-@media all and (max-width: 462px) {
+@media all and (max-width: 530px) {
     .burger{ 
         display: inline-block;
     }
@@ -476,7 +571,7 @@ li>a:only-child:after {
     /* Stylinf the toggle lable */
     .toggle {
         display: block;
-        background-color: #FFF;
+        background-color: var(--background-color-normal);
         padding: 0.8rem 1.5rem;
         padding-top: 0px;
         color: #252525;
@@ -502,7 +597,7 @@ li>a:only-child:after {
     }
     nav ul li ul li .toggle, nav ul ul a, nav ul ul ul a {
         padding: 0.8rem 1.5rem;
-        color: #FFF;
+        color: green/;
         /*font-size:17px; */
     }
     nav ul li ul li .toggle, nav ul ul a {
