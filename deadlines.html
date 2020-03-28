@@ -1,9 +1,11 @@
+<h1> Joe's totaly awsome deadline countdown </h1>
+
 <script>
 function daysBetween(date1, date2){
 	var Difference_In_Time = date2.getTime() - date1.getTime(); 
   
 	// To calculate the no. of days between two dates 
-	return Math.round(Difference_In_Time / (1000 * 3600 * 24)); 
+	return Math.ceil(Difference_In_Time / (1000 * 3600 * 24)); 
 }
 
 document.write(`TSE: ${daysBetween(new Date(), new Date("04/23/2020"))} days<br>`);
