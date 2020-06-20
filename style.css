@@ -39,6 +39,7 @@ body {
     color: var(--text-color-normal);
     padding: 0 10px 8rem;
     background-color: var(--background-color-normal); 
+    transition: background-color 0.3s, color 0.3s;
 }
 
 h1,
@@ -127,7 +128,7 @@ h3 {
 }
 
 .python {
-    background-color: #3572a5;
+    background-color: #366d9c;
     color: #FFF;    
 }
 .shell {
@@ -145,6 +146,10 @@ h3 {
 .js{
     background-color: #f1e05a;
     color: #000;
+}
+.typescript{
+    background-color: #0076c6;
+    color: #FFF;
 }
 
 #logo{
@@ -203,6 +208,7 @@ html {
     padding: 1rem;
     background-color: var(--footer-color-normal);
     text-align: center;
+    transition: background-color 0.3s;
 }
 
 button {
@@ -219,140 +225,6 @@ button {
 button::-moz-focus-inner {
     border: 0;
 }
-
-.btn {
-  background: #1db954 !important;
-  background-image: -webkit-linear-gradient(top, #1db954, #1db954) !important;
-  background-image: -moz-linear-gradient(top, #1db954, #1db954) !important;
-  background-image: -ms-linear-gradient(top, #1db954, #1db954) !important;
-  background-image: -o-linear-gradient(top, #1db954, #1db954) !important;
-  background-image: linear-gradient(to bottom, #1db954, #1db954) !important;
-  -webkit-border-radius: 28 !important;
-  -moz-border-radius: 28 !important;
-  border-radius: 28px !important;
-  font-family: Arial !important;
-  color: var(--background-color-normal)fff !important;
-  font-size: 20px !important;
-  padding: 10px 20px 10px 20px !important;
-  text-decoration: none !important;
-}
-
-.btn:hover {
-  background: #3cb0fd !important;
-  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db) !important;
-  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db) !important;
-  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db) !important;
-  background-image: -o-linear-gradient(top, #3cb0fd, #3498db) !important;
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db) !important;
-  text-decoration: none !important;
-}
-.form-container {
-   border: 1px solid var(--background-color-normal)fff;
-   background: var(--background-color-normal)fff;
-   background: -webkit-gradient(linear, left top, left bottom, from(var(--background-color-normal)fff), to(var(--background-color-normal)fff));
-   background: -webkit-linear-gradient(top, var(--background-color-normal)fff, var(--background-color-normal)fff);
-   background: -moz-linear-gradient(top, var(--background-color-normal)fff, var(--background-color-normal)fff);
-   background: -ms-linear-gradient(top, var(--background-color-normal)fff, var(--background-color-normal)fff);
-   background: -o-linear-gradient(top, var(--background-color-normal)fff, var(--background-color-normal)fff);
-   background-image: -ms-linear-gradient(top, var(--background-color-normal)fff 0%, var(--background-color-normal)fff 100%);
-   -webkit-border-radius: 6px;
-   -moz-border-radius: 6px;
-   border-radius: 6px;
-   -webkit-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
-   -moz-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
-   box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
-   font-family: 'Helvetica Neue',Helvetica,sans-serif;
-   text-decoration: none;
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   vertical-align: middle;
-   min-width:300px;
-   padding:20px;
-   width:300px;
-   }
-.form-field {
-   border: 1px solid var(--text-color-normal);
-   background: var(--background-color-normal)fff;
-   -webkit-border-radius: 4px;
-   -moz-border-radius: 4px;
-   border-radius: 4px;
-   color: var(--text-color-normal);
-   -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
-   -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
-   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
-   padding:8px;
-   margin-bottom:20px;
-   width:280px;
-   }
-.form-field:focus {
-   background: var(--background-color-normal);
-   color: #3dff6a;
-   }
-.form-container h2 {
-   text-shadow: #ffecd4 0 1px 0;
-   font-size:18px;
-   margin: 0 0 10px 0;
-   font-weight:bold;
-   text-align:center;
-    }
-.form-title {
-   margin-bottom:10px;
-   color: var(--text-color-normal);
-   text-shadow: #ffecd4 0 1px 0;
-   }
-.submit-container {
-   margin:8px 0;
-   text-align:center;
-   }
-.submit-button {
-   border: 2px solid #447314;
-   background: #6aa436;
-   background: -webkit-gradient(linear, left top, left bottom, from(#8dc059), to(#6aa436));
-   background: -webkit-linear-gradient(top, #8dc059, #6aa436);
-   background: -moz-linear-gradient(top, #8dc059, #6aa436);
-   background: -ms-linear-gradient(top, #8dc059, #6aa436);
-   background: -o-linear-gradient(top, #8dc059, #6aa436);
-   background-image: -ms-linear-gradient(top, #8dc059 0%, #6aa436 100%);
-   -webkit-border-radius: 5px;
-   -moz-border-radius: 5px;
-   border-radius: 5px;
-   -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
-   -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
-   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
-   text-shadow: #addc7e 0 1px 0;
-   color: #31540c;
-   font-family: helvetica, serif;
-   padding: 8.5px 18px;
-   font-size: 14px;
-   text-decoration: none;
-   vertical-align: middle;
-   }
-.submit-button:hover {
-   border: 2px solid #447314;
-   text-shadow: #31540c 0 1px 0;
-   background: #6aa436;
-   background: -webkit-gradient(linear, left top, left bottom, from(#8dc059), to(#6aa436));
-   background: -webkit-linear-gradient(top, #8dc059, #6aa436);
-   background: -moz-linear-gradient(top, #8dc059, #6aa436);
-   background: -ms-linear-gradient(top, #8dc059, #6aa436);
-   background: -o-linear-gradient(top, #8dc059, #6aa436);
-   background-image: -ms-linear-gradient(top, #8dc059 0%, #6aa436 100%);
-   color: var(--background-color-normal);
-   }
-.submit-button:active {
-   text-shadow: #31540c 0 1px 0;
-   border: 2px solid #447314;
-   background: #8dc059;
-   background: -webkit-gradient(linear, left top, left bottom, from(#6aa436), to(#6aa436));
-   background: -webkit-linear-gradient(top, #6aa436, #8dc059);
-   background: -moz-linear-gradient(top, #6aa436, #8dc059);
-   background: -ms-linear-gradient(top, #6aa436, #8dc059);
-   background: -o-linear-gradient(top, #6aa436, #8dc059);
-   background-image: -ms-linear-gradient(top, #6aa436 0%, #8dc059 100%);
-   color: var(--background-color-normal);
-   }
-
 
 #menu-bar{
     display: inline;
@@ -535,15 +407,13 @@ li>a:only-child:after {
 
 .burger {
     display: none;
-    padding: 0.8rem 1.5rem;
-    padding-left: 0.3rem;
-    padding-top: 0px;
     justify-content: flex-end;
     vertical-align: middle;
-    padding-top: 1.6rem;
     float: right;
-    
-    
+    cursor: pointer;
+    margin-top: 1.4rem;
+    margin-left: 1.5rem;
+
 }
 .burger div {
     width: 35px;
@@ -552,77 +422,64 @@ li>a:only-child:after {
     margin: 6px 0;
 }
 
+#burger ul li{
+    display: block;
+    width: 100%;
+    visibility: hidden;
+    height: 0px;
+    opacity: 0;
+    transition: height 0.5s;
+}
+
+@keyframes open{
+    0%{
+        opacity: 0;
+        height: 0px;
+    }
+    100%{
+        opacity: 1;
+        height: 32px;
+    }
+}
+
+
 @media all and (max-width: 530px) {
-    .burger{ 
-        display: inline-block;
+    /* [id^=drop]:checked+#menu ul li{
+        animation-name: open;
+        visibility: visible;
+        animation-duration: 0.4s;
+        height: 32px;
+        opacity: 1;
+    } */
+    [id^=drop]:checked+ul#burger_menu li{
+        animation-name: open;
+        animation-fill-mode: both;
+        visibility: visible;
+        animation-duration: 0.4s;
+        height: 32px;
+        /* opacity: 1; */
     }
-    #logo{
-        width: 15%;
+    .burger{
+        display: block;
     }
-    nav {
-        margin: 0;
-        padding-right: 3.5rem;
-    }
-    /* Hide the navigation menu by default */
-    /* Also hide the  */
-    .toggle+a, .menu {
+    #normalMenu{
         display: none;
-    }
-    /* Stylinf the toggle lable */
-    .toggle {
-        display: block;
-        background-color: var(--background-color-normal);
-        padding: 0.8rem 1.5rem;
-        padding-top: 0px;
-        color: #252525;
-        /*font-size:17px;*/
-        text-decoration: none;
-        border: none;
-    }
+    }   
+ 
 
-    /* Display Dropdown when clicked on Parent Lable */
-    [id^=drop]:checked+ul {
-        display: block;
+    #burger ul li:nth-child(1){
+        animation-delay: 0.0s;
     }
-    /* Change menu item's width to 100% */
-    nav ul li {
-        display: block;
-        width: 100%;
+    #burger ul li:nth-child(2){
+        animation-delay: 0.1s;
     }
-    nav ul ul .toggle, nav ul ul a {
-        padding: 0 40px;
+    #burger ul li:nth-child(3){
+        animation-delay: 0.2s;
     }
-    nav ul ul ul a {
-        padding: 0 80px;
+    #burger ul li:nth-child(4){
+        animation-delay: 0.3s;
     }
-    nav ul li ul li .toggle, nav ul ul a, nav ul ul ul a {
-        padding: 0.8rem 1.5rem;
-        color: green/;
-        /*font-size:17px; */
+    #burger ul li:nth-child(5){
+        animation-delay: 0.4s;
     }
-    nav ul li ul li .toggle, nav ul ul a {
-        background-color: #00AEEF;
-    }
-
-    /* Hide Dropdowns by Default */
-    nav ul ul {
-        float: none;
-        position: static;
-        color: #ffffff;
-        /* has to be the same number as the "line-height" of "nav a" */
-    }
-    /* Hide menus on hover */
-    nav ul ul li:hover>ul, nav ul li:hover>ul {
-        display: none;
-    }
-    /* Fisrt Tier Dropdown */
-    nav ul ul li {
-        display: block;
-        width: 100%;
-    }
-    nav ul ul ul li {
-        position: static;
-        /* has to be the same number as the "width" of "nav ul ul li" */
-    }
-
 }
