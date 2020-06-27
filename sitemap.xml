@@ -8,8 +8,29 @@
 
 
 <url>
-  <loc>https://joepittsy.co.uk/</loc>
-  <lastmod>2018-02-20T11:51:15+00:00</lastmod>
+  <loc>https://joepitts.co.uk/</loc>
+  <lastmod>2020-06-20T16:24:13+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://joepitts.co.uk/index.html</loc>
+  <lastmod>2020-06-20T16:24:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://joepitts.co.uk/work.html</loc>
+  <lastmod>2020-06-20T16:24:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://joepitts.co.uk/instagram.html</loc>
+  <lastmod>2020-06-20T16:24:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://joepitts.co.uk/resources/Joseph_Pitts_CV.pdf</loc>
+  <lastmod>2020-06-20T16:24:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
