@@ -155,11 +155,18 @@ h3 {
 #logo{
     border-radius: 50%;
     vertical-align: middle;
+    width: 15%;
 }
 
 #title{
     display:inline-block;
     vertical-align: middle;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 20px;
+    color: var(--text-color-normal);
 }
 
 a:visited {
@@ -411,7 +418,7 @@ li>a:only-child:after {
     vertical-align: middle;
     float: right;
     cursor: pointer;
-    margin-top: 1.4rem;
+    margin-top: 2rem;
     margin-left: 1.5rem;
 
 }
@@ -455,7 +462,7 @@ li>a:only-child:after {
         animation-name: open;
         animation-fill-mode: both;
         visibility: visible;
-        animation-duration: 0.4s;
+        animation-duration: 0.5s;
         height: 32px;
         /* opacity: 1; */
     }
@@ -471,15 +478,15 @@ li>a:only-child:after {
         animation-delay: 0.0s;
     }
     #burger ul li:nth-child(2){
-        animation-delay: 0.1s;
+        animation-delay: 0.05s;
     }
     #burger ul li:nth-child(3){
-        animation-delay: 0.2s;
+        animation-delay: 0.1s;
     }
     #burger ul li:nth-child(4){
-        animation-delay: 0.3s;
+        animation-delay: 0.15s;
     }
     #burger ul li:nth-child(5){
-        animation-delay: 0.4s;
+        animation-delay: 0.2s;
     }
 }
