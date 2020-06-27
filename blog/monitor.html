@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-114382787-2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-114382787-2");
+    </script>
+
+    <script type="text/javascript" src="js/darkMode.js"></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../resources/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../resources/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../resources/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../resources/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="../resources/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Joe Pitts</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+
+    <meta
+      name="description"
+      content="The personal website for Joe Pitts, Programmer, Photographer, England, UK, Coding!"
+    />
+  </head>
+
+  <body link="black" style="height: auto;">
+    <div id="content" class="content">
+      <header>
+        <div id="containter">
+          <div>
+            <img
+              id="logo"
+              src="../resources/logo.jpg"
+              ,=""
+              height:10%,=""
+              width="10%,"
+            />
+            <a id="title" href="../">
+              <h1>&nbsp;Joe Pitts</h1>
+            </a>
+            <div
+              class="burger"
+              onclick="document.getElementById('drop').click();"
+            >
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <aside>
+          <nav id="burger">
+            <label
+              class="toggle"
+              for="drop"
+              style="pointer-events: none;"
+            ></label>
+            <input id="drop" type="checkbox" />
+            <ul class="menu" id="burger_menu">
+              <li>
+                <a href="../index.html">Home</a>
+              </li>
+              <li>
+                <a href="../work.html">My Work</a>
+              </li>
+              <li>
+                <a href="index.html">Blog</a>
+              </li>
+              <li>
+                <a href="../instagram.html">Photography</a>
+              </li>
+              <li>
+                <a href="#" onclick="toggleNightMode(); ">Dark Mode</a>
+              </li>
+            </ul>
+          </nav>
+
+          <nav id="normalMenu">
+            <ul class="menu">
+              <li>
+                <a href="../index.html">Home</a>
+              </li>
+              <li>
+                <a href="../work.html">My Work</a>
+              </li>
+              <li>
+                <a href="../blog">Blog</a>
+              </li>
+              <li>
+                <a href="../instagram.html">Photography</a>
+              </li>
+              <li>
+                <a href="#" onclick="toggleNightMode(); ">Dark Mode</a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+      </header>
+      <hr />
+
+      <h2>Automatic Display Rotation</h2>
+      <p>
+        Having the display rotate to match the orientation of our device is
+        something we all take for granted on our phones and tablets, but for
+        some reason, it never made it to our PCs even though a lot of content we
+        consume is better suited for a vertical screen (Reddit, Writing,
+        Programming, e.t.c).
+      </p>
+      <p>
+        This blog post is going to be about how I implemented auto-rotating
+        displays using Microsoft's MXChip IoT DevKit.
+      </p>
+
+      <h3>MXChip to PC Communication</h3>
+      <p>
+        The MXChip is primarily made for connecting to Azure Web Services,
+        however, I decided not to go with Azure, or any cloud service, for this
+        project. There were a few reasons for this:
+      </p>
+      <ol>
+        <li>
+          This project was made during the 2020 Global Covid-19 pandemic and
+          cloud resources were prioritised for hospitals and other government
+          uses.
+        </li>
+        <li>
+          I felt that spinning up a database to store the rotation of my monitor
+          might be a little overkill.
+        </li>
+      </ol>
+      <p>
+        My first thought was using a serial connection and this would have
+        worked great apart from I'd have to run a USB cable to the back of the
+        monitor with enough slack to allow it to rotate and well I don't own any
+        USB cables that long. If your monitor has USB passthrough then this
+        would be the way to go.
+      </p>
+      <p>
+        Since a solution using serial was unfeasible I knew the MXChip to PC
+        communication would have to be wireless. I decided to use MQTT, a
+        publish-subscribe protocol. Using this I could publish all of the sensor
+        data from the chip to the same server but on different topics, therefore
+        allowing future projects to have easy access to the data.
+      </p>
+    </div>
+
+    <div class="footer">
+      <p align="center">
+        <a href="https://linkedin.com/in/JoePittsy">LinkedIn</a>&nbsp;&nbsp;
+        <a href="https://twitter.com/JoePittsy">Twitter</a>&nbsp;&nbsp;<a
+          href="https://instagram.com/JoePittsy"
+          >Instagram</a
+        >&nbsp;&nbsp;<a href=" https://github.com/Pittsy24">GitHub</a>
+      </p>
+    </div>
+  </body>
+</html>
