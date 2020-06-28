@@ -130,30 +130,33 @@ h3 {
     padding: 0 0.5rem;
     font-weight: 100;
 }
-
+.cpp{
+    background-color: #6891d5 !important;
+    color: #fff !important;
+}
 .python {
-    background-color: #366d9c;
-    color: #FFF;    
+    background-color: #366d9c !important;
+    color: #FFF !important;    
 }
 .shell {
-    background-color: #89e051;
-    color: #FFF;    
+    background-color: #89e051 !important;
+    color: #FFF !important;    
 }
 .html{
-    background-color: #e34c26;
-    color: #FFF;
+    background-color: #e34c26 !important;
+    color: #FFF !important;
 }
 .css{
-    background-color: #563d7c;
-    color: #FFF;
+    background-color: #563d7c !important;
+    color: #FFF !important;
 }
 .js{
-    background-color: #f1e05a;
-    color: #000;
+    background-color: #f1e05a !important;
+    color: #000 !important;
 }
 .typescript{
-    background-color: #0076c6;
-    color: #FFF;
+    background-color: #0076c6 !important;
+    color: #FFF !important;
 }
 
 #logo{
@@ -454,6 +457,10 @@ li>a:only-child:after {
     opacity: 1;
 }
 
+html[data-theme='dark'] .codeSnippet{
+    filter: invert(1);
+}
+
 .double-val-label {
     position: absolute;
 	display: table;
@@ -474,8 +481,13 @@ li>a:only-child:after {
 	padding: .3em .6em;
 	text-align: center;
 	vertical-align: baseline;
-	white-space: nowrap;
+    white-space: nowrap;
 }
+
+html[data-theme='dark'] .double-val-label>span{
+    filter: invert(1);
+}
+
 .double-val-label>span:first-child{
     border-bottom-left-radius: 0.25em;
     border-top-left-radius: .25em;
@@ -500,7 +512,17 @@ li>a:only-child:after {
     display: block;
     margin: auto;
 }
+.blogPost h2{
+    margin-bottom: 0px;
+}
+.blogPost #readingTime  p{
+    margin-top: 0px;
+    display: inline-block;
+}
 
+.blogPost h3:first-of-type{
+    margin-top: 0px;
+}
 @media all and (max-width: 530px) {
     /* [id^=drop]:checked+#menu ul li{
         animation-name: open;
