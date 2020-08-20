@@ -52,6 +52,32 @@ h3 {
     line-height: 1.2;
 }
 
+h1 {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-block-start: .67em;
+    margin-block-end: .67em;
+  }
+  
+  h2{
+    display: block;
+    font-size: 1.17em;
+    font-weight: bold;
+    margin-block-start: .83em;
+    margin-block-end: .83em;
+  }
+  
+  h3{
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+  }
+  
+  
+
 #containter {
     height: 10%;
     display: flex;
@@ -173,6 +199,16 @@ h3 {
     vertical-align: middle;
     margin-left: 20px;
 }
+#title p{    
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    margin-block-start: .67em;
+    margin-block-end: .67em;
+}
+#title p{
+    color: var(--text-color-normal);
+}
 
 #copyright{
     color: var(--footer-color-normal);
@@ -181,9 +217,7 @@ h3 {
     margin-bottom: 0px;
 }
 
-#title h1{
-    color: var(--text-color-normal);
-}
+
 
 a:visited {
     color: var(--link-visited-normal);
@@ -513,7 +547,7 @@ html[data-theme='dark'] .double-val-label>span{
     display: block;
     margin: auto;
 }
-.blogPost h2{
+.blogPost h1{
     margin-bottom: 0px;
 }
 .blogPost #readingTime  p{
@@ -521,7 +555,7 @@ html[data-theme='dark'] .double-val-label>span{
     display: inline-block;
 }
 
-.blogPost h3:first-of-type{
+.blogPost h2:first-of-type{
     margin-top: 0px;
 }
 @media all and (max-width: 530px) {
