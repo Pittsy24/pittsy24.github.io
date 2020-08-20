@@ -5,9 +5,9 @@
           {
             "@context": "http://schema.org",
             "@type": "TechArticle",
-            "headline": "Automatic Display Rotation",
+            "headline": "Create automatic display rotation with MXChip",
             "datePublished": "2020-06-28T20:18:22.883324"
-            "image": "https://JoePittsy.co.uk/resources/JoePitts.jpg",
+            "image": "https://JoePitts.co.uk/resources/JoePitts.jpg",
             "author": {
               "@type": "Person",
               "name": "Joe Pitts",
@@ -22,7 +22,7 @@
                 "https://www.instagram.com/JoePittsy/",
                 "https://github.com/Pittsy24"
               ],
-              "image": "https://JoePittsy.co.uk/resources/JoePitts.jpg",
+              "image": "https://JoePitts.co.uk/resources/JoePitts.jpg",
               "description": "Joe Pitts, Developer at the University of Lincoln"
             }
           }
@@ -37,15 +37,15 @@
     something we all take for granted on our phones and tablets, but for
     some reason, it never made it to our PCs..."
     name="description">
-  <meta name="twitter:title" content="Joe Pitts | Automatic Display Rotation">
+  <meta name="twitter:title" content="Joe Pitts | Create automatic display rotation with MXChip">
   <meta name="twitter:creator" content="@JoePittsy"> 
   <meta property="og:image" content="https://joepitts.co.uk/resources/JoePitts.jpg" />
 
-  <meta property='og:title' content="Automatic Display Rotation"/>
+  <meta property='og:title' content="Create automatic display rotation with MXChip"/>
   <meta property='og:description' content="Having the display rotate to match the orientation of our device is
     something we all take for granted on our phones and tablets, but for
     some reason, it never made it to our PCs..."/>
-  <meta property='og:url' content="https://joepitts.co.uk/blog/monitor.html"/>
+  <meta property='og:url' content="https://joepitts.co.uk/blog/create-automatic-display-rotation-with-mxchip.html"/>
   <meta name="author" content="Joe Pitts"> 
 
   <meta name="twitter:image" content="https://joepitts.co.uk/resources/JoePitts.jpg">
@@ -71,7 +71,7 @@
   <meta content="#ffffff" name="theme-color">
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1" name="viewport">
-  <title>Joe Pitts | Automatic Display Rotation</title>
+  <title>Joe Pitts | Create automatic display rotation with MXChip</title>
   <link href="/style.css" rel="stylesheet" type="text/css">
   <meta
     content="Website of Joe Pitts, a 20 year old Developer and Student of Computer Science at the University of Lincoln UK"
@@ -86,7 +86,7 @@
         <div id="header">
           <img alt="Joe Pitts" id="logo" src="/resources/JoePitts.jpg" title="Joe Pitts" width="10%"> <a href="/"
             id="title">
-            <h1>Joe Pitts</h1>
+            <p>Joe Pitts</p>
           </a>
           <div class="burger" onclick="document.getElementById('drop').click();">
             <div></div>
@@ -145,10 +145,10 @@
     </header>
     <hr />
     <div class="blogPost">
-      <h2>Automatic Display Rotation</h2> <span id="readingTime">
+      <h1>Create automatic display rotation with MXChip</h1> <span id="readingTime">
         <date>28th of June 2020</date> | <p>6-7 minutes</p>
       </span>
-      <h3>Introduction</h3>
+      <a class="anchor" href="#introduction"><h2 id="introduction">Introduction</h2></a>
       <p>
         Having the display rotate to match the orientation of our device is
         something we all take for granted on our phones and tablets, but for
@@ -160,8 +160,7 @@
         This blog post is going to be about how I implemented auto-rotating
         displays using Microsoft's MXChip IoT DevKit.
       </p>
-
-      <h3>Determining the rotation of the MXChip</h3>
+      <a class="anchor" href="#rotation"><h2 id="rotation">Determining the rotation of the MXChip</h2></a>
       <p>In order to rotate the display, we first need to know the rotation of the MXChip. To do this we will use the
         LSM6DSL Sensor, an accelerometer and gyroscope sensor on the MXChip. By rotating the MXChip in my hands and
         looking at a real-time readout of the accelerometer's X and Y values I was able to find bounds that told me the
@@ -176,7 +175,7 @@
       <p>Now that we know the rotation of the MXChip we need to find a way to send this to the PC so it can rotate the
         display to match.</p>
 
-      <h3>MXChip to PC Communication</h3>
+      <a class="anchor" href="#communication"><h2 id="communication">MXChip to PC Communication</h2></a>
       <p>
         The MXChip is primarily made for connecting to Azure Web Services,
         however, I decided not to go with Azure, or any cloud service, for this
@@ -247,7 +246,8 @@
         <source src="/resources/videos/demo.mp4" type="video/mp4">
         <source src="/resources/videos/demo.webm" type="video/webm">
       </video>
-      <h3>Thoughts and future development</h3>
+      <p></p>
+      <a class="anchor" href="#future"><h2 id="future">Thoughts and future development</h2></a>
       <p>This project was definitely a success and is something Ive found myself using almost daily without even
         thinking about it, that's not to say there isn't improvements I want to make. For one this only works on Linux
         at the moment, a Windows version would definitely be welcome. Another issue i've ran into is the MXChip losing
