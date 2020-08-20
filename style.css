@@ -627,6 +627,18 @@ table tr td:nth-child(2), table tr td:nth-child(3) {
     padding: 0.25em;
     text-align: center;
 }
+
+#filesFlex{
+    display: flex;
+}
+
+.download{
+    display: inline-block;
+}
+
+.download p,small{
+    display: inline;
+}
 /* 
 #blogHR{
     z-index: -1;

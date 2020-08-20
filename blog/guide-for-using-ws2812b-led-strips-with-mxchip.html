@@ -5,9 +5,8 @@
       {
         "@context": "http://schema.org",
         "@type": "TechArticle",
-        "headline": "Automatic Display Rotation",
-        "datePublished": "2020-06-28T20:18:22.883324"
-        "image": "https://JoePittsy.co.uk/resources/JoePitts.jpg",
+        "headline": "Guide for using WS2812B LED Strips with MXChip",
+        "datePublished": "2020-08-20"
         "author": {
           "@type": "Person",
           "name": "Joe Pitts",
@@ -22,8 +21,8 @@
             "https://www.instagram.com/JoePittsy/",
             "https://github.com/Pittsy24"
           ],
-          "image": "https://JoePittsy.co.uk/resources/JoePitts.jpg",
-          "description": "Joe Pitts, Developer at the University of Lincoln"
+          "image": "https://JoePitts.co.uk/resources/led.jpg",
+          "description": "Guide for using WS2812B LED Strips with MXChip"
         }
       }
     </script>
@@ -32,37 +31,35 @@
     <meta name="twitter:site" content="@JoePittsy" />
     <meta
       name="twitter:description"
-      content="Having the display rotate to match the orientation of our device is
-    something we all take for granted on our phones and tablets, but for
-    some reason, it never made it to our PCs..."
+      content="This guide will walk you through how to connect and control a WS2812B
+      individually addressable RGB LED strip with the MXChip."
       name="description"
     />
     <meta
       name="twitter:title"
-      content="Joe Pitts | Automatic Display Rotation"
+      content="Joe Pitts | Guide for using WS2812B LED Strips with MXChip"
     />
     <meta name="twitter:creator" content="@JoePittsy" />
     <meta
       property="og:image"
-      content="https://joepitts.co.uk/resources/JoePitts.jpg"
+      content="https://joepitts.co.uk/resources/led.jpg"
     />
 
-    <meta property="og:title" content="Automatic Display Rotation" />
+    <meta property="og:title" content="Guide for using WS2812B LED Strips with MXChip" />
     <meta
       property="og:description"
-      content="Having the display rotate to match the orientation of our device is
-    something we all take for granted on our phones and tablets, but for
-    some reason, it never made it to our PCs..."
+      content="This guide will walk you through how to connect and control a WS2812B
+      individually addressable RGB LED strip with the MXChip."
     />
     <meta
       property="og:url"
-      content="https://joepitts.co.uk/blog/monitor.html"
+      content="https://joepitts.co.uk/blog/guide-for-using-ws2812b-led-strips-with-mxchip.html"
     />
     <meta name="author" content="Joe Pitts" />
 
     <meta
       name="twitter:image"
-      content="https://joepitts.co.uk/resources/JoePitts.jpg"
+      content="https://joepitts.co.uk/resources/led.jpg"
     />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -103,10 +100,11 @@
     <meta content="#ffffff" name="theme-color" />
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <title>Joe Pitts | Automatic Display Rotation</title>
+    <title>Joe Pitts | Guide for using WS2812B LED Strips with MXChip</title>
     <link href="/style.css" rel="stylesheet" type="text/css" />
     <meta
-      content="Website of Joe Pitts, a 20 year old Developer and Student of Computer Science at the University of Lincoln UK"
+      content="This guide will walk you through how to connect and control a WS2812B
+      individually addressable RGB LED strip with the MXChip."
       name="description"
     />
     <meta lang="en-gb" />
@@ -194,7 +192,7 @@
       <div class="blogPost">
         <h1>Guide for using WS2812B LED Strips with MXChip</h1>
         <span id="readingTime">
-          <date>28th of June 2020</date> |
+          <date>20th of August 2020</date> |
           <p>6-7 minutes</p>
         </span>
         <a class="anchor" href="#introduction"
@@ -232,6 +230,7 @@
           >
         </p>
 
+
         <a class="anchor" href="#wiring"><h2 id="wiring">Wiring</h2></a>
 
         <p>
@@ -244,10 +243,10 @@
           wire to any of the data pins.
         </p>
         <picture id="wireImage">
-          <!-- <source srcset="/resources/images/mqtt.webp" type="image/webp" /> -->
+          <source srcset="/resources/images/wire.webp" type="image/webp" />
           <source srcset="/resources/images/wire.jpg" type="image/jpeg" />
           <img src="/resources/images/wire.jpg" />
-          <figcaption>It should look like this.</figcaption>
+          <figcaption><small>It should look like this.</small></figcaption>
         </picture>
         <h3>Pin Mapping</h3>
         <p>
@@ -384,7 +383,7 @@
           </table>
         </div>
         <p></p>
-        <h2>The Code</h2>
+        <a class="anchor" href="#code"><h2 id="code">The Code</h2></a>
         <p>
           The first thing you will need is the header and cpp files to drive the
           LED strip. These were written by microsoft and provide some nice
@@ -395,43 +394,41 @@
 
         <p>
           Once those files have been downloaded and extracted into your
-          workspace we can finally light the LED strip up!.
+          workspace we can finally light the LED strip up!. The code provided
+          below will run the strip through three different programmes, be sure
+          the change NUMBER_OF_LED and LED_PIN to the correct values for your
+          setup.
         </p>
         <div class="codeSnippet">
           <div class="double-val-label">
             <span class="cpp">C++</span>
             <span data-clipboard-target="#getRot" id="rotCopy">Copy</span>
           </div>
-          <pre><div id = "getRot" style="color: #383a42;/*! background-color: #fafafa; */font-family: 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback';font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;"><div><span style="color: #a626a4;">int</span><span style="color: #383a42;"> </span><span style="color: #4078f2;">getRotation</span><span style="color: #383a42;">()</span></div><div><span style="color: #383a42;">{</span></div><div><span style="color: #383a42;">    </span><span style="color: #e45649;">sensor</span><span style="color: #383a42;">-&gt;</span><span style="color: #4078f2;">enableAccelerator</span><span style="color: #383a42;">();</span></div><div><span style="color: #383a42;">    </span><span style="color: #e45649;">sensor</span><span style="color: #383a42;">-&gt;</span><span style="color: #4078f2;">getXAxes</span><span style="color: #383a42;">(axes);</span></div><br><div><span style="color: #a0a1a7;font-style: italic;">    // If the X axis is between -500 and 500 the device is vertical</span></div><div><span style="color: #383a42;">    </span><span style="color: #a626a4;">if</span><span style="color: #383a42;"> (</span><span style="color: #e45649;">axes</span><span style="color: #383a42;">[</span><span style="color: #986801;">0</span><span style="color: #383a42;">] </span><span style="color: #a626a4;">&lt;=</span><span style="color: #383a42;"> </span><span style="color: #986801;">500</span><span style="color: #383a42;"> </span><span style="color: #a626a4;">&amp;&amp;</span><span style="color: #383a42;"> </span><span style="color: #e45649;">axes</span><span style="color: #383a42;">[</span><span style="color: #986801;">0</span><span style="color: #383a42;">] </span><span style="color: #a626a4;">&gt;=</span><span style="color: #383a42;"> </span><span style="color: #a626a4;">-</span><span style="color: #986801;">500</span><span style="color: #383a42;">){</span></div><div><span style="color: #a0a1a7;font-style: italic;">        // If the Y axis is &gt;= 0 then the device is pointed down</span></div><div><span style="color: #383a42;">        </span><span style="color: #a626a4;">if</span><span style="color: #383a42;"> (</span><span style="color: #e45649;">axes</span><span style="color: #383a42;">[</span><span style="color: #986801;">1</span><span style="color: #383a42;">] </span><span style="color: #a626a4;">&gt;=</span><span style="color: #383a42;"> </span><span style="color: #986801;">0</span><span style="color: #383a42;">)</span></div><div><span style="color: #383a42;">            </span><span style="color: #a626a4;">return</span><span style="color: #383a42;"> D_DOWN;</span></div><div><span style="color: #a0a1a7;font-style: italic;">        // Else the device must be pointing upwards</span></div><div><span style="color: #383a42;">        </span><span style="color: #a626a4;">else</span></div><div><span style="color: #383a42;">            </span><span style="color: #a626a4;">return</span><span style="color: #383a42;"> D_UP;</span></div><div><span style="color: #383a42;">    }</span></div><div><span style="color: #a0a1a7;font-style: italic;">    // If we're not vertical we must be horizontal</span></div><div><span style="color: #383a42;">    </span><span style="color: #a626a4;">else</span><span style="color: #383a42;">{</span></div><div><span style="color: #a0a1a7;font-style: italic;">        // If the X axis is &gt;= 0 the device is on its right side</span></div><div><span style="color: #383a42;">        </span><span style="color: #a626a4;">if</span><span style="color: #383a42;"> (</span><span style="color: #e45649;">axes</span><span style="color: #383a42;">[</span><span style="color: #986801;">0</span><span style="color: #383a42;">] </span><span style="color: #a626a4;">&gt;=</span><span style="color: #383a42;"> </span><span style="color: #986801;">0</span><span style="color: #383a42;">)</span></div><div><span style="color: #383a42;">            </span><span style="color: #a626a4;">return</span><span style="color: #383a42;"> D_RIGHT;</span></div><div><span style="color: #a0a1a7;font-style: italic;">        // Otherwise its on its left</span></div><div><span style="color: #383a42;">        </span><span style="color: #a626a4;">else</span></div><div><span style="color: #383a42;">            </span><span style="color: #a626a4;">return</span><span style="color: #383a42;"> D_LEFT;</span></div><div><span style="color: #383a42;">    }</span></div><div><span style="color: #383a42;">}</span>       </div></div></pre>
+          <pre><div style="color: #383a42;/*! background-color: #fafafa; */font-family: 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback';font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;"><div><span style="color: #a626a4;">#include</span><span style="color: #383a42;"> </span><span style="color: #50a14f;">"neopixel.h"</span></div><br><div><span style="color: #a626a4;">#define</span><span style="color: #383a42;"> </span><span style="color: #4078f2;">NUMBER_OF_LED</span><span style="color: #383a42;"> </span><span style="color: #986801;">72</span><span style="color: #a0a1a7;font-style: italic;"> // This is the number of LEDs in your strip</span></div><div><span style="color: #a626a4;">#define</span><span style="color: #383a42;"> </span><span style="color: #4078f2;">LED_PIN</span><span style="color: #383a42;"> </span><span style="color: #986801;">16</span><span style="color: #a0a1a7;font-style: italic;"> // This is the pin you plugged the data wire into</span></div><br><div><span style="color: #a626a4;">static</span><span style="color: #383a42;"> NeoPixel </span><span style="color: #a626a4;">*</span><span style="color: #383a42;">neopixel </span><span style="color: #a626a4;">=</span><span style="color: #383a42;"> </span><span style="color: #986801;">NULL</span><span style="color: #383a42;">;</span></div><div><span style="color: #a626a4;">static</span><span style="color: #383a42;"> </span><span style="color: #a626a4;">int</span><span style="color: #383a42;"> test </span><span style="color: #a626a4;">=</span><span style="color: #383a42;"> </span><span style="color: #986801;">0</span><span style="color: #383a42;">;</span></div><div><span style="color: #a626a4;">static</span><span style="color: #383a42;"> </span><span style="color: #a626a4;">bool</span><span style="color: #383a42;"> runTest </span><span style="color: #a626a4;">=</span><span style="color: #383a42;"> </span><span style="color: #986801;">false</span><span style="color: #383a42;">;</span></div><br><div><span style="color: #a626a4;">void</span><span style="color: #383a42;"> </span><span style="color: #4078f2;">setup</span><span style="color: #383a42;">(){</span></div><div><span style="color: #383a42;">    neopixel </span><span style="color: #a626a4;">=</span><span style="color: #383a42;"> </span><span style="color: #a626a4;">new</span><span style="color: #383a42;"> </span><span style="color: #4078f2;">NeoPixel</span><span style="color: #383a42;">(LED_PIN, NUMBER_OF_LED);</span></div><div><span style="color: #383a42;">    runTest </span><span style="color: #a626a4;">=</span><span style="color: #383a42;"> </span><span style="color: #e45649;">neopixel</span><span style="color: #383a42;">-&gt;</span><span style="color: #4078f2;">init</span><span style="color: #383a42;">();</span></div><div><span style="color: #383a42;">}</span></div><br><div><span style="color: #a626a4;">void</span><span style="color: #383a42;"> </span><span style="color: #4078f2;">loop</span><span style="color: #383a42;">(){</span></div><div><span style="color: #383a42;"><br></span></div><div><span style="color: #383a42;">    </span><span style="color: #a626a4;">if</span><span style="color: #383a42;"> (runTest){</span></div><div><span style="color: #383a42;">        </span><span style="color: #a626a4;">switch</span><span style="color: #383a42;"> (test </span><span style="color: #a626a4;">%</span><span style="color: #383a42;"> </span><span style="color: #986801;">3</span><span style="color: #383a42;">){</span></div><div><span style="color: #383a42;"><br></span></div><div><span style="color: #383a42;">        </span><span style="color: #a626a4;">case</span><span style="color: #383a42;"> </span><span style="color: #986801;">0</span><span style="color: #383a42;">:</span></div><div><span style="color: #383a42;">            </span><span style="color: #e45649;">Serial</span><span style="color: #383a42;">.</span><span style="color: #4078f2;">println</span><span style="color: #383a42;">(</span><span style="color: #50a14f;">"Rainbow..."</span><span style="color: #383a42;">);</span></div><div><span style="color: #383a42;">            </span><span style="color: #e45649;">neopixel</span><span style="color: #383a42;">-&gt;</span><span style="color: #4078f2;">showRainbowCycle</span><span style="color: #383a42;">(</span><span style="color: #986801;">60</span><span style="color: #383a42;">, </span><span style="color: #986801;">25</span><span style="color: #383a42;">, </span><span style="color: #986801;">20</span><span style="color: #383a42;">, </span><span style="color: #986801;">200</span><span style="color: #383a42;">);</span></div><div><span style="color: #383a42;">            </span><span style="color: #e45649;">neopixel</span><span style="color: #383a42;">-&gt;</span><span style="color: #4078f2;">showColor</span><span style="color: #383a42;">(</span><span style="color: #986801;">0</span><span style="color: #383a42;">, </span><span style="color: #986801;">0</span><span style="color: #383a42;">, </span><span style="color: #986801;">0</span><span style="color: #383a42;">);</span></div><div><span style="color: #383a42;">            </span><span style="color: #a626a4;">break</span><span style="color: #383a42;">;</span></div><div><span style="color: #383a42;"><br></span></div><div><span style="color: #383a42;">        </span><span style="color: #a626a4;">case</span><span style="color: #383a42;"> </span><span style="color: #986801;">1</span><span style="color: #383a42;">:</span></div><div><span style="color: #383a42;">            </span><span style="color: #e45649;">Serial</span><span style="color: #383a42;">.</span><span style="color: #4078f2;">println</span><span style="color: #383a42;">(</span><span style="color: #50a14f;">"Theatre-style crawling lights..."</span><span style="color: #383a42;">);</span></div><div><span style="color: #383a42;">            </span><span style="color: #e45649;">neopixel</span><span style="color: #383a42;">-&gt;</span><span style="color: #4078f2;">showTheaterChase</span><span style="color: #383a42;">(</span><span style="color: #986801;">236</span><span style="color: #383a42;">, </span><span style="color: #986801;">19</span><span style="color: #383a42;">, </span><span style="color: #986801;">122</span><span style="color: #383a42;">, </span><span style="color: #986801;">500</span><span style="color: #383a42;">);</span></div><div><span style="color: #383a42;">            </span><span style="color: #e45649;">neopixel</span><span style="color: #383a42;">-&gt;</span><span style="color: #4078f2;">showColor</span><span style="color: #383a42;">(</span><span style="color: #986801;">0</span><span style="color: #383a42;">, </span><span style="color: #986801;">0</span><span style="color: #383a42;">, </span><span style="color: #986801;">0</span><span style="color: #383a42;">);</span></div><div><span style="color: #383a42;">            </span><span style="color: #a626a4;">break</span><span style="color: #383a42;">;</span></div><div><span style="color: #383a42;"><br></span></div><div><span style="color: #383a42;">        </span><span style="color: #a626a4;">case</span><span style="color: #383a42;"> </span><span style="color: #986801;">2</span><span style="color: #383a42;">:</span></div><div><span style="color: #383a42;">            </span><span style="color: #e45649;">Serial</span><span style="color: #383a42;">.</span><span style="color: #4078f2;">println</span><span style="color: #383a42;">(</span><span style="color: #50a14f;">"Detonate..."</span><span style="color: #383a42;">);</span></div><div><span style="color: #383a42;">            </span><span style="color: #e45649;">neopixel</span><span style="color: #383a42;">-&gt;</span><span style="color: #4078f2;">showDetonate</span><span style="color: #383a42;">(</span><span style="color: #986801;">236</span><span style="color: #383a42;">, </span><span style="color: #986801;">19</span><span style="color: #383a42;">, </span><span style="color: #986801;">122</span><span style="color: #383a42;">, </span><span style="color: #986801;">800</span><span style="color: #383a42;">);</span></div><div><span style="color: #383a42;">            </span><span style="color: #e45649;">neopixel</span><span style="color: #383a42;">-&gt;</span><span style="color: #4078f2;">showColor</span><span style="color: #383a42;">(</span><span style="color: #986801;">0</span><span style="color: #383a42;">, </span><span style="color: #986801;">0</span><span style="color: #383a42;">, </span><span style="color: #986801;">0</span><span style="color: #383a42;">);</span></div><div><span style="color: #383a42;">            </span><span style="color: #a626a4;">break</span><span style="color: #383a42;">;</span></div><div><span style="color: #383a42;"><br></span></div><div><span style="color: #383a42;">        }</span></div><div><span style="color: #383a42;">        test</span><span style="color: #a626a4;">++</span><span style="color: #383a42;">;</span></div><div><span style="color: #383a42;">    }</span></div><div><span style="color: #383a42;">    </span><span style="color: #4078f2;">wait_ms</span><span style="color: #383a42;">(</span><span style="color: #986801;">2000</span><span style="color: #383a42;">);</span></div><div><span style="color: #383a42;">}</span></div></div></pre>
         </div>
         <p>
-          I set this script to run at startup and it worked great, the prototype
-          was complete!
+          From here you can create your own animations and more using the
+          neopixel->showColor() and neopixel->setColor() commands that allow you
+          to set the strip and individual LED's colours respectively.
         </p>
-        <video autoplay controls muted loop width="320">
-          <source src="/resources/videos/demo.mp4" type="video/mp4" />
-          <source src="/resources/videos/demo.webm" type="video/webm" />
-        </video>
-        <h2>Thoughts and future development</h2>
-        <p>
-          This project was definitely a success and is something Ive found
-          myself using almost daily without even thinking about it, that's not
-          to say there isn't improvements I want to make. For one this only
-          works on Linux at the moment, a Windows version would definitely be
-          welcome. Another issue i've ran into is the MXChip losing connection
-          to the Wi-FI, I believe this is an issue of the Wi-Fi signal being
-          rather weak behind my monitor, a way to help mitigate this issue would
-          be setting up a MQTT
-          <a
-            href="https://www.hivemq.com/blog/mqtt-essentials-part-9-last-will-and-testament/"
-            >last will and testament</a
-          >
-          for when the MXChip loses connection, I could then have my phone send
-          me a notification telling me to reset the MXChip. Overall I am very
-          happy with this project and if you have an MXChip or Arduino with an
-          accelerometer handy I would recommend building this project yourself!
-        </p>
+
+        <a class="anchor" href="#files"><h2 id="files">Files</h2></a>
+
+        <div class="download">
+          <p><a href="/resources/files/driver.zip">Driver.zip</a> <small>The header and cpp needed to drive the LED strip</small></p>
+          <p class="download__instructions">
+            <small class="download__properties">2.8 <abbr title="Kilobyte">kB</abbr></small>
+          </p>
+        </div>
+
+        <div class="download">
+          <p><a href="/resources/files/Example_Project.zip">Example_Project.zip</a> <small>A ready to flash project with the test script.</small></p>
+          <p class="download__instructions">
+            <small class="download__properties">6.4 <abbr title="Kilobyte">kB</abbr></small>
+          </p>
+        </div>
       </div>
+      <p></p>
       <div id="disqus_thread"></div>
       <script>
         (function () {
