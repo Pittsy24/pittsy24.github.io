@@ -148,7 +148,7 @@
       <h1>Create automatic display rotation with MXChip</h1> <span id="readingTime">
         <date>28th of June 2020</date> | <p>6-7 minutes</p>
       </span>
-      <h2>Introduction</h2>
+      <a class="anchor" href="#introduction"><h2 id="introduction">Introduction</h2></a>
       <p>
         Having the display rotate to match the orientation of our device is
         something we all take for granted on our phones and tablets, but for
@@ -160,8 +160,7 @@
         This blog post is going to be about how I implemented auto-rotating
         displays using Microsoft's MXChip IoT DevKit.
       </p>
-
-      <h2>Determining the rotation of the MXChip</h2>
+      <a class="anchor" href="#rotation"><h2 id="rotation">Determining the rotation of the MXChip</h2></a>
       <p>In order to rotate the display, we first need to know the rotation of the MXChip. To do this we will use the
         LSM6DSL Sensor, an accelerometer and gyroscope sensor on the MXChip. By rotating the MXChip in my hands and
         looking at a real-time readout of the accelerometer's X and Y values I was able to find bounds that told me the
@@ -176,7 +175,7 @@
       <p>Now that we know the rotation of the MXChip we need to find a way to send this to the PC so it can rotate the
         display to match.</p>
 
-      <h2>MXChip to PC Communication</h2>
+      <a class="anchor" href="#communication"><h2 id="communication">MXChip to PC Communication</h2></a>
       <p>
         The MXChip is primarily made for connecting to Azure Web Services,
         however, I decided not to go with Azure, or any cloud service, for this
@@ -247,7 +246,8 @@
         <source src="/resources/videos/demo.mp4" type="video/mp4">
         <source src="/resources/videos/demo.webm" type="video/webm">
       </video>
-      <h2>Thoughts and future development</h2>
+      <p></p>
+      <a class="anchor" href="#future"><h2 id="future">Thoughts and future development</h2></a>
       <p>This project was definitely a success and is something Ive found myself using almost daily without even
         thinking about it, that's not to say there isn't improvements I want to make. For one this only works on Linux
         at the moment, a Windows version would definitely be welcome. Another issue i've ran into is the MXChip losing
