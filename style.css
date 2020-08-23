@@ -132,10 +132,17 @@ h1 {
 
 }
 
+.blog-link{
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+}
 .blog-footer {
     margin: 0 auto;
     padding-bottom: 0.5rem;
-    width: 80%;
+    width: 90%;
 }
 .blog-footer ul {
     list-style: none;
@@ -159,9 +166,10 @@ h1 {
     white-space: nowrap;
 }
 
-
-.lang{
-    
+.type{
+    margin-right: auto;
+}
+.lang{    
     border-radius: 3px;
     padding: 0 0.5rem;
     font-weight: 100;
