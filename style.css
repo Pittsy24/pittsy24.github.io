@@ -10,12 +10,12 @@ html[data-theme='dark'] {
 
 html{
   --text-color-normal: #000;
-  --background-color-normal: var(--background-color-normal);
+  --background-color-normal: #f9f9fa;
   --link-normal: #00568F;
   --link-visited-normal:#694D75;
   --footer-color-normal: #ececec;
   --blog-background: #fffffe;
-  --blog-shadow: rgba(0, 0, 0, .1);
+  --blog-shadow: rgba(12, 12, 13, 0.1);
 
 }
 
@@ -88,7 +88,7 @@ h1 {
 .blog-container {
     background: var(--blog-background);
     border-radius: 5px;
-    box-shadow: var(--blog-shadow) 4px 4px 2px -2px;
+    box-shadow: 0 1px 4px 0 var(--blog-shadow);
     font-family: "adelle-sans", sans-serif;
     font-weight: 100;
     margin: 24px auto;
@@ -96,34 +96,44 @@ h1 {
     position: relative;
 
 }
+.blog-container:hover {
+    box-shadow: 0 0 0 2.5px #D7D7DB;
+    cursor: pointer;
+    transition: box-shadow 200ms;
+}
 .blog-summary p{
     margin-top: 0px;
     margin-bottom: 0px
 }
 .blog-body {
     margin: 0 auto;
-    width: 80%;
-    padding-bottom: 0.5rem;
+    width: 90%;
+
+}
+
+.blog-container:hover .blog-title h1 a {
+    color: var(--link-normal);
 }
 .blog-title h1 a {
-    /* color: #333; */
+    color: var(--text-color-normal);
     font-weight: bold;
     font-size: 1.2rem;
     padding-top: 1rem;
     margin-bottom: 0px;
     padding-bottom: 0px;
+    text-decoration: none;
 }
 .blog-title h1{
     margin-bottom: 1rem;
     padding-bottom: 0px; 
+    padding-top: 1em;
     line-height: 0.8;
+
 
 }
 
 .blog-footer {
-    border-top: 1px solid var(--text-color-normal);
     margin: 0 auto;
-    padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     width: 80%;
 }
