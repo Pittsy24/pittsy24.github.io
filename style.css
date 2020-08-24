@@ -28,9 +28,12 @@ a:hover {
     text-decoration: underline;
 }
 
+
 .toggleDark{
     cursor: pointer;
 }
+
+
 
 body {
     position: relative;
@@ -182,9 +185,14 @@ h1 {
     background-color: #366d9c !important;
     color: #FFF !important;    
 }
+.mxchip{
+    background-color: #0042b4 !important;
+    color: #FFF !important;    
+
+}
 .shell {
     background-color: #89e051 !important;
-    color: #FFF !important;    
+    color: #000  !important;    
 }
 .html{
     background-color: #e34c26 !important;
@@ -657,6 +665,31 @@ table tr td:nth-child(2), table tr td:nth-child(3) {
 .download p,small{
     display: inline;
 }
+
+
+#workCardContainer .blog-container{
+    opacity: 0;
+}
+
+
+#workCardContainer .blog-container:nth-of-type(n){
+    --index: 0;
+    animation: 0.4s ease-in-out 0s 1 slideInFromLeft forwards; 
+    animation-delay: calc(200ms * var(--index));
+}
+/* .workCardContainer:nth-child(1){
+    animation-delay: 1s;
+} */
+
+@keyframes slideInFromLeft {
+    0% {
+    opacity: 0;
+    }
+    100% {  
+      opacity: 1;
+    }
+  }
+
 /* 
 #blogHR{
     z-index: -1;
