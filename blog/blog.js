@@ -7,10 +7,6 @@ let tagList = new Set();
 let articleCards = [];
 
 
-$().ready(()=> {
-  $("#blogNoJS").css("display", "none");
-
-})
 
 
 $.getJSON("/blog/articles.json", function (data) {
