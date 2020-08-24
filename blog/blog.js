@@ -7,6 +7,12 @@ let tagList = new Set();
 let articleCards = [];
 
 
+$().ready(()=> {
+  $("#blogNoJS").css("display", "none");
+
+})
+
+
 $.getJSON("/blog/articles.json", function (data) {
   // Read the data, hide the loading spinner and build the blog
   articles = data.articles;
