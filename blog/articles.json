@@ -1,0 +1,18 @@
+{
+    "articles": [
+        {
+            "headline": "Guide for using WS2812B LED Strips with MXChip",
+            "summary": "A guide on how to control a WS2812B LED Strip with the MXChip",
+            "link": "/blog/guide-for-using-ws2812b-led-strips-with-mxchip.html",
+            "date": 1597881600,
+            "tags": ["C++", "MXChip"]
+        },
+        {
+            "headline": "Create automatic display rotation with MXChip",
+            "summary": "MXChip/Arduino project that automatically rotates your screens display when you rotate your monitor.",
+            "link": "/blog/create-automatic-display-rotation-with-mxchip.html",
+            "date": 1593302400,
+            "tags": ["C++", "Python", "Shell", "MXChip"]
+        }
+    ]
+}
