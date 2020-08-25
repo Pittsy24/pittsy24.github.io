@@ -1,4 +1,4 @@
-var url = new URL("http://127.0.0.1:5500/games/ttt.html");
+var url = new URL("http://joepitts.co.uk/games/ttt.html");
 var player;
 var peer = new Peer();
 var peerID;
