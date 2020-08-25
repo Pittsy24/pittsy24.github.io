@@ -1,8 +1,10 @@
-var url = new URL("http://127.0.0.1:5500/games/ttt.html");
+var url = new URL("http://joepitts.co.uk/games/ttt.html");
 var player;
 var peer = new Peer();
 var peerID;
 var conn;
+
+var opponentsName = "Player ";
 
 var grid;
 
@@ -28,6 +30,7 @@ function nameChange() {
 }
 
 function changeOtherPlayersName(data) {
+  opponentsName = data;
   var input = $(`#ttt_player${player} input`)[0].outerHTML;
   var v = $(`#ttt_player${player} input`)[0].value;
 
@@ -87,7 +90,8 @@ function messageHandler(data) {
   if (obj.name !== undefined) {
     changeOtherPlayersName(obj.name);
   }
-
+  else{
+    $("#ttt_playersturn").text("It's my turn");
   // We got a coord
 
   // grid[1][1].children().children(small[0][1]);
@@ -105,7 +109,13 @@ function messageHandler(data) {
   );
 
   disablePointer();
-  enablePointer([[obj.square[1], obj.square[0]]]);
+  if(running){
+    enablePointer([[obj.square[1], obj.square[0]]]);
+
+  }
+  }
+
+
 }
 
 function squareToIndex(square) {
@@ -125,8 +135,9 @@ function checkOverallWin(square, plyr) {
     if (!grid[i][coords[0]].children().hasClass("p" + plyr)) break;
     if (i == 2) {
       console.log("WIN");
-      alert(`Player ${plyr} has won!`);
       disablePointer();
+
+      alert(`Player ${plyr} has won!`);
       running = false;
       //report win for s
     }
@@ -138,9 +149,10 @@ function checkOverallWin(square, plyr) {
     if (!grid[coords[1]][i].children().hasClass("p" + plyr)) break;
     if (i == 2) {
       console.log("WIN");
+      disablePointer();
+
 
       alert(`Player ${plyr} has won!`);
-      disablePointer();
       running = false;
 
       //report win for s
@@ -153,9 +165,10 @@ function checkOverallWin(square, plyr) {
       if (!grid[i][i].children().hasClass("p" + plyr)) break;
       if (i == 2) {
         console.log("WIN");
+        disablePointer();
+
 
         alert(`Player ${plyr} has won!`);
-        disablePointer();
         running = false;
       }
     }
@@ -167,9 +180,10 @@ function checkOverallWin(square, plyr) {
       if (!grid[i][2 - i].children().hasClass("p" + plyr)) break;
       if (i == 2) {
         console.log("WIN");
+        disablePointer();
+
 
         alert(`Player ${plyr} has won!`);
-        disablePointer();
         running = false;
       }
     }
@@ -263,6 +277,7 @@ function disablePointer() {
 }
 
 function squareClicked(elm) {
+  $("#ttt_playersturn").text(`It's ${opponentsName}'s turn`);
   console.log(elm);
   $(elm).addClass("p" + player);
   disablePointer();
@@ -284,7 +299,9 @@ function squareClicked(elm) {
     square: [x, y],
   };
   conn.send(JSON.stringify(data));
-  indicate(grid[y][x].children());
+  setTimeout(() => {
+    if(running){indicate(grid[y][x].children());}
+  }, 250)
 }
 
 function enablePointer(grids) {
@@ -335,6 +352,7 @@ function indicate(elm) {
 }
 
 function showGame() {
+  $("#ttt_title").fadeOut();
   $("#ttt_instructions").fadeOut();
   $("#ttt_new_options").fadeOut(
     (callback = () => {
@@ -348,12 +366,17 @@ function showGame() {
             myGo = false;
             $("#ttt_player2").fadeIn();
           }
+          $("#ttt_playersturn").fadeIn();
           $("#ttt_grid").fadeIn(
             (callback = () => {
               resizeGrid();
               if (myGo) {
                 enablePointer("all");
+                $("#ttt_playersturn").text("It's my turn");
+                opponentsName = "Player Two";
               } else {
+                opponentsName = "Player One";
+                $("#ttt_playersturn").text(`It's ${opponentsName}'s turn`);
                 disablePointer();
                 indicate("all");
               }
