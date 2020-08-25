@@ -646,6 +646,15 @@ small {
   display: inline;
 }
 
+#ttt_grid{
+  --player-one: #117AA7;
+  --player-two: #f64740;
+  --indicate: rgb(162, 155, 254);
+  --indicate-pulse: rgba(162, 155, 254, 0.7);
+  --grid-colour: #555;
+}
+
+
 #ttt_grid {
   width: 100%;
   height: 640px;
@@ -681,11 +690,16 @@ small {
 
 }
 
+#ttt_playersturn{
+  display: none;
+}
 #ttt_player1{
+  width: 100%;
     display: none;
 }
 
 #ttt_player2{
+  width: 100%;
     display: none;
 }
 .ttt_square {
@@ -696,29 +710,28 @@ small {
 }
 
 .ttt_small.middle {
-  border-left: 1px solid #555555;
-  border-right: 1px solid #555555;
+  border-left: 1px solid var(--grid-colour);
+  border-right: 1px solid var(--grid-colour);
 }
 
 .ttt_small.mid {
-  border-top: 1px solid #555555;
-  border-bottom: 1px solid #555555;
+  border-top: 1px solid var(--grid-colour);
+  border-bottom: 1px solid var(--grid-colour);
 }
 
 .ttt_big.middle {
-  border-left: 3px solid #555555;
-  border-right: 3px solid #555555;
+  border-left: 3px solid var(--grid-colour);
+  border-right: 3px solid var(--grid-colour);
 }
 
 .ttt_big.mid {
-  border-top: 3px solid #555555;
-  border-bottom: 3px solid #555555;
+  border-top: 3px solid var(--grid-colour);
+  border-bottom: 3px solid var(--grid-colour);
 }
 
 .ttt_small_grid {
   width: 100%;
   height: 100%;
-  color: blue;
   position: relative;
   padding: 10%;
 }
@@ -732,7 +745,7 @@ small {
 
 .ttt_indicate::before{
     position: absolute;
-    background-color: rgb(162, 155, 254);
+    background-color: var(--indicate);
     width: 90%;
     height: 90%;
     content: "";
@@ -741,51 +754,61 @@ small {
     left: 0;
     top: 0;
     transform: scale(1);
-	animation: pulse 2s infinite;
+    animation: swashIn 0.25s ease-in-out forwards, pulse 2s infinite;
 }
 
 @keyframes pulse {
 	0% {
 		transform: scale(0.98);
-		box-shadow: 0 0 0 0 rgba(162, 155, 254, 0.7);
+		box-shadow: 0 0 0 0 var(--indicate-pulse)
 	}
 
 	70% {
 		transform: scale(1);
-		box-shadow: 0 0 0 10px rgba(162, 155, 254, 0);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
 	}
 
 	100% {
 		transform: scale(0.98);
-		box-shadow: 0 0 0 0 rgba(162, 155, 254, 0);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 	}
 }
-
 .ttt_small.p1::before{
     position: absolute;
-    background-color: blue;
+    background-color: var(--player-one);
     width: 85%;
     height: 85%;
     content: "";
     margin: 7.5%;
     border-radius: 5px;
+    animation: swashIn 0.25s ease-in-out forwards;
 }
 #ttt_new_options{
     display: none;
 }
 .ttt_small.p2::before{
     position: absolute;
-    background-color: red;
+    background-color: var(--player-two);
     width: 85%;
     height: 85%;
     content: "";
     margin: 7.5%;
     border-radius: 5px;
+    animation: swashIn 0.25s ease-in-out forwards;
+
+
 }
 
+
+.ttt_small.p2:hover::before, .ttt_small.p2:focus::before {
+  animation: swashIn 0.25s ease-in-out forwards;
+}
+.ttt_small.p1:hover::before, .ttt_small.p1:focus::before {
+  animation: swashIn 0.25s ease-in-out forwards;
+}
 .ttt_small_grid.p1::before{
     position: absolute;
-    background-color: blue;
+    background-color: var(--player-one);
     width: 85%;
     height: 85%;
     content: "";
@@ -797,7 +820,7 @@ small {
 }
 .ttt_small_grid.p2::before{
     position: absolute;
-    background-color: red;
+    background-color: var(--player-two);
     width: 85%;
     height: 85%;
     content: "";
@@ -807,6 +830,8 @@ small {
     top: 0;
     z-index: 1;
 }
+
+  
 #workCardContainer .blog-container {
   opacity: 0;
 }
@@ -821,7 +846,7 @@ small {
 } */
 
 
-h3>input[type="text"]{
+h1>input[type="text"]{
     background-color: var(--background-color-normal);
     width: 10ch;
     font-size: 1em;
@@ -839,6 +864,33 @@ h3>input[type="text"]{
     opacity: 1;
   }
 }
+
+@keyframes swashIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+  }
+
+  90% {
+    opacity: 1;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
 
 /* 
 #blogHR{
