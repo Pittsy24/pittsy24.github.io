@@ -785,6 +785,7 @@ small {
 }
 #ttt_new_options{
     display: none;
+    width: 100%;
 }
 .ttt_small.p2::before{
     position: absolute;
