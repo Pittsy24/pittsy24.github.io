@@ -899,7 +899,7 @@ h1>input[type="text"]{
 #blogHR{
     z-index: -1;
 } */
-@media all and (max-width: 585px) {
+@media all and (max-width: 530px) {
   /* [id^=drop]:checked+#menu ul li{
         animation-name: open;
         visibility: visible;
