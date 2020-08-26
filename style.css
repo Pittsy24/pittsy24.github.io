@@ -186,7 +186,7 @@ h3 {
   color: #000 !important;
 }
 .html {
-  background-color: #e34c26 !important;
+  background-color: #e44d26 !important;
   color: #fff !important;
 }
 .css {
@@ -899,7 +899,7 @@ h1>input[type="text"]{
 #blogHR{
     z-index: -1;
 } */
-@media all and (max-width: 530px) {
+@media all and (max-width: 585px) {
   /* [id^=drop]:checked+#menu ul li{
         animation-name: open;
         visibility: visible;
