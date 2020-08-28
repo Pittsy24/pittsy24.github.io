@@ -31,17 +31,15 @@ a:hover {
     cursor: pointer;
 }
 
+
+
 body {
     position: relative;
     margin: 0;
     height: auto;
     min-height: 100%;
     line-height: 1.6;
-    font: 18px/1.5 -apple-system, BlinkMacSystemFont, "avenir next", avenir,
-        "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans",
-        roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu,
-        "franklin gothic medium", "century gothic", "Liberation Sans",
-        sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: var(--text-color-normal);
     padding: 0 10px 8rem;
@@ -156,7 +154,7 @@ h3 {
     padding-left: 0;
 }
 
-.blog-footer li+li {
+.blog-footer li + li {
     margin-left: 0.5rem;
 }
 
@@ -428,7 +426,7 @@ nav ul ul {
 
 /* Display Dropdowns on Hover */
 
-nav ul li:hover>ul {
+nav ul li:hover > ul {
     display: inherit;
 }
 
@@ -455,11 +453,11 @@ nav ul ul ul li {
 
 /* Change ' +' in order to change the Dropdown symbol */
 
-li>a:after {
+li > a:after {
     content: " +";
 }
 
-li>a:only-child:after {
+li > a:only-child:after {
     content: "";
 }
 
@@ -546,7 +544,7 @@ li>a:only-child:after {
     padding: 0.5em;
 }
 
-.codeSnippet:hover>.double-val-label {
+.codeSnippet:hover > .double-val-label {
     opacity: 1;
 }
 
@@ -565,7 +563,7 @@ html[data-theme="dark"] .codeSnippet {
     transition: all 0.3s;
 }
 
-.double-val-label>span {
+.double-val-label > span {
     background-color: #656565;
     color: #ffffff;
     display: table-cell;
@@ -578,22 +576,22 @@ html[data-theme="dark"] .codeSnippet {
     white-space: nowrap;
 }
 
-html[data-theme="dark"] .double-val-label>span {
+html[data-theme="dark"] .double-val-label > span {
     filter: invert(1);
 }
 
-.double-val-label>span:first-child {
+.double-val-label > span:first-child {
     border-bottom-left-radius: 0.25em;
     border-top-left-radius: 0.25em;
 }
 
-.double-val-label>span:last-child {
+.double-val-label > span:last-child {
     border-bottom-right-radius: 0.25em;
     border-top-right-radius: 0.25em;
     cursor: pointer;
 }
 
-.double-val-label>span.primary {
+.double-val-label > span.primary {
     background-color: #337ab7;
 }
 
@@ -912,7 +910,7 @@ small {
     animation-delay: 1s;
 } */
 
-h1>input[type="text"] {
+h1 > input[type="text"] {
     background-color: var(--background-color-normal);
     width: 10ch;
     font-size: 1em;
@@ -969,7 +967,7 @@ h1>input[type="text"] {
     line-height: 1em;
 }
 
-.player.host>.player_name::before {
+.player.host > .player_name::before {
     content: url("data:image/svg+xml; utf8, <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='star' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512' class='svg-inline--fa fa-star fa-w-18' id='svg_resize' width='25' height='25'><path fill='currentColor' d='M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z' class=''></path></svg>");
     display: inline-block;
     vertical-align: middle;
@@ -999,17 +997,17 @@ h1>input[type="text"] {
 
 #secret_join {
     font-family: SecretHitler;
-    width: 45%;
+    background: #f9f9fa;
+    width: 288px;
     border: #709cc7 1.75rem solid;
     border-radius: 20px;
     padding: 0.5rem;
-    padding-bottom: 20%;
+    min-height: 450px;
     height: max-content;
-
     position: relative;
 }
 
-#secret_join>h2 {
+#secret_join > h2 {
     font-weight: unset;
     font-size: 2em;
     padding: 0;
@@ -1017,24 +1015,37 @@ h1>input[type="text"] {
     color: #709cc7;
     width: 100%;
     border-bottom: #709cc7 dotted 6px;
+    margin-bottom: 1rem;
 }
 
-#secret_join>img {
+#secret_join > img {
     width: 25%;
     height: 100px;
 }
 
-
-#secret_create p{
+#secret_create p {
     margin: 0;
     display: inline;
 }
 
+#secret_join p {
+    margin: 0;
+    display: inline;
+}
 
-.filler{
-    word-wrap: anywhere;
-    text-decoration: overline line-through underline #c56e6c 4px;
+.red_filler {
+    box-shadow: inset 0px -6px 0 rgb(197, 110, 108), inset 0px 6px 0 rgb(197, 110, 108);
     color: transparent !important;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+
+.blue_filler {
+    box-shadow: inset 0px -6px 0 #709cc7, inset 0px 6px 0 #709cc7;
+    color: transparent !important;
+    width: 100%;
+    margin-bottom: 0.5rem;
 }
 #secret_join:before {
     content: "";
@@ -1050,40 +1061,73 @@ h1>input[type="text"] {
     width: 32px;
     height: 32px;
     display: inline-block;
-    border: calc(var(--t)*1px) solid transparent;
-    border-image:
-        linear-gradient(to bottom left,
-            transparent 49.5%, var(--c) 50%) var(--t);
-    background: linear-gradient(to bottom left, var(--c) 0%, var(--c) 50% calc(50% + var(--t)*1px), #ff0b0b00 calc(50% + var(--t)*1px + 1px));
+    border: calc(var(--t) * 1px) solid transparent;
+    border-image: linear-gradient(
+            to bottom left,
+            transparent 49.5%,
+            var(--c) 50%
+        )
+        var(--t);
+    background: linear-gradient(
+        to bottom left,
+        var(--c) 0%,
+        var(--c) 50% calc(50% + var(--t) * 1px),
+        #ff0b0b00 calc(50% + var(--t) * 1px + 1px)
+    );
     background-origin: border-box;
     background-repeat: no-repeat;
 }
 
 #secret_create {
     font-family: SecretHitler;
-    width: 45%;
+    width: 288px;
+    background: #f9f9fa;
     border: rgb(197, 110, 108) 1.75rem solid;
+    color: rgb(197, 110, 108);
     border-radius: 20px;
     padding: 0.5rem;
-    padding-bottom: 5%;
-    height: max-content;
     position: relative;
+    min-height: 450px;
+    height: max-content;
+
+
 }
-#create_lobby{
-   border: rgb(197, 110, 108) 0.25rem solid;
-   text-transform: uppercase;
-   font-size: 1rem;
-   font-weight: bold;
-   color: rgb(197, 110, 108, 0.5);
-   
-   cursor: pointer;
+#create_lobby {
+    border: rgb(197, 110, 108) 0.25rem solid;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(197, 110, 108, 0.5);
+    cursor: pointer;
+    margin-left: 0.25ch;
+    float: right;
 }
-#create_lobby:hover{
+
+#create_lobby:focus {
+    outline: none;
+}
+#create_lobby:hover {
     color: rgb(197, 110, 108);
-
 }
 
-#secret_create>h2 {
+#join_lobby {
+    border: rgb(112, 156, 199) 0.25rem solid;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(112, 156, 199, 0.5);
+    cursor: pointer;
+    margin-left: 0.5ch;
+    float: right;
+}
+
+#join_lobby:focus {
+    outline: none;
+}
+#join_lobby:hover {
+    color: rgb(112, 156, 199);
+}
+#secret_create > h2 {
     font-weight: unset;
     font-size: 2em;
     padding: 0;
@@ -1094,21 +1138,15 @@ h1>input[type="text"] {
     margin-bottom: 1rem;
 }
 
-#secret_create>p {
-    font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir,
-    "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans",
-    roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu,
-    "franklin gothic medium", "century gothic", "Liberation Sans",
-    sans-serif;
+#secret_create > p {
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     color: rgb(197, 110, 108);
-    
 }
 
-#secret_create>img {
+#secret_create > img {
     width: 25%;
     height: 100px;
-
 }
 
 #secret_create:before {
@@ -1125,77 +1163,185 @@ h1>input[type="text"] {
     width: 32px;
     height: 32px;
     display: inline-block;
-    border: calc(var(--t)*1px) solid transparent;
-    border-image:
-        linear-gradient(to bottom left,
-            transparent 49.5%, var(--c) 50%) var(--t);
-    background: linear-gradient(to bottom left, var(--c) 0%, var(--c) 50% calc(50% + var(--t)*1px), #ff0b0b00 calc(50% + var(--t)*1px + 1px));
+    border: calc(var(--t) * 1px) solid transparent;
+    border-image: linear-gradient(
+            to bottom left,
+            transparent 49.5%,
+            var(--c) 50%
+        )
+        var(--t);
+    background: linear-gradient(
+        to bottom left,
+        var(--c) 0%,
+        var(--c) 50% calc(50% + var(--t) * 1px),
+        #ff0b0b00 calc(50% + var(--t) * 1px + 1px)
+    );
     background-origin: border-box;
     background-repeat: no-repeat;
 }
 
-#create_name{
+#create_name {
     border: none;
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: bold;
     color: rgb(197, 110, 108);
-    width: 9ch;
+    width: 135px;
+}
+#create_name:focus{
+    outline: rgb(197, 110, 108);
+}
+#join_name {
+    border: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #709cc7;
+    width: 14ch;
+}
 
+#join_name:focus{
+    outline: rgb(197, 110, 108);
+}
+
+#join_code {
+    border: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #709cc7;
+    width: 16ch;
+}
+
+#join_code:focus{
+    outline: rgb(197, 110, 108);
+}
+
+#secret_join > p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #709cc7;
+}
+
+#secret_hitler_title {
+    font-family: "Eskapade";
+    font-size: 4rem;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.back_card{
+   display: none;
 }
 
 @font-face {
-    font-family: 'SecretHitler';
-    src: url('/resources/fonts/secret_hitler.ttf') format('truetype');
+    font-family: "Eskapade";
+    src: url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.eot");
+    src: url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.eot?#iefix")
+            format("embedded-opentype"),
+        url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.woff2")
+            format("woff2"),
+        url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.woff")
+            format("woff"),
+        url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.ttf")
+            format("truetype"),
+        url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.svg#Eskapade")
+            format("svg");
+}
 
-    /* 
+@font-face {
+    font-family: "SecretHitler";
+    src: url("/resources/fonts/secret_hitler.ttf") format("truetype");
+}
+/* 
 #blogHR{
     z-index: -1;
 } */
-    @media all and (max-width: 530px) {
 
-        /* [id^=drop]:checked+#menu ul li{
+@media all and (max-width: 660px) {
+    #secret_hitler_title{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    #secret_game{
+        flex-direction: column;
+        position: relative;
+        width: fit-content;
+        width: -moz-fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #secret_game::after{
+        content: url("/resources/images/secret_hitler/flip.svg");
+        position: absolute;
+        z-index: 2;
+        top: -25px;
+        width: 50px;
+        right: -20px;
+        cursor: pointer;
+    }
+
+    .card:last-child{
+        box-shadow: 10px -8px 0px 0px rgb(197, 110, 108);
+    }
+
+    .card:last-child{
+        display: block !important;
+    }
+
+    #secret_game .card{
+        margin-left: auto;
+        margin-right: auto;
+        display: none;
+    }
+}
+@media all and (max-width: 530px) {
+
+    [id^="drop"]:checked + ul#burger_menu li {
         animation-name: open;
+        animation-fill-mode: both;
         visibility: visible;
-        animation-duration: 0.4s;
+        animation-duration: 0.5s;
         height: 32px;
-        opacity: 1;
-    } */
-        [id^="drop"]:checked+ul#burger_menu li {
-            animation-name: open;
-            animation-fill-mode: both;
-            visibility: visible;
-            animation-duration: 0.5s;
-            height: 32px;
-            /* opacity: 1; */
-        }
+        /* opacity: 1; */
+    }
 
-        .burger {
-            display: block;
-        }
+    #header{
+        margin-bottom: 0;
+    }
 
-        #normalMenu {
-            display: none;
-        }
+    hr{
+        margin: 0;
+    }
+   
+    .burger {
+        display: block;
+    }
 
-        #burger ul li:nth-child(1) {
-            animation-delay: 0s;
-        }
+    #normalMenu {
+        display: none;
+    }
 
-        #burger ul li:nth-child(2) {
-            animation-delay: 0.05s;
-        }
+    #burger ul li:nth-child(1) {
+        animation-delay: 0s;
+    }
 
-        #burger ul li:nth-child(3) {
-            animation-delay: 0.1s;
-        }
+    #burger ul li:nth-child(2) {
+        animation-delay: 0.05s;
+    }
 
-        #burger ul li:nth-child(4) {
-            animation-delay: 0.15s;
-        }
+    #burger ul li:nth-child(3) {
+        animation-delay: 0.1s;
+    }
 
-        #burger ul li:nth-child(5) {
-            animation-delay: 0.2s;
-        }
+    #burger ul li:nth-child(4) {
+        animation-delay: 0.15s;
+    }
+
+    #burger ul li:nth-child(5) {
+        animation-delay: 0.2s;
     }
 }
