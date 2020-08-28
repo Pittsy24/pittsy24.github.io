@@ -35,17 +35,16 @@ class User {
     DataHandler;
     Server;
 
-    constructor(name, dataHandler = printData, customID) {
+    constructor(name, dataHandler = printData, callback = ()=>{}) {
         // This is an existing connection
         this.DataHandler = dataHandler;
         this.Name = name;
-        if (customID !== undefined) {
-            this.Peer = new Peer(customID);
-        } else {
-            this.Peer = new Peer();
-        }
+
+        this.Peer = new Peer();
+        
         this.Peer.on("open", (id) => {
             this.ID = id;
+            callback();
         });
     }
 
@@ -72,8 +71,9 @@ class Lobby {
     ID;
     Connections = [];
     DataHandler;
+    NewUser;
 
-    constructor(name, dataHandler = handler) {
+    constructor(name, dataHandler = handler, newUserHandler = ()=>{} ) {
         this.Peer = new Peer();
         this.Peer.on("open", (id) => {
             this.ID = id;
@@ -86,6 +86,7 @@ class Lobby {
 
         this.Name = name;
         this.DataHandler = dataHandler;
+        this.NewUser =  newUserHandler;
         this.Connections = [];
     }
 
@@ -100,15 +101,17 @@ class Lobby {
             this.Connections.splice(existingIndex, 1);
         }
         this.Connections.push(u);
-        setTimeout(this.NewConnectionUpdate, 100)
+        setTimeout(this.NewConnectionUpdate.bind(this), 100)
     }
 
     NewConnectionUpdate() {
         let users = { users: [] };
+        console.log(this);
         this.Connections.forEach((connection) => {
             users.users.push(connection.Name);
         });
         this.Broadcast(users);
+        newUser(users.users[users.users.length - 1]);
     }
 
     Receive(sender, data, context) {

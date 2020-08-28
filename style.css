@@ -85,6 +85,7 @@ h3 {
     align-items: center;
     justify-content: space-between;
 }
+
 .blog-container {
     background: var(--blog-background);
     border-radius: 5px;
@@ -95,15 +96,18 @@ h3 {
     /* width: 20rem; */
     position: relative;
 }
+
 .blog-container:hover {
     box-shadow: 0 0 0 2.5px #d7d7db;
     cursor: pointer;
     transition: box-shadow 200ms;
 }
+
 .blog-summary p {
     margin-top: 0px;
     margin-bottom: 0px;
 }
+
 .blog-body {
     margin: 0 auto;
     width: 90%;
@@ -112,6 +116,7 @@ h3 {
 .blog-container:hover .blog-title h1 a {
     color: var(--link-normal);
 }
+
 .blog-title h1 a {
     color: var(--text-color-normal);
     font-weight: bold;
@@ -121,6 +126,7 @@ h3 {
     padding-bottom: 0px;
     text-decoration: none;
 }
+
 .blog-title h1 {
     margin-bottom: 1rem;
     padding-bottom: 0px;
@@ -135,11 +141,13 @@ h3 {
     left: 0;
     top: 0;
 }
+
 .blog-footer {
     margin: 0 auto;
     padding-bottom: 0.5rem;
     width: 90%;
 }
+
 .blog-footer ul {
     list-style: none;
     display: flex;
@@ -148,9 +156,10 @@ h3 {
     padding-left: 0;
 }
 
-.blog-footer li + li {
+.blog-footer li+li {
     margin-left: 0.5rem;
 }
+
 .blog-footer li {
     font-size: 0.75rem;
     height: 1.5rem;
@@ -165,39 +174,48 @@ h3 {
 .type {
     margin-right: auto;
 }
+
 .lang {
     border-radius: 3px;
     padding: 0 0.5rem;
     font-weight: 100;
 }
+
 .cpp {
     background-color: #6891d5 !important;
     color: #fff !important;
 }
+
 .python {
     background-color: #366d9c !important;
     color: #fff !important;
 }
+
 .mxchip {
     background-color: #0042b4 !important;
     color: #fff !important;
 }
+
 .shell {
     background-color: #89e051 !important;
     color: #000 !important;
 }
+
 .html {
     background-color: #e44d26 !important;
     color: #fff !important;
 }
+
 .css {
     background-color: #563d7c !important;
     color: #fff !important;
 }
+
 .js {
     background-color: #f1e05a !important;
     color: #000 !important;
 }
+
 .typescript {
     background-color: #0076c6 !important;
     color: #fff !important;
@@ -208,14 +226,17 @@ h3 {
     vertical-align: middle;
     width: 12.5%;
 }
+
 #header {
     margin-bottom: 1rem;
 }
+
 #title {
     display: inline-block;
     vertical-align: middle;
     margin-left: 20px;
 }
+
 #title p {
     display: block;
     font-size: 2em;
@@ -223,6 +244,7 @@ h3 {
     margin-block-start: 0.67em;
     margin-block-end: 0.67em;
 }
+
 #title p {
     color: var(--text-color-normal);
 }
@@ -253,6 +275,7 @@ html {
 .thumbnail {
     width: 100%;
 }
+
 .content {
     margin: 0 auto;
     padding-top: 2%;
@@ -278,9 +301,11 @@ html {
     text-align: center;
     transition: background-color 0.3s;
 }
+
 .footer a {
     color: var(--text-color-normal);
 }
+
 /* button {
   background: none;
   color: inherit;
@@ -301,9 +326,11 @@ button::-moz-focus-inner {
 }
 
 .row {
-    display: -ms-flexbox; /* IE10 */
+    display: -ms-flexbox;
+    /* IE10 */
     display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
+    -ms-flex-wrap: wrap;
+    /* IE10 */
     flex-wrap: wrap;
     padding: 0 4px;
 }
@@ -319,16 +346,20 @@ button::-moz-focus-inner {
     margin-top: 4px;
     vertical-align: middle;
 }
+
 nav {
     line-height: 2rem;
 }
+
 nav a {
     color: #252525;
 }
+
 .toggle,
 [id^="drop"] {
     display: none;
 }
+
 /* Giving a background-color to the nav container. */
 
 nav {
@@ -336,6 +367,7 @@ nav {
     padding: 0;
     background-color: unset;
 }
+
 /* Since we'll have the "ul li" "float:left"
 * we need to add a clear after the container. */
 
@@ -344,6 +376,7 @@ nav:after {
     display: table;
     clear: both;
 }
+
 /* Removing padding, margin and "list-style" from the "ul",
 * and adding "position:reltive" */
 
@@ -361,6 +394,7 @@ nav ul li {
     display: inline-block;
     float: left;
 }
+
 /* Styling the links */
 
 nav a {
@@ -371,14 +405,17 @@ nav a {
     text-decoration: none;
     outline: none;
 }
+
 nav ul li ul li:hover {
     text-decoration: underline;
 }
+
 /* Background color change on Hover */
 
 nav a:hover {
     text-decoration: underline;
 }
+
 /* Hide Dropdowns by Default
 * and giving it a position of absolute */
 
@@ -388,11 +425,13 @@ nav ul ul {
     /* has to be the same number as the "line-height" of "nav a" */
     top: 2.8rem;
 }
+
 /* Display Dropdowns on Hover */
 
-nav ul li:hover > ul {
+nav ul li:hover>ul {
     display: inherit;
 }
+
 /* Fisrt Tier Dropdown */
 
 nav ul ul li {
@@ -401,6 +440,7 @@ nav ul ul li {
     display: list-item;
     position: relative;
 }
+
 /* Second, Third and more Tiers	
 * We move the 2nd and 3rd etc tier dropdowns to the left
 * by the amount of the width of the first tier.
@@ -412,12 +452,14 @@ nav ul ul ul li {
     /* has to be the same number as the "width" of "nav ul ul li" */
     left: 170px;
 }
+
 /* Change ' +' in order to change the Dropdown symbol */
 
-li > a:after {
+li>a:after {
     content: " +";
 }
-li > a:only-child:after {
+
+li>a:only-child:after {
     content: "";
 }
 
@@ -434,6 +476,7 @@ li > a:only-child:after {
     margin-top: 1.7rem;
     margin-left: 1.5rem;
 }
+
 .burger div {
     width: 35px;
     height: 5px;
@@ -449,14 +492,17 @@ li > a:only-child:after {
     opacity: 0;
     transition: height 0.5s;
 }
+
 #burger ul li a {
     color: var(--text-color-normal);
 }
+
 @keyframes open {
     0% {
         opacity: 0;
         height: 0px;
     }
+
     100% {
         opacity: 1;
         height: 32px;
@@ -476,8 +522,10 @@ li > a:only-child:after {
 }
 
 .imageCaptionBox img {
-    width: -moz-available; /* WebKit-based browsers will ignore this. */
-    width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+    width: -moz-available;
+    /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;
+    /* Mozilla-based browsers will ignore this. */
     width: fill-available;
     width: 100%;
 }
@@ -491,13 +539,14 @@ li > a:only-child:after {
     background-color: var(--blog-shadow);
     position: relative;
 }
+
 .codeSnippet pre {
     overflow: auto;
     margin: 0;
     padding: 0.5em;
 }
 
-.codeSnippet:hover > .double-val-label {
+.codeSnippet:hover>.double-val-label {
     opacity: 1;
 }
 
@@ -515,7 +564,8 @@ html[data-theme="dark"] .codeSnippet {
     opacity: 0;
     transition: all 0.3s;
 }
-.double-val-label > span {
+
+.double-val-label>span {
     background-color: #656565;
     color: #ffffff;
     display: table-cell;
@@ -528,21 +578,22 @@ html[data-theme="dark"] .codeSnippet {
     white-space: nowrap;
 }
 
-html[data-theme="dark"] .double-val-label > span {
+html[data-theme="dark"] .double-val-label>span {
     filter: invert(1);
 }
 
-.double-val-label > span:first-child {
+.double-val-label>span:first-child {
     border-bottom-left-radius: 0.25em;
     border-top-left-radius: 0.25em;
 }
-.double-val-label > span:last-child {
+
+.double-val-label>span:last-child {
     border-bottom-right-radius: 0.25em;
     border-top-right-radius: 0.25em;
     cursor: pointer;
 }
 
-.double-val-label > span.primary {
+.double-val-label>span.primary {
     background-color: #337ab7;
 }
 
@@ -555,9 +606,11 @@ html[data-theme="dark"] .double-val-label > span {
     display: block;
     margin: auto;
 }
+
 .blogPost h1 {
     margin-bottom: 0px;
 }
+
 .blogPost #readingTime p {
     margin-top: 0px;
     display: inline-block;
@@ -577,6 +630,7 @@ html[data-theme="dark"] .double-val-label > span {
     padding-bottom: 0.25em;
     border-bottom: 1px solid #eaecef;
 }
+
 .blogPost h2:first-of-type {
     margin-top: 0em;
 }
@@ -665,6 +719,7 @@ small {
 #ttt_title {
     margin-bottom: 0;
 }
+
 #ttt_players {
     display: none;
     margin-top: 0;
@@ -677,6 +732,7 @@ small {
 #ttt_gameid {
     display: none;
 }
+
 #ttt_code {
     width: auto;
 }
@@ -684,6 +740,7 @@ small {
 #ttt_buttons {
     display: none;
 }
+
 #ttt_buttons button {
     margin-left: 0.25rem;
     margin-right: 0.25rem;
@@ -692,6 +749,7 @@ small {
 #ttt_playersturn {
     display: none;
 }
+
 #ttt_player1 {
     width: 100%;
     display: none;
@@ -701,6 +759,7 @@ small {
     width: 100%;
     display: none;
 }
+
 .ttt_square {
     width: 33%;
     height: 33%;
@@ -734,6 +793,7 @@ small {
     position: relative;
     padding: 10%;
 }
+
 .ttt_small {
     width: 33%;
     height: 33%;
@@ -772,6 +832,7 @@ small {
         box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     }
 }
+
 .ttt_small.p1::before {
     position: absolute;
     background-color: var(--player-one);
@@ -782,10 +843,12 @@ small {
     border-radius: 5px;
     animation: swashIn 0.25s ease-in-out forwards;
 }
+
 #ttt_new_options {
     display: none;
     width: 100%;
 }
+
 .ttt_small.p2::before {
     position: absolute;
     background-color: var(--player-two);
@@ -801,10 +864,12 @@ small {
 .ttt_small.p2:focus::before {
     animation: swashIn 0.25s ease-in-out forwards;
 }
+
 .ttt_small.p1:hover::before,
 .ttt_small.p1:focus::before {
     animation: swashIn 0.25s ease-in-out forwards;
 }
+
 .ttt_small_grid.p1::before {
     position: absolute;
     background-color: var(--player-one);
@@ -818,6 +883,7 @@ small {
     z-index: 1;
     opacity: 0.6;
 }
+
 .ttt_small_grid.p2::before {
     position: absolute;
     background-color: var(--player-two);
@@ -841,11 +907,12 @@ small {
     animation: 0.4s ease-in-out 0s 1 slideInFromLeft forwards;
     animation-delay: calc(200ms * var(--index));
 }
+
 /* .workCardContainer:nth-child(1){
     animation-delay: 1s;
 } */
 
-h1 > input[type="text"] {
+h1>input[type="text"] {
     background-color: var(--background-color-normal);
     width: 10ch;
     font-size: 1em;
@@ -855,10 +922,12 @@ h1 > input[type="text"] {
     border: none;
     text-decoration: underline;
 }
+
 @keyframes slideInFromLeft {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -889,6 +958,7 @@ h1 > input[type="text"] {
         transform: scale(1, 1);
     }
 }
+
 .player {
     display: flex;
     padding: 1rem;
@@ -898,7 +968,8 @@ h1 > input[type="text"] {
 .player_name {
     line-height: 1em;
 }
-.player.host > .player_name::before {
+
+.player.host>.player_name::before {
     content: url("data:image/svg+xml; utf8, <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='star' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512' class='svg-inline--fa fa-star fa-w-18' id='svg_resize' width='25' height='25'><path fill='currentColor' d='M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z' class=''></path></svg>");
     display: inline-block;
     vertical-align: middle;
@@ -911,53 +982,219 @@ h1 > input[type="text"] {
     border: none;
     cursor: pointer;
 }
+
 .player_kick svg {
     width: 25px;
     height: 25px;
 }
+
 #new_player {
     margin-top: 1rem;
 }
-/* 
+
+#secret_game {
+    display: flex;
+    justify-content: space-around;
+}
+
+#secret_join {
+    font-family: SecretHitler;
+    width: 45%;
+    border: #709cc7 1.75rem solid;
+    border-radius: 20px;
+    padding: 0.5rem;
+    padding-bottom: 20%;
+    height: max-content;
+
+    position: relative;
+}
+
+#secret_join>h2 {
+    font-weight: unset;
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+    color: #709cc7;
+    width: 100%;
+    border-bottom: #709cc7 dotted 6px;
+}
+
+#secret_join>img {
+    width: 25%;
+    height: 100px;
+}
+
+
+#secret_create p{
+    margin: 0;
+    display: inline;
+}
+
+
+.filler{
+    word-wrap: anywhere;
+    text-decoration: overline line-through underline #c56e6c 4px;
+    color: transparent !important;
+}
+#secret_join:before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: -6px;
+
+    --t: 2;
+    /* Thickness */
+    --c: #709cc7;
+    /* Color */
+
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    border: calc(var(--t)*1px) solid transparent;
+    border-image:
+        linear-gradient(to bottom left,
+            transparent 49.5%, var(--c) 50%) var(--t);
+    background: linear-gradient(to bottom left, var(--c) 0%, var(--c) 50% calc(50% + var(--t)*1px), #ff0b0b00 calc(50% + var(--t)*1px + 1px));
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+#secret_create {
+    font-family: SecretHitler;
+    width: 45%;
+    border: rgb(197, 110, 108) 1.75rem solid;
+    border-radius: 20px;
+    padding: 0.5rem;
+    padding-bottom: 5%;
+    height: max-content;
+    position: relative;
+}
+#create_lobby{
+   border: rgb(197, 110, 108) 0.25rem solid;
+   text-transform: uppercase;
+   font-size: 1rem;
+   font-weight: bold;
+   color: rgb(197, 110, 108, 0.5);
+   
+   cursor: pointer;
+}
+#create_lobby:hover{
+    color: rgb(197, 110, 108);
+
+}
+
+#secret_create>h2 {
+    font-weight: unset;
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+    color: rgb(197, 110, 108);
+    width: 100%;
+    border-bottom: rgb(197, 110, 108) dotted 6px;
+    margin-bottom: 1rem;
+}
+
+#secret_create>p {
+    font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir,
+    "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans",
+    roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu,
+    "franklin gothic medium", "century gothic", "Liberation Sans",
+    sans-serif;
+    font-weight: bold;
+    color: rgb(197, 110, 108);
+    
+}
+
+#secret_create>img {
+    width: 25%;
+    height: 100px;
+
+}
+
+#secret_create:before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: -6px;
+
+    --t: 2;
+    /* Thickness */
+    --c: rgb(197, 110, 108);
+    /* Color */
+
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    border: calc(var(--t)*1px) solid transparent;
+    border-image:
+        linear-gradient(to bottom left,
+            transparent 49.5%, var(--c) 50%) var(--t);
+    background: linear-gradient(to bottom left, var(--c) 0%, var(--c) 50% calc(50% + var(--t)*1px), #ff0b0b00 calc(50% + var(--t)*1px + 1px));
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+#create_name{
+    border: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(197, 110, 108);
+    width: 9ch;
+
+}
+
+@font-face {
+    font-family: 'SecretHitler';
+    src: url('/resources/fonts/secret_hitler.ttf') format('truetype');
+
+    /* 
 #blogHR{
     z-index: -1;
 } */
-@media all and (max-width: 530px) {
-    /* [id^=drop]:checked+#menu ul li{
+    @media all and (max-width: 530px) {
+
+        /* [id^=drop]:checked+#menu ul li{
         animation-name: open;
         visibility: visible;
         animation-duration: 0.4s;
         height: 32px;
         opacity: 1;
     } */
-    [id^="drop"]:checked + ul#burger_menu li {
-        animation-name: open;
-        animation-fill-mode: both;
-        visibility: visible;
-        animation-duration: 0.5s;
-        height: 32px;
-        /* opacity: 1; */
-    }
-    .burger {
-        display: block;
-    }
-    #normalMenu {
-        display: none;
-    }
+        [id^="drop"]:checked+ul#burger_menu li {
+            animation-name: open;
+            animation-fill-mode: both;
+            visibility: visible;
+            animation-duration: 0.5s;
+            height: 32px;
+            /* opacity: 1; */
+        }
 
-    #burger ul li:nth-child(1) {
-        animation-delay: 0s;
+        .burger {
+            display: block;
+        }
+
+        #normalMenu {
+            display: none;
+        }
+
+        #burger ul li:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        #burger ul li:nth-child(2) {
+            animation-delay: 0.05s;
+        }
+
+        #burger ul li:nth-child(3) {
+            animation-delay: 0.1s;
+        }
+
+        #burger ul li:nth-child(4) {
+            animation-delay: 0.15s;
+        }
+
+        #burger ul li:nth-child(5) {
+            animation-delay: 0.2s;
+        }
     }
-    #burger ul li:nth-child(2) {
-        animation-delay: 0.05s;
-    }
-    #burger ul li:nth-child(3) {
-        animation-delay: 0.1s;
-    }
-    #burger ul li:nth-child(4) {
-        animation-delay: 0.15s;
-    }
-    #burger ul li:nth-child(5) {
-        animation-delay: 0.2s;
-    }
-}
