@@ -67,14 +67,13 @@ class User {
 
 class Lobby {
     Peer;
-    Name;
     ID;
     Connections = [];
     DataHandler;
     NewUser;
 
     constructor(name, dataHandler = handler, newUserHandler = ()=>{} ) {
-        this.Peer = new Peer();
+        this.Peer = new Peer(name);
         this.Peer.on("open", (id) => {
             this.ID = id;
             console.log(this.ID);
@@ -84,7 +83,6 @@ class Lobby {
             i(data);
         });
 
-        this.Name = name;
         this.DataHandler = dataHandler;
         this.NewUser =  newUserHandler;
         this.Connections = [];

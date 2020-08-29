@@ -959,12 +959,12 @@ h1 > input[type="text"] {
 
 .player {
     display: flex;
-    padding: 1rem;
+    padding: 0.25rem;
     border-bottom: var(--blog-shadow) 1px solid;
 }
 
 .player_name {
-    line-height: 1em;
+    line-height: 0.25em;
 }
 
 .player.host > .player_name::before {
@@ -981,7 +981,7 @@ h1 > input[type="text"] {
     cursor: pointer;
 }
 
-.player_kick svg {
+.player_kick img {
     width: 25px;
     height: 25px;
 }
@@ -1260,6 +1260,51 @@ h1 > input[type="text"] {
     z-index: -1;
 } */
 
+#lobby{
+    font-family: "Eskapade";
+
+}
+
+#lobby{
+    display: none;
+}
+
+#lobby_info *{
+    display: inline;
+    font-family: "Roboto";
+    /* padding-right: rem; */
+}
+
+#fascist_board{
+    background-color: #A04240;
+    width: 75vw;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#fascist_spaces{
+    display: flex;
+    height: 100%;
+    margin: 2rem;
+}
+
+.fascist_space{
+    width: 16.66%;
+    height: 100%;
+    background-color: var(--link-normal);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}   
+#fascist_board_title{
+    font-family: "Eskapade";
+    font-size: 2rem;
+    background-color: rgb(197, 110, 108);
+    margin-top: 0;
+    margin-bottom: 0;
+}
 @media all and (max-width: 660px) {
     #secret_hitler_title{
         font-size: 2rem;
@@ -1343,5 +1388,8 @@ h1 > input[type="text"] {
 
     #burger ul li:nth-child(5) {
         animation-delay: 0.2s;
+    }
+    #burger ul li:nth-child(6) {
+        animation-delay: 0.25s ;
     }
 }

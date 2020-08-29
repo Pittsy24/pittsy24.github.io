@@ -195,12 +195,52 @@
             </header>
             <hr />
             <h1 class="center" id="secret_hitler_title">SECRET HITLER</h1>
+            <div id="game_boards">
+                <div id="fascist_board">
+                    <div>
+                        <img src = "/resources/images/secret_hitler/red_chain.png"/>
+                    <h2 class="center" id="fascist_board_title">FASCIST</h2>
+                    </div>
+                    <div id="fascist_spaces">
+                        <div class="fascist_space" id="space_one">
+                            <img class="search"
+                                src="/resources/images/secret_hitler/search.svg"
+                            />
+                            <p>The president investigates a player's identity card.</p>
+                        </div>
+                        <div class="fascist_space" id="space_two">
+                            <img class="search"
+                            src="/resources/images/secret_hitler/search.svg"
+                        />
+                        </div>
+                        <div class="fascist_space" id="space_three">
+                            <img class="search"
+                            src="/resources/images/secret_hitler/search.svg"
+                        />
+                        </div>
+                        <div class="fascist_space" id="space_four">4</div>
+                        <div class="fascist_space" id="space_five">5</div>
+                        <div class="fascist_space" id="space_six">6</div>
+                    </div>
+                </div>
+
+                <!-- <div id = "fascist_board">
+                    <h2 class="center" id="secret_hitler_title">LIBERAL</h2>
+                    <div id = "space_one"></div>
+                    <div id = "space_two"></div>
+                    <div id = "space_three"></div>
+                    <div id = "space_four"></div>
+                    <div id = "space_five"></div>
+                    <div id = "space_six"></div>
+
+                </div> -->
+            </div>
             <div id="secret_game">
-                <div id="secret_create" class="card">
-                    <image
+                <!-- <div id="secret_create" class="card">
+                    <img
                         class="center"
                         src="/resources/images/secret_hitler/skull.svg"
-                    ></image>
+                    ></img>
                     <h2 class="center">Create Game</h2>
                     <p>NAME:</p>
                     <input id="create_name" placeholder="Gobbles" />
@@ -209,15 +249,30 @@
                     <div class="red_filler">1</div>
 
                     <div class="red_filler">1</div>
-                    <div class="red_filler" style="width:56%; display: inline-block;">1</div>
+                    <div
+                        class="red_filler"
+                        style="width: 56%; display: inline-block"
+                    >
+                        1
+                    </div>
 
                     <button id="create_lobby">Create</button>
+
+                    <div id = "lobby">
+                    <div id = "lobby_info">
+                        <h2 id = "lobby_code">Lobby Code: </h2>
+                        <h2 id = "player_count"> Players: 0/10</h2>
+                    </div>
+                    <div id="player_list">
+    
+                    </div>
+                </div>
                 </div>
                 <div id="secret_join" class="card">
-                    <image
+                    <img
                         class="center"
                         src="/resources/images/secret_hitler/dove.svg"
-                    ></image>
+                    ></img>
                     <h2 class="center">Join Game</h2>
                     <p>NAME:</p>
                     <input id="join_name" placeholder="Bonhoeffer" />
@@ -227,9 +282,14 @@
                     <div class="blue_filler">1</div>
                     <div class="blue_filler">1</div>
 
-                    <div class="blue_filler" style="width:65%; display: inline-block;">1</div>
+                    <div
+                        class="blue_filler"
+                        style="width: 65%; display: inline-block"
+                       >
+                        1
+                    </div>
                     <button id="join_lobby">Join</button>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="footer">
