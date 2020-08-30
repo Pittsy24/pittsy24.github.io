@@ -57,7 +57,6 @@ class User {
         this.Conn.on("data", (data) => {
             this.Receive(data);
         });
-        console.log("Tell the server we're ready");
     }
 
     Send(data) {
@@ -71,8 +70,9 @@ class Lobby {
     Connections = [];
     DataHandler;
     NewUser;
+    DisconnectedUser;
 
-    constructor(name, dataHandler = handler, newUserHandler = ()=>{} ) {
+    constructor(name, dataHandler = handler, newUserHandler = ()=>{}, disconnectedUser = () => {} ) {
         this.Peer = new Peer(name);
         this.Peer.on("open", (id) => {
             this.ID = id;
@@ -83,13 +83,21 @@ class Lobby {
             i(data);
         });
 
+    
+
         this.DataHandler = dataHandler;
         this.NewUser =  newUserHandler;
+        this.DisconnectedUser =  disconnectedUser;
+
         this.Connections = [];
     }
 
     IncomingConnection(conn) {
         let u = new ServerUser(this.Receive, conn, this);
+
+        u.Conn.on("close", (data) => {
+            console.log(this)
+        })
 
         let existingIndex = this.Connections.findIndex((connection) => {
             connection.ID === u.ID;
@@ -104,12 +112,15 @@ class Lobby {
 
     NewConnectionUpdate() {
         let users = { users: [] };
-        console.log(this);
         this.Connections.forEach((connection) => {
             users.users.push(connection.Name);
         });
         this.Broadcast(users);
         newUser(users.users[users.users.length - 1]);
+    }
+
+    DisconnectedUserUpdate(){
+
     }
 
     Receive(sender, data, context) {

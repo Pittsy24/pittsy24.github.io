@@ -31,15 +31,13 @@ a:hover {
     cursor: pointer;
 }
 
-
-
 body {
     position: relative;
     margin: 0;
     height: auto;
     min-height: 100%;
     line-height: 1.6;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 18px;
     color: var(--text-color-normal);
     padding: 0 10px 8rem;
@@ -154,7 +152,7 @@ h3 {
     padding-left: 0;
 }
 
-.blog-footer li+li {
+.blog-footer li + li {
     margin-left: 0.5rem;
 }
 
@@ -426,7 +424,7 @@ nav ul ul {
 
 /* Display Dropdowns on Hover */
 
-nav ul li:hover>ul {
+nav ul li:hover > ul {
     display: inherit;
 }
 
@@ -453,11 +451,11 @@ nav ul ul ul li {
 
 /* Change ' +' in order to change the Dropdown symbol */
 
-li>a:after {
+li > a:after {
     content: " +";
 }
 
-li>a:only-child:after {
+li > a:only-child:after {
     content: "";
 }
 
@@ -544,7 +542,7 @@ li>a:only-child:after {
     padding: 0.5em;
 }
 
-.codeSnippet:hover>.double-val-label {
+.codeSnippet:hover > .double-val-label {
     opacity: 1;
 }
 
@@ -563,7 +561,7 @@ html[data-theme="dark"] .codeSnippet {
     transition: all 0.3s;
 }
 
-.double-val-label>span {
+.double-val-label > span {
     background-color: #656565;
     color: #ffffff;
     display: table-cell;
@@ -576,22 +574,22 @@ html[data-theme="dark"] .codeSnippet {
     white-space: nowrap;
 }
 
-html[data-theme="dark"] .double-val-label>span {
+html[data-theme="dark"] .double-val-label > span {
     filter: invert(1);
 }
 
-.double-val-label>span:first-child {
+.double-val-label > span:first-child {
     border-bottom-left-radius: 0.25em;
     border-top-left-radius: 0.25em;
 }
 
-.double-val-label>span:last-child {
+.double-val-label > span:last-child {
     border-bottom-right-radius: 0.25em;
     border-top-right-radius: 0.25em;
     cursor: pointer;
 }
 
-.double-val-label>span.primary {
+.double-val-label > span.primary {
     background-color: #337ab7;
 }
 
@@ -910,7 +908,7 @@ small {
     animation-delay: 1s;
 } */
 
-h1>input[type="text"] {
+h1 > input[type="text"] {
     background-color: var(--background-color-normal);
     width: 10ch;
     font-size: 1em;
@@ -967,7 +965,7 @@ h1>input[type="text"] {
     line-height: 0.25em;
 }
 
-.player.host>.player_name::before {
+.player.host > .player_name::before {
     content: url("data:image/svg+xml; utf8, <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='star' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512' class='svg-inline--fa fa-star fa-w-18' id='svg_resize' width='25' height='25'><path fill='currentColor' d='M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z' class=''></path></svg>");
     display: inline-block;
     vertical-align: middle;
@@ -992,7 +990,7 @@ h1>input[type="text"] {
 
 #secret_game {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 #secret_join {
@@ -1005,9 +1003,10 @@ h1>input[type="text"] {
     min-height: 450px;
     height: max-content;
     position: relative;
+    margin-left: 0.5rem;
 }
 
-#secret_join>h2 {
+#secret_join > h2 {
     font-weight: unset;
     font-size: 2em;
     padding: 0;
@@ -1018,7 +1017,7 @@ h1>input[type="text"] {
     margin-bottom: 1rem;
 }
 
-#secret_join>img {
+#secret_join > img {
     width: 25%;
     height: 100px;
 }
@@ -1028,18 +1027,18 @@ h1>input[type="text"] {
     display: inline;
 }
 
-#secret_join p {
+.label {
     margin: 0;
     display: inline;
 }
 
 .red_filler {
-    box-shadow: inset 0px -6px 0 rgb(197, 110, 108), inset 0px 6px 0 rgb(197, 110, 108);
+    box-shadow: inset 0px -6px 0 rgb(197, 110, 108),
+        inset 0px 6px 0 rgb(197, 110, 108);
     color: transparent !important;
     width: 100%;
     margin-bottom: 0.5rem;
 }
-
 
 .blue_filler {
     box-shadow: inset 0px -6px 0 #709cc7, inset 0px 6px 0 #709cc7;
@@ -1063,13 +1062,18 @@ h1>input[type="text"] {
     height: 32px;
     display: inline-block;
     border: calc(var(--t) * 1px) solid transparent;
-    border-image: linear-gradient(to bottom left,
+    border-image: linear-gradient(
+            to bottom left,
             transparent 49.5%,
-            var(--c) 50%) var(--t);
-    background: linear-gradient(to bottom left,
-            var(--c) 0%,
-            var(--c) 50% calc(50% + var(--t) * 1px),
-            #ff0b0b00 calc(50% + var(--t) * 1px + 1px));
+            var(--c) 50%
+        )
+        var(--t);
+    background: linear-gradient(
+        to bottom left,
+        var(--c) 0%,
+        var(--c) 50% calc(50% + var(--t) * 1px),
+        #ff0b0b00 calc(50% + var(--t) * 1px + 1px)
+    );
     background-origin: border-box;
     background-repeat: no-repeat;
 }
@@ -1085,8 +1089,7 @@ h1>input[type="text"] {
     position: relative;
     min-height: 450px;
     height: max-content;
-
-
+    margin-right: 0.5rem;
 }
 
 #create_lobby {
@@ -1108,26 +1111,31 @@ h1>input[type="text"] {
     color: rgb(197, 110, 108);
 }
 
-#join_lobby {
+.liberal_button{
     border: rgb(112, 156, 199) 0.25rem solid;
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: bold;
     color: rgb(112, 156, 199, 0.5);
     cursor: pointer;
+
+}
+
+#join_lobby {
+
     margin-left: 0.5ch;
     float: right;
 }
 
-#join_lobby:focus {
+.liberal_button:focus {
     outline: none;
 }
 
-#join_lobby:hover {
+.liberal_button:hover {
     color: rgb(112, 156, 199);
 }
 
-#secret_create>h2 {
+#secret_create > h2 {
     font-weight: unset;
     font-size: 2em;
     padding: 0;
@@ -1138,13 +1146,13 @@ h1>input[type="text"] {
     margin-bottom: 1rem;
 }
 
-#secret_create>p {
-    font-family: 'Roboto', sans-serif;
+#secret_create > p {
+    font-family: "Roboto", sans-serif;
     font-weight: bold;
     color: rgb(197, 110, 108);
 }
 
-#secret_create>img {
+#secret_create > img {
     width: 25%;
     height: 100px;
 }
@@ -1164,13 +1172,18 @@ h1>input[type="text"] {
     height: 32px;
     display: inline-block;
     border: calc(var(--t) * 1px) solid transparent;
-    border-image: linear-gradient(to bottom left,
+    border-image: linear-gradient(
+            to bottom left,
             transparent 49.5%,
-            var(--c) 50%) var(--t);
-    background: linear-gradient(to bottom left,
-            var(--c) 0%,
-            var(--c) 50% calc(50% + var(--t) * 1px),
-            #ff0b0b00 calc(50% + var(--t) * 1px + 1px));
+            var(--c) 50%
+        )
+        var(--t);
+    background: linear-gradient(
+        to bottom left,
+        var(--c) 0%,
+        var(--c) 50% calc(50% + var(--t) * 1px),
+        #ff0b0b00 calc(50% + var(--t) * 1px + 1px)
+    );
     background-origin: border-box;
     background-repeat: no-repeat;
 }
@@ -1214,8 +1227,8 @@ h1>input[type="text"] {
     outline: rgb(197, 110, 108);
 }
 
-#secret_join>p {
-    font-family: 'Roboto', sans-serif;
+#secret_join > p {
+    font-family: "Roboto", sans-serif;
     font-weight: bold;
     color: #709cc7;
 }
@@ -1228,7 +1241,6 @@ h1>input[type="text"] {
     margin-bottom: 1rem;
 }
 
-
 .back_card {
     display: none;
 }
@@ -1236,11 +1248,16 @@ h1>input[type="text"] {
 @font-face {
     font-family: "Eskapade";
     src: url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.eot");
-    src: url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.eot?#iefix") format("embedded-opentype"),
-        url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.woff2") format("woff2"),
-        url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.woff") format("woff"),
-        url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.ttf") format("truetype"),
-        url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.svg#Eskapade") format("svg");
+    src: url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.eot?#iefix")
+            format("embedded-opentype"),
+        url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.woff2")
+            format("woff2"),
+        url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.woff")
+            format("woff"),
+        url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.ttf")
+            format("truetype"),
+        url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.svg#Eskapade")
+            format("svg");
 }
 
 @font-face {
@@ -1255,7 +1272,6 @@ h1>input[type="text"] {
 
 #lobby {
     font-family: "Eskapade";
-
 }
 
 #lobby {
@@ -1266,32 +1282,6 @@ h1>input[type="text"] {
     display: inline;
     font-family: "Roboto";
     /* padding-right: rem; */
-}
-
-#fascist_board {
-    background-color: #e66443;
-    width: 75vw;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-
-#fascist_spaces {
-    display: flex;
-    height: 100%;
-    margin: 2rem;
-}
-
-.fascist_space {
-    width: 16.66%;
-    height: 100%;
-    background-color: #e66443;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-right: 4px dotted #990200;
 }
 
 .search {
@@ -1312,29 +1302,27 @@ h1>input[type="text"] {
     /* word-; */
 }
 
-
 #fascist_board_title {
     font-family: "Eskapade";
     font-size: 3rem;
     line-height: 0.78em;
 
-    background-color: #e66443;
+    background-color: var(--light);
     margin-top: 0;
     margin-bottom: 0;
-    color: #990200;
+    color: var(--dark);
     margin-left: 0;
     margin-right: 0;
     width: 200px;
     padding: 0.25rem;
 }
 
-
 #fascist_board_text {
     width: 100%;
-    background-color: #e66443;
-    color: #990200;
+    background-color: var(--light);
+    color: var(--dark);
     font-family: "Roboto";
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 0.75rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -1342,21 +1330,30 @@ h1>input[type="text"] {
 }
 
 .grid-container {
+    --dark: #990200;
+    --light: #e66443;
+    --border: #feffac;
+
     display: grid;
     grid-template-columns: 2.5em 1fr 1fr 1fr 1fr 1fr 1fr 2.5em;
     grid-template-rows: 2.5em 0.5fr 2.5em;
     gap: 0px 0px;
-    grid-template-areas: "left_decoration top_decoration top_decoration top_decoration top_decoration top_decoration top_decoration right_decoration""left_decoration play_area play_area play_area play_area play_area play_area right_decoration""left_decoration bottom_decoration bottom_decoration bottom_decoration bottom_decoration bottom_decoration bottom_decoration right_decoration";
-    background-color: #990200;
+    grid-template-areas: "left_decoration top_decoration top_decoration top_decoration top_decoration top_decoration top_decoration right_decoration" "left_decoration play_area play_area play_area play_area play_area play_area right_decoration" "left_decoration bottom_decoration bottom_decoration bottom_decoration bottom_decoration bottom_decoration bottom_decoration right_decoration";
+    background-color: var(--dark);
     padding: 0.25rem;
-    width: 1110px;
+    max-width: 1110px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
+.grid-container.liberal {
+    width: 942px;
+}
+
 .left_decoration {
     grid-area: left_decoration;
-    border: 4px solid #feffac;
+    border: 4px solid var(--border);
     border-right: 0;
     display: flex;
     justify-content: center;
@@ -1370,24 +1367,22 @@ h1>input[type="text"] {
 
 .right_decoration {
     grid-area: right_decoration;
-    border: 4px solid #feffac;
+    border: 4px solid var(--border);
     border-left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
 .right_decoration img {
     width: 100%;
     height: 90%;
 }
 
-
 .top_decoration {
     grid-area: top_decoration;
-    border-top: 4px solid #feffac;
-    border-bottom: 4px solid #feffac;
+    border-top: 4px solid var(--border);
+    border-bottom: 4px solid var(--border);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1403,8 +1398,8 @@ h1>input[type="text"] {
 
 .bottom_decoration {
     grid-area: bottom_decoration;
-    border-top: 4px solid #feffac;
-    border-bottom: 4px solid #feffac;
+    border-top: 4px solid var(--border);
+    border-bottom: 4px solid var(--border);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1418,8 +1413,6 @@ h1>input[type="text"] {
     padding: 0.25rem;
 }
 
-
-
 .play_area {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -1429,20 +1422,32 @@ h1>input[type="text"] {
     grid-area: play_area;
     height: 240px;
     width: 100%;
-    border-left: 4px solid #feffac;
-    border-right: 4px solid #feffac;
+    border-left: 4px solid var(--border);
+    border-right: 4px solid var(--border);
     padding: 0.25rem;
-    background-color: #e66443;
-
+    background-color: var(--light);
 }
 
-.grid_1{
-    grid-area: grid_1;  
+.play_area.liberal {
+    grid-template-columns: 166px 166px 166px 166px 166px;
+}
 
-    border: #990200 solid 1px;
+.polka {
+    background-image:
+    radial-gradient(white 20%, transparent 0), 
+    radial-gradient(white 20%, transparent 0);
+  background-size: 10px 10px;
+  background-position: 0 0, 5px 5px;
+
+  padding: 0;
+}
+.grid_1 {
+    grid-area: grid_1;
+
+    border: var(--dark) solid 1px;
     border-right: 0;
 }
-.arrow{
+.arrow {
     position: absolute;
     right: -7%;
     top: 41%;
@@ -1451,10 +1456,10 @@ h1>input[type="text"] {
     z-index: 1000;
 }
 .light_grid {
-    border-top: #990200 solid 2px;
-    border-bottom: #990200 solid 2px;
+    border-top: var(--dark) solid 2px;
+    border-bottom: var(--dark) solid 2px;
 
-    background-color: #e66443;
+    background-color: var(--light);
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -1463,20 +1468,20 @@ h1>input[type="text"] {
     position: relative;
     padding-top: 2rem;
 }
-.light_grid::before{
+.light_grid::before {
     position: absolute;
     content: "";
-    border-right: #990200 dotted 3px;
+    border-right: var(--dark) dotted 3px;
     width: 1px;
     height: 40%;
     right: 1px;
     top: 2px;
 }
 
-.light_grid::after{
+.light_grid::after {
     position: absolute;
     content: "";
-    border-right: #990200 dotted 3px;
+    border-right: var(--dark) dotted 3px;
     width: 1px;
     height: 40%;
     right: 1px;
@@ -1484,10 +1489,10 @@ h1>input[type="text"] {
 }
 
 .dark_grid {
-    border-top: #990200 solid 2px;
-    border-bottom: #990200 solid 2px;
+    border-top: var(--dark) solid 2px;
+    border-bottom: var(--dark) solid 2px;
 
-    background-color: #990200;
+    background-color: var(--dark);
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -1496,20 +1501,20 @@ h1>input[type="text"] {
     padding-top: 2rem;
     position: relative;
 }
-.dark_grid::before{
+.dark_grid::before {
     position: absolute;
     content: "";
-    border-right: #e66443 dotted 3px;
+    border-right: var(--light) dotted 3px;
     width: 1px;
     height: 40%;
     right: 1px;
     top: 2px;
 }
 
-.dark_grid::after{
+.dark_grid::after {
     position: absolute;
     content: "";
-    border-right: #e66443 dotted 3px;
+    border-right: var(--light) dotted 3px;
     width: 1px;
     height: 40%;
     right: 1px;
@@ -1517,22 +1522,19 @@ h1>input[type="text"] {
 }
 .grid_2 {
     grid-area: grid_2;
-    background-color: #e66443;
-
+    background-color: var(--light);
 }
 
 .grid_3 {
     grid-area: grid_3;
-    background-color: #e66443;
-
+    background-color: var(--light);
 }
 
-
 .grid_3 {
-    border-top: #990200 solid 2px;
-    border-bottom: #990200 solid 2px;
+    border-top: var(--dark) solid 2px;
+    border-bottom: var(--dark) solid 2px;
 
-    background-color: #e66443;
+    background-color: var(--light);
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -1541,20 +1543,20 @@ h1>input[type="text"] {
     padding-top: 2rem;
     position: relative;
 }
-.grid_3::before{
+.grid_3::before {
     position: absolute;
     content: "";
-    border-right: #990200 dotted 3px;
+    border-right: var(--dark) dotted 3px;
     width: 1px;
     height: 40%;
     right: -1px;
     top: 2px;
 }
 
-.grid_3::after{
+.grid_3::after {
     position: absolute;
     content: "";
-    border-right: #990200 dotted 3px;
+    border-right: var(--dark) dotted 3px;
     width: 1px;
     height: 40%;
     right: -1px;
@@ -1569,12 +1571,11 @@ h1>input[type="text"] {
     grid-area: grid_5;
 }
 
-.grid_6 {
-    grid-area: grid_6;
-    border-top: #990200 solid 2px;
-    border-bottom: #990200 solid 2px;
+.grid_5.liberal {
+    border-top: var(--dark) solid 2px;
+    border-bottom: var(--dark) solid 2px;
 
-    background-color: #990200;
+    background-color: var(--dark);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1583,12 +1584,38 @@ h1>input[type="text"] {
     position: relative;
 }
 
-.grid_6 img{
+.grid_6 {
+    grid-area: grid_6;
+    border-top: var(--dark) solid 2px;
+    border-bottom: var(--dark) solid 2px;
+
+    background-color: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.grid_6 img, .grid_5.liberal img {
     width: 85%;
     height: 85%;
 }
 
+.liberal {
+    --dark: #004e6e !important;
+    --light: #4ba7ba !important;
+}
+/* 
+.liberal_light{
+    background-color: #4ba7ba !important;
+    color: #004e6e !important;
 
+} */
+#game_boards{
+    display: none;
+}
 @media all and (max-width: 660px) {
     #secret_hitler_title {
         font-size: 2rem;
@@ -1604,19 +1631,6 @@ h1>input[type="text"] {
         margin-right: auto;
     }
 
-    #secret_game::after {
-        content: url("/resources/images/secret_hitler/flip.svg");
-        position: absolute;
-        z-index: 2;
-        top: -25px;
-        width: 50px;
-        right: -20px;
-        cursor: pointer;
-    }
-
-    .card:last-child {
-        box-shadow: 10px -8px 0px 0px rgb(197, 110, 108);
-    }
 
     .card:last-child {
         display: block !important;
@@ -1630,8 +1644,7 @@ h1>input[type="text"] {
 }
 
 @media all and (max-width: 530px) {
-
-    [id^="drop"]:checked+ul#burger_menu li {
+    [id^="drop"]:checked + ul#burger_menu li {
         animation-name: open;
         animation-fill-mode: both;
         visibility: visible;

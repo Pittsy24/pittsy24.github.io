@@ -11,8 +11,12 @@ function newUser(user){
     console.log(user + " Connected");
     if(users.length == 0){
         lobby_dom.append(lobby_user_html.replace('<div class="player ">', '<div class="player host">').replace("![name]!", user).replace('<button class="player_kick">        <img            src="/resources/images/secret_hitler/boot.svg"        ></img>    </button>', ''));
+        lobby.Connections[users.length].Send({"leader": true});
+  
     }else{
         lobby_dom.append(lobby_user_html.replace("![name]!", user));
+        lobby.Connections[users.length].Send({"leader": false});
+
     }
     users.push(user);
     $("#player_count")[0].innerHTML = " Players: "+users.length+"/10";
@@ -82,6 +86,25 @@ function mobileMenu(){
 }
 
 mobileMenu();
+
+let coopz_users = [];
+
+function create(){
+    let coopz = ["Abby", "Beckham", "Pollard", "Henry", "James", "Bailey", "Patrick", "Lewis", "Ellie"];
+    coopz.forEach(troop => {
+        coopz_users.push(new User(troop));
+    });
+}
+
+function join(){
+    for (let i = 0; i < coopz_users.length; i++) {
+        const element = coopz_users[i];
+        setTimeout(() => {
+            element.Connect(lobby_code);
+        }, 200*i)
+        
+    }
+}
   
 
 let playerAmnt;
@@ -129,14 +152,21 @@ function setupGame(){
         let pick = getRandomInt(playerAmnt);
         if(pick != hitler && !liberals.includes(pick)){
             liberals.push(pick);
+            lobby.Connections[pick].Send({"role": "Liberal"})
+
         }
     }
     while(fascists.length < fascistsAmnt){
         let pick = getRandomInt(playerAmnt);
         if(pick != hitler && !liberals.includes(pick) && !fascists.includes(pick)){
             fascists.push(pick);
+            lobby.Connections[pick].Send({"role": "Fascist"})
+
         }
     }
+
+    lobby.Connections[hitler].Send({"role": "Hitler"})
+    
 
 
     
