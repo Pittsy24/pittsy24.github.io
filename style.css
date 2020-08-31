@@ -1616,6 +1616,99 @@ h1 > input[type="text"] {
 #game_boards{
     display: none;
 }
+
+#secret_hand{
+    margin-top: auto;
+    width: 50%;
+
+}
+#selected_card{
+    width: 65%;
+}
+#selected_card * {
+    width: 100%;
+    transform: rotate(0);
+    border-radius: 4px;
+}
+
+
+
+
+.secret_role{
+    transform-origin: center 120%;
+}
+
+.nein{
+    transform-origin: center 120%;
+}
+.ja{
+    transform-origin: center 120%;
+}
+
+#secret_hand  img{
+    height: auto;
+    width: inherit;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0px;
+    transform-origin: center 120%;
+    border-radius: 4px;
+}
+
+
+.selected{
+    border: rgba(255,217,0,1) solid 4px;
+    animation: glow 2s infinite ease-in-out;
+
+}
+
+
+@keyframes glow {
+    0% {
+        box-shadow: 0px 0px 41px 2px rgba(255,217,0,1) !important;
+
+    }
+
+    100% {
+        box-shadow: 0px 0px 41px 15px rgba(255,217,0,1) !important;
+    }
+}
+
+
+
+
+.hidden{
+    visibility: hidden;
+    position: unset !important; 
+    width: 100% !important;
+}
+
+
+html{
+    overflow-x: hidden;
+}
+
+.ja{
+    transform: rotate(-15deg);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.nein{
+    transform: rotate(-7.5deg);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.party_membership{
+    transform: rotate(7.5deg);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.secret_role{
+    transform: rotate(15deg);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+
+}
+
 @media all and (max-width: 660px) {
     #secret_hitler_title {
         font-size: 2rem;
@@ -1629,6 +1722,10 @@ h1 > input[type="text"] {
         width: -moz-fit-content;
         margin-left: auto;
         margin-right: auto;
+        width: inherit;
+        align-items: center;
+        justify-content: flex-start;
+
     }
 
 
@@ -1636,7 +1733,12 @@ h1 > input[type="text"] {
         display: block !important;
     }
 
-    #secret_game .card {
+    #secret_create {
+        margin-left: auto;
+        margin-right: auto;
+        display: none;
+    }
+    #secret_join {
         margin-left: auto;
         margin-right: auto;
         display: none;

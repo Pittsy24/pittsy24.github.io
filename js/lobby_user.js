@@ -14,6 +14,7 @@ function myFunction(x) {
 var x = window.matchMedia("(max-width: 660px)");
 myFunction(x); // Call listener function at run time
 x.addListener(myFunction); // Attach listener function on state changes
+$("#secret_game").height($("body").height() - $("header").height());
 
 
 $("#join_lobby").click(() => {
