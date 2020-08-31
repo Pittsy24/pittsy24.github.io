@@ -5,6 +5,11 @@ let lobby_dom = $("#player_list");
 
 function dataReceived(sender, data){
     console.log(`${sender}: ${data}`);
+    console.log(data === "start")
+    if(data === "start"){
+        console.log("start the game!")
+        setupGame();
+    }
 }
 
 function newUser(user){
@@ -46,7 +51,7 @@ $("#create_lobby").click(() => {
     $("#secret_join").css("height", $("#secret_join").height());
     $("#secret_join").css("overflow", "hidden");
     lobby_code= replaceAll(lobby_name, " ", "_")+Math.round(Math.random()*10)+Math.round(Math.random()*10)+Math.round(Math.random()*10);
-    lobby = new Lobby(lobby_code);
+    lobby = new Lobby(lobby_code, dataReceived, newUser);
 
     $("#secret_join").animate(
         {

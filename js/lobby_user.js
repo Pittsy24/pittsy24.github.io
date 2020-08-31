@@ -10,6 +10,11 @@ function myFunction(x) {
 
     }
 }
+$("#packet").on("click", cxt => {
+    $("#secret_dossier").addClass("open")
+
+    $("#lid").addClass("open")
+})
 
 var x = window.matchMedia("(max-width: 660px)");
 myFunction(x); // Call listener function at run time
@@ -31,10 +36,21 @@ function data_receive(data){
         leader = data.leader;
         if(leader){
             $("#secret_join h2").after('<p id = "lobby_message" style = "width: 100%" class = "center">You\'re the lobby leader, press play when everyone has connected!</p>')
-            $("#lobby_message").after("<button class = 'center liberal_button'>PLAY</button>")
+            $("#lobby_message").after("<button onclick='start_game()' class = 'center liberal_button'>PLAY</button>")
         }else{
             $("#secret_join h2").after('<p id = "lobby_message" style = "width: 100%" class = "center">Sit back and relax. The game will start soon!</p>')
         }
+    }else{
+        if(data.hasOwnProperty("users")){
+            console.log(data.users)
+            $("#player_count_small")[0].innerHTML = `${data.users.length}/10`
+        }
+    }
+}
+
+function start_game(){
+    if(leader){
+        me.Send("start");
     }
 }
 
@@ -55,7 +71,7 @@ function game_loop(lobby_id){
         $("#join_lobby").text("Quit")
         $("#secret_join h2 ~ :not(button)").fadeOut()
 
-        $("#join_lobby").before('<p id = "player_count" style = "position: absolute; bottom: 5px; left: 8px;" >1/10</p>')
+        $("#join_lobby").before('<p id = "player_count_small" style = "position: absolute; bottom: 5px; left: 8px;" >1/10</p>')
     }})
 
 

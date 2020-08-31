@@ -116,7 +116,7 @@ class Lobby {
             users.users.push(connection.Name);
         });
         this.Broadcast(users);
-        newUser(users.users[users.users.length - 1]);
+        this.NewUser(users.users[users.users.length - 1]);
     }
 
     DisconnectedUserUpdate(){

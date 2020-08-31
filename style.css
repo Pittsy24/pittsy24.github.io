@@ -152,7 +152,7 @@ h3 {
     padding-left: 0;
 }
 
-.blog-footer li + li {
+.blog-footer li+li {
     margin-left: 0.5rem;
 }
 
@@ -424,7 +424,7 @@ nav ul ul {
 
 /* Display Dropdowns on Hover */
 
-nav ul li:hover > ul {
+nav ul li:hover>ul {
     display: inherit;
 }
 
@@ -451,11 +451,11 @@ nav ul ul ul li {
 
 /* Change ' +' in order to change the Dropdown symbol */
 
-li > a:after {
+li>a:after {
     content: " +";
 }
 
-li > a:only-child:after {
+li>a:only-child:after {
     content: "";
 }
 
@@ -542,7 +542,7 @@ li > a:only-child:after {
     padding: 0.5em;
 }
 
-.codeSnippet:hover > .double-val-label {
+.codeSnippet:hover>.double-val-label {
     opacity: 1;
 }
 
@@ -561,7 +561,7 @@ html[data-theme="dark"] .codeSnippet {
     transition: all 0.3s;
 }
 
-.double-val-label > span {
+.double-val-label>span {
     background-color: #656565;
     color: #ffffff;
     display: table-cell;
@@ -574,22 +574,22 @@ html[data-theme="dark"] .codeSnippet {
     white-space: nowrap;
 }
 
-html[data-theme="dark"] .double-val-label > span {
+html[data-theme="dark"] .double-val-label>span {
     filter: invert(1);
 }
 
-.double-val-label > span:first-child {
+.double-val-label>span:first-child {
     border-bottom-left-radius: 0.25em;
     border-top-left-radius: 0.25em;
 }
 
-.double-val-label > span:last-child {
+.double-val-label>span:last-child {
     border-bottom-right-radius: 0.25em;
     border-top-right-radius: 0.25em;
     cursor: pointer;
 }
 
-.double-val-label > span.primary {
+.double-val-label>span.primary {
     background-color: #337ab7;
 }
 
@@ -908,7 +908,7 @@ small {
     animation-delay: 1s;
 } */
 
-h1 > input[type="text"] {
+h1>input[type="text"] {
     background-color: var(--background-color-normal);
     width: 10ch;
     font-size: 1em;
@@ -965,7 +965,7 @@ h1 > input[type="text"] {
     line-height: 0.25em;
 }
 
-.player.host > .player_name::before {
+.player.host>.player_name::before {
     content: url("data:image/svg+xml; utf8, <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='star' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512' class='svg-inline--fa fa-star fa-w-18' id='svg_resize' width='25' height='25'><path fill='currentColor' d='M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z' class=''></path></svg>");
     display: inline-block;
     vertical-align: middle;
@@ -1006,7 +1006,7 @@ h1 > input[type="text"] {
     margin-left: 0.5rem;
 }
 
-#secret_join > h2 {
+#secret_join>h2 {
     font-weight: unset;
     font-size: 2em;
     padding: 0;
@@ -1017,7 +1017,7 @@ h1 > input[type="text"] {
     margin-bottom: 1rem;
 }
 
-#secret_join > img {
+#secret_join>img {
     width: 25%;
     height: 100px;
 }
@@ -1062,18 +1062,13 @@ h1 > input[type="text"] {
     height: 32px;
     display: inline-block;
     border: calc(var(--t) * 1px) solid transparent;
-    border-image: linear-gradient(
-            to bottom left,
+    border-image: linear-gradient(to bottom left,
             transparent 49.5%,
-            var(--c) 50%
-        )
-        var(--t);
-    background: linear-gradient(
-        to bottom left,
-        var(--c) 0%,
-        var(--c) 50% calc(50% + var(--t) * 1px),
-        #ff0b0b00 calc(50% + var(--t) * 1px + 1px)
-    );
+            var(--c) 50%) var(--t);
+    background: linear-gradient(to bottom left,
+            var(--c) 0%,
+            var(--c) 50% calc(50% + var(--t) * 1px),
+            #ff0b0b00 calc(50% + var(--t) * 1px + 1px));
     background-origin: border-box;
     background-repeat: no-repeat;
 }
@@ -1111,7 +1106,7 @@ h1 > input[type="text"] {
     color: rgb(197, 110, 108);
 }
 
-.liberal_button{
+.liberal_button {
     border: rgb(112, 156, 199) 0.25rem solid;
     text-transform: uppercase;
     font-size: 1rem;
@@ -1135,7 +1130,7 @@ h1 > input[type="text"] {
     color: rgb(112, 156, 199);
 }
 
-#secret_create > h2 {
+#secret_create>h2 {
     font-weight: unset;
     font-size: 2em;
     padding: 0;
@@ -1146,13 +1141,13 @@ h1 > input[type="text"] {
     margin-bottom: 1rem;
 }
 
-#secret_create > p {
+#secret_create>p {
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     color: rgb(197, 110, 108);
 }
 
-#secret_create > img {
+#secret_create>img {
     width: 25%;
     height: 100px;
 }
@@ -1172,18 +1167,13 @@ h1 > input[type="text"] {
     height: 32px;
     display: inline-block;
     border: calc(var(--t) * 1px) solid transparent;
-    border-image: linear-gradient(
-            to bottom left,
+    border-image: linear-gradient(to bottom left,
             transparent 49.5%,
-            var(--c) 50%
-        )
-        var(--t);
-    background: linear-gradient(
-        to bottom left,
-        var(--c) 0%,
-        var(--c) 50% calc(50% + var(--t) * 1px),
-        #ff0b0b00 calc(50% + var(--t) * 1px + 1px)
-    );
+            var(--c) 50%) var(--t);
+    background: linear-gradient(to bottom left,
+            var(--c) 0%,
+            var(--c) 50% calc(50% + var(--t) * 1px),
+            #ff0b0b00 calc(50% + var(--t) * 1px + 1px));
     background-origin: border-box;
     background-repeat: no-repeat;
 }
@@ -1227,7 +1217,7 @@ h1 > input[type="text"] {
     outline: rgb(197, 110, 108);
 }
 
-#secret_join > p {
+#secret_join>p {
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     color: #709cc7;
@@ -1248,16 +1238,11 @@ h1 > input[type="text"] {
 @font-face {
     font-family: "Eskapade";
     src: url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.eot");
-    src: url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.eot?#iefix")
-            format("embedded-opentype"),
-        url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.woff2")
-            format("woff2"),
-        url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.woff")
-            format("woff"),
-        url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.ttf")
-            format("truetype"),
-        url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.svg#Eskapade")
-            format("svg");
+    src: url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.eot?#iefix") format("embedded-opentype"),
+        url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.woff2") format("woff2"),
+        url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.woff") format("woff"),
+        url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.ttf") format("truetype"),
+        url("//db.onlinewebfonts.com/t/34ef7a65a4825cfc84856db83a1ac382.svg#Eskapade") format("svg");
 }
 
 @font-face {
@@ -1269,6 +1254,14 @@ h1 > input[type="text"] {
 #blogHR{
     z-index: -1;
 } */
+
+#secret_dossier {
+    /* background-image: url("/resources/images/secret_hitler/dossier.png"); */
+    /* border: #e1a971 1.75rem solid; */
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+}
 
 #lobby {
     font-family: "Eskapade";
@@ -1321,7 +1314,6 @@ h1 > input[type="text"] {
     width: 100%;
     background-color: var(--light);
     color: var(--dark);
-    font-family: "Roboto";
     font-family: "Roboto", sans-serif;
     font-size: 0.75rem;
     padding-left: 0.5rem;
@@ -1338,7 +1330,7 @@ h1 > input[type="text"] {
     grid-template-columns: 2.5em 1fr 1fr 1fr 1fr 1fr 1fr 2.5em;
     grid-template-rows: 2.5em 0.5fr 2.5em;
     gap: 0px 0px;
-    grid-template-areas: "left_decoration top_decoration top_decoration top_decoration top_decoration top_decoration top_decoration right_decoration" "left_decoration play_area play_area play_area play_area play_area play_area right_decoration" "left_decoration bottom_decoration bottom_decoration bottom_decoration bottom_decoration bottom_decoration bottom_decoration right_decoration";
+    grid-template-areas: "left_decoration top_decoration top_decoration top_decoration top_decoration top_decoration top_decoration right_decoration""left_decoration play_area play_area play_area play_area play_area play_area right_decoration""left_decoration bottom_decoration bottom_decoration bottom_decoration bottom_decoration bottom_decoration bottom_decoration right_decoration";
     background-color: var(--dark);
     padding: 0.25rem;
     max-width: 1110px;
@@ -1434,19 +1426,21 @@ h1 > input[type="text"] {
 
 .polka {
     background-image:
-    radial-gradient(white 20%, transparent 0), 
-    radial-gradient(white 20%, transparent 0);
-  background-size: 10px 10px;
-  background-position: 0 0, 5px 5px;
+        radial-gradient(white 20%, transparent 0),
+        radial-gradient(white 20%, transparent 0);
+    background-size: 10px 10px;
+    background-position: 0 0, 5px 5px;
 
-  padding: 0;
+    padding: 0;
 }
+
 .grid_1 {
     grid-area: grid_1;
 
     border: var(--dark) solid 1px;
     border-right: 0;
 }
+
 .arrow {
     position: absolute;
     right: -7%;
@@ -1455,6 +1449,7 @@ h1 > input[type="text"] {
     height: 17%;
     z-index: 1000;
 }
+
 .light_grid {
     border-top: var(--dark) solid 2px;
     border-bottom: var(--dark) solid 2px;
@@ -1468,6 +1463,7 @@ h1 > input[type="text"] {
     position: relative;
     padding-top: 2rem;
 }
+
 .light_grid::before {
     position: absolute;
     content: "";
@@ -1501,6 +1497,7 @@ h1 > input[type="text"] {
     padding-top: 2rem;
     position: relative;
 }
+
 .dark_grid::before {
     position: absolute;
     content: "";
@@ -1520,6 +1517,7 @@ h1 > input[type="text"] {
     right: 1px;
     bottom: 2px;
 }
+
 .grid_2 {
     grid-area: grid_2;
     background-color: var(--light);
@@ -1543,6 +1541,7 @@ h1 > input[type="text"] {
     padding-top: 2rem;
     position: relative;
 }
+
 .grid_3::before {
     position: absolute;
     content: "";
@@ -1598,7 +1597,8 @@ h1 > input[type="text"] {
     position: relative;
 }
 
-.grid_6 img, .grid_5.liberal img {
+.grid_6 img,
+.grid_5.liberal img {
     width: 85%;
     height: 85%;
 }
@@ -1607,15 +1607,104 @@ h1 > input[type="text"] {
     --dark: #004e6e !important;
     --light: #4ba7ba !important;
 }
+
 /* 
 .liberal_light{
     background-color: #4ba7ba !important;
     color: #004e6e !important;
 
 } */
-#game_boards{
+#game_boards {
     display: none;
 }
+
+#secret_create,
+#secret_join {
+    display: none;
+}
+
+.card {
+    max-width: 288px;
+}
+
+#secret_dossier {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+}
+
+#lid {
+    clip-path: polygon(40% 0%, 60% 0%, 100% 80%, 100% 100%, 0% 100%, 0% 80%);
+    position: absolute;
+    
+    z-index: 5;
+    transform-origin: bottom;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    transform: rotateX(180deg);
+    
+}
+
+#packet{
+    margin-top: 100px;
+    transform: rotateX(20deg);
+    position: relative;
+}
+
+
+
+#secret_dossier.open:after {
+    position: absolute;
+    content: "";
+    width: 288px;
+    height: 0px;
+    right: 16px;
+    bottom: 400px;
+    background-color: khaki;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    z-index: 10;
+    animation: grow 0.8s forwards;
+    animation-delay: 0.6s;
+}
+
+#secret_dossier.open:before {
+    position: absolute;
+    content: "";
+    width: 288px;
+    height: 0px;
+    right: 16px;
+    bottom: 400px;
+    background-color:aquamarine;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    z-index: 12;
+    animation: grow2 0.8s forwards;
+    animation-delay: 0.8s;
+}
+
+@keyframes grow {
+    100% {
+      height: 120px;
+    }
+  }
+
+  @keyframes grow2 {
+    100% {
+      height: 95px;
+    }
+  }
+
+#lid.open{
+    transition: transform 0.8s ease-in-out;
+    transform-origin: bottom;
+
+    transform: rotateX(-8deg);
+    /* z-index: -1; */
+
+
+}
+
 @media all and (max-width: 660px) {
     #secret_hitler_title {
         font-size: 2rem;
@@ -1644,7 +1733,7 @@ h1 > input[type="text"] {
 }
 
 @media all and (max-width: 530px) {
-    [id^="drop"]:checked + ul#burger_menu li {
+    [id^="drop"]:checked+ul#burger_menu li {
         animation-name: open;
         animation-fill-mode: both;
         visibility: visible;
