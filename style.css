@@ -996,14 +996,16 @@ h1>input[type="text"] {
 #secret_join {
     font-family: SecretHitler;
     background: #f9f9fa;
-    width: 288px;
+    width: 100%;
     border: #709cc7 1.75rem solid;
     border-radius: 20px;
     padding: 0.5rem;
     min-height: 450px;
     height: max-content;
     position: relative;
-    margin-left: 0.5rem;
+    /* margin-left: 0.5rem; */
+    /* margin-top: auto;
+    margin-bottom: auto; */
 }
 
 #secret_join>h2 {
@@ -1043,7 +1045,7 @@ h1>input[type="text"] {
 .blue_filler {
     box-shadow: inset 0px -6px 0 #709cc7, inset 0px 6px 0 #709cc7;
     color: transparent !important;
-    width: 100%;
+    width: auto;
     margin-bottom: 0.5rem;
 }
 
@@ -1113,13 +1115,26 @@ h1>input[type="text"] {
     font-weight: bold;
     color: rgb(112, 156, 199, 0.5);
     cursor: pointer;
+}
 
+.one_line{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.one_line .blue_filler{
+    flex-grow: 1;
 }
 
 #join_lobby {
 
     margin-left: 0.5ch;
     float: right;
+    width: auto;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 0.5rem;
 }
 
 .liberal_button:focus {
@@ -1197,7 +1212,8 @@ h1>input[type="text"] {
     font-size: 1rem;
     font-weight: bold;
     color: #709cc7;
-    width: 14ch;
+    min-width: 1px;
+    width: auto;
 }
 
 #join_name:focus {
@@ -1210,14 +1226,15 @@ h1>input[type="text"] {
     font-size: 1rem;
     font-weight: bold;
     color: #709cc7;
-    width: 16ch;
+    min-width:1px;
+    width: auto;
 }
 
 #join_code:focus {
     outline: rgb(197, 110, 108);
 }
 
-#secret_join>p {
+#secret_join>p, .one_line>p {
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     color: #709cc7;
@@ -1618,10 +1635,6 @@ h1>input[type="text"] {
     display: none;
 }
 
-#secret_create,
-#secret_join {
-    display: none;
-}
 
 .card {
     max-width: 288px;
@@ -1631,7 +1644,7 @@ h1>input[type="text"] {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 320px;
+    /* width: 320px; */
 }
 
 #lid {
@@ -1649,39 +1662,11 @@ h1>input[type="text"] {
     margin-top: 100px;
     transform: rotateX(20deg);
     position: relative;
+    width: 100%;
 }
 
 
 
-#secret_dossier.open:after {
-    position: absolute;
-    content: "";
-    width: 288px;
-    height: 0px;
-    right: 16px;
-    bottom: 400px;
-    background-color: khaki;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    z-index: 10;
-    animation: grow 0.8s forwards;
-    animation-delay: 0.6s;
-}
-
-#secret_dossier.open:before {
-    position: absolute;
-    content: "";
-    width: 288px;
-    height: 0px;
-    right: 16px;
-    bottom: 400px;
-    background-color:aquamarine;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    z-index: 12;
-    animation: grow2 0.8s forwards;
-    animation-delay: 0.8s;
-}
 
 @keyframes grow {
     100% {
@@ -1704,11 +1689,25 @@ h1>input[type="text"] {
 }
 #secret_hand{
     margin-top: auto;
-    width: 50%;
+    width: 85vw;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+    align-items: flex-start;
+    margin-bottom: 50%;
+    display: none;
 
 }
+
+#secret_hand div div:first-child img{
+    transform: rotate(-17deg);
+}
+
+#secret_hand div div:last-child img{
+    transform: rotate(17deg);
+}
 #selected_card{
-    width: 65%;
+    width: 35%;
 }
 #selected_card * {
     width: 100%;
@@ -1716,7 +1715,14 @@ h1>input[type="text"] {
     border-radius: 4px;
 }
 
+.selected img{
+    transform: rotate(0deg) !important; 
+    width: 75% !important;
+}
 
+.selected{
+    bottom: 40% !important;
+}
 
 
 .secret_role{
@@ -1730,35 +1736,36 @@ h1>input[type="text"] {
     transform-origin: center 120%;
 }
 
-#secret_hand  img{
-    height: auto;
-    width: inherit;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 0px;
+#secret_hand img{
+    width: 40%;
+    margin: 0.25rem;
+    
     transform-origin: center 120%;
     border-radius: 4px;
-}
-
-
-.selected{
-    border: rgba(255,217,0,1) solid 4px;
-    animation: glow 2s infinite ease-in-out;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 
 }
 
 
-@keyframes glow {
-    0% {
-        box-shadow: 0px 0px 41px 2px rgba(255,217,0,1) !important;
+.secret_card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    transition: bottom 0.25s;
 
-    }
 
-    100% {
-        box-shadow: 0px 0px 41px 15px rgba(255,217,0,1) !important;
-    }
 }
 
+/* 
+#general, #vote{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ */
 
 
 
@@ -1773,27 +1780,49 @@ html{
     overflow-x: hidden;
 }
 
-.ja{
-    transform: rotate(-15deg);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+.selected_vote{
+    border: yellow 4px solid;
 }
 
-.nein{
-    transform: rotate(-7.5deg);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+
+h4{
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
 }
 
-.party_membership{
-    transform: rotate(7.5deg);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+#game_text{
+    display: none;
+    width: 100%;
 }
 
-.secret_role{
-    transform: rotate(15deg);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 
+#game_text ul{
+    column-count: 2;
+    list-style-type: none;
+    padding: 0;
 }
 
+#vote .secret_card{
+    pointer-events: none;
+}
+
+#vote .secret_card img{
+    pointer-events: all;
+}
+.selectedItem {
+    border: black 2px solid;
+    border-radius: 4px;
+    break-inside: avoid-column;
+}
+
+
+#vote{
+    display: none;
+}
 @media all and (max-width: 660px) {
     #secret_hitler_title {
         font-size: 2rem;
@@ -1810,12 +1839,9 @@ html{
         width: inherit;
         align-items: center;
         justify-content: flex-start;
+        overflow-y: hidden;
+        overflow-x: hidden;
 
-    }
-
-
-    .card:last-child {
-        display: block !important;
     }
 
     #secret_create {
@@ -1826,7 +1852,6 @@ html{
     #secret_join {
         margin-left: auto;
         margin-right: auto;
-        display: none;
     }
 }
 

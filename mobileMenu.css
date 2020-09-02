@@ -41,14 +41,19 @@
     #title p {
         /* display: none; */
         font-family: "Eskapade";
-        /* font-size: ; */
+        font-size: 1.75rem;
 
     }
 
+    .footer{
+        display: none;
+    }
     #logo {
         display: none;
     }
-
+    body{
+        padding-bottom: 0;
+    }
     .burger {
         display: block !important;
         margin: 0;
