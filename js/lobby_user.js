@@ -66,6 +66,8 @@ function data_receive(data) {
                     fHtml += "<h4>" + fascist + "</h4>";
                 })
 
+                fHtml += "<h4>HITLER:" + data.hitler + "</h4>";
+
                 $("#game_text").prepend(fHtml);
 
                 break;
@@ -131,23 +133,103 @@ function data_receive(data) {
         $("#general").fadeOut(100, () => {
             $("#vote").fadeIn();
             $("#game_text").empty();
-            $("#game_text").append(`<h2>President elect ${data.president} is running with Chancellor elect ${data.nominee}.</h2><h3>Vote Ja or Nein on this proposed government.</h3><button id = "castVote">Cast Vote</button>`);
+            $("#game_text").append(`<h2>President elect ${data.pres} is running with Chancellor elect ${data.nominee}.</h2><h3>Vote Ja or Nein on this proposed government.</h3><button id = "castVote">Cast Vote</button>`);
 
-            $("#vote .secret_card img").click(function() {
+            $("#vote .secret_card img").click(function () {
                 $("#vote .secret_card img").removeClass("selected_vote")
                 $(this).addClass("selected_vote");
             })
 
             $("#castVote").click(() => {
-                if($("#vote .secret_card img.selected_vote").length != 0){
+                if ($("#vote .secret_card img.selected_vote").length != 0) {
                     let yes = $("#vote .secret_card img.selected_vote").hasClass("ja");
-                    me.Send({"vote": yes ? "yes" : "no"})
+                    me.Send({
+                        "vote": yes ? "yes" : "no"
+                    });
+            
                 }
-
             })
 
 
         })
+
+    } else if (data.hasOwnProperty("policy_choices")) {
+        $("#vote").fadeOut(100, () => {
+            $("#president_selection").fadeIn();
+            $("#game_text").empty();
+            $("#game_text").append(`<h2>You must discard one card and send the rest to your chancellor.</h2><button id = "discard">Discard</button>`);
+            let cards = $("#president_selection").children()
+
+            for (let i = 0; i < data.policy_choices.length; i++) {
+                const element = data.policy_choices[i];
+                if (element == 0) {
+                    $($(cards[i]).children()[0]).attr("src", "/resources/images/secret_hitler/fascist_policy.png").attr("data-id", i);
+                } else {
+                    $($(cards[i]).children()[0]).attr("src", "/resources/images/secret_hitler/liberal_policy.png").attr("data-id", i);
+
+                }
+
+            }
+            $("#president_selection .secret_card img").click(function () {
+                $("#president_selection .secret_card img").removeClass("selected_vote")
+                $(this).addClass("selected_vote");
+            })
+
+            $("#discard").click(() => {
+                if ($("#president_selection .secret_card img.selected_vote").length != 0) {
+                    let discard = $("#president_selection .secret_card img.selected_vote").attr("data-id");
+                    me.Send({
+                        "discard": data.policy_choices[discard],
+                        "keep": data.policy_choices.flatMap((card, index) => {
+                            if(index != discard) { return card}  return []
+                        })
+                    });
+                    $("#president_selection").fadeOut(100, () => {
+                        $("#general").fadeIn();
+                    });
+
+                }
+            })
+        });
+
+    }else if (data.hasOwnProperty("chan_polices")) {
+        $("#vote").fadeOut(100, () => {
+            $("#chan_selection").fadeIn();
+            $("#game_text").empty();
+            $("#game_text").append(`<h2>You must choose a policy to enact.</h2><button id = "enact">Enact</button>`);
+            let cards = $("#chan_selection").children()
+
+            for (let i = 0; i < data.chan_polices.length; i++) {
+                const element = data.chan_polices[i];
+                if (element == 0) {
+                    $($(cards[i]).children()[0]).attr("src", "/resources/images/secret_hitler/fascist_policy.png").attr("data-id", i);
+                } else {
+                    $($(cards[i]).children()[0]).attr("src", "/resources/images/secret_hitler/liberal_policy.png").attr("data-id", i);
+
+                }
+
+            }
+            $("#chan_selection .secret_card img").click(function () {
+                $("#chan_selection .secret_card img").removeClass("selected_vote")
+                $(this).addClass("selected_vote");
+            })
+
+            $("#enact").click(() => {
+                if ($("#chan_selection .secret_card img.selected_vote").length != 0) {
+                    let enact = $("#chan_selection .secret_card img.selected_vote").attr("data-id");
+                    me.Send({
+                        "enact": data.chan_polices[enact],
+                        "discard": data.chan_polices.flatMap((card, index) => {
+                            if(index != discard) { return card}  return []
+                        })[0]
+                    });
+                    $("#chan_selection").fadeOut(100, () => {
+                        $("#general").fadeIn();
+                    });
+
+                }
+            })
+        });
 
     }
 }
@@ -186,9 +268,5 @@ function game_loop(lobby_id) {
             $("#join_lobby").before('<p id = "player_count_small" style = "position: absolute; bottom: 5px; left: 8px;" >1/10</p>')
         }
     })
-
-
-
-
 
 }

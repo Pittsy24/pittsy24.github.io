@@ -1117,13 +1117,13 @@ h1>input[type="text"] {
     cursor: pointer;
 }
 
-.one_line{
+.one_line {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.one_line .blue_filler{
+.one_line .blue_filler {
     flex-grow: 1;
 }
 
@@ -1226,7 +1226,7 @@ h1>input[type="text"] {
     font-size: 1rem;
     font-weight: bold;
     color: #709cc7;
-    min-width:1px;
+    min-width: 1px;
     width: auto;
 }
 
@@ -1234,7 +1234,8 @@ h1>input[type="text"] {
     outline: rgb(197, 110, 108);
 }
 
-#secret_join>p, .one_line>p {
+#secret_join>p,
+.one_line>p {
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     color: #709cc7;
@@ -1650,15 +1651,15 @@ h1>input[type="text"] {
 #lid {
     clip-path: polygon(40% 0%, 60% 0%, 100% 80%, 100% 100%, 0% 100%, 0% 80%);
     position: absolute;
-    
+
     z-index: 5;
     transform-origin: bottom;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
     transform: rotateX(180deg);
-    
+
 }
 
-#packet{
+#packet {
     margin-top: 100px;
     transform: rotateX(20deg);
     position: relative;
@@ -1670,24 +1671,25 @@ h1>input[type="text"] {
 
 @keyframes grow {
     100% {
-      height: 120px;
+        height: 120px;
     }
-  }
+}
 
-  @keyframes grow2 {
+@keyframes grow2 {
     100% {
-      height: 95px;
+        height: 95px;
     }
-  }
+}
 
-#lid.open{
+#lid.open {
     transition: transform 0.8s ease-in-out;
     transform-origin: bottom;
 
     transform: rotateX(-8deg);
     /* z-index: -1; */
 }
-#secret_hand{
+
+#secret_hand {
     margin-top: auto;
     width: 85vw;
     display: flex;
@@ -1699,47 +1701,52 @@ h1>input[type="text"] {
 
 }
 
-#secret_hand div div:first-child img{
+
+
+#secret_hand div div:first-child img {
     transform: rotate(-17deg);
 }
 
-#secret_hand div div:last-child img{
+#secret_hand div div:last-child img {
     transform: rotate(17deg);
 }
-#selected_card{
+
+#selected_card {
     width: 35%;
 }
+
 #selected_card * {
     width: 100%;
     transform: rotate(0);
     border-radius: 4px;
 }
 
-.selected img{
-    transform: rotate(0deg) !important; 
+.selected img {
+    transform: rotate(0deg) !important;
     width: 75% !important;
 }
 
-.selected{
+.selected {
     bottom: 40% !important;
 }
 
 
-.secret_role{
+.secret_role {
     transform-origin: center 120%;
 }
 
-.nein{
-    transform-origin: center 120%;
-}
-.ja{
+.nein {
     transform-origin: center 120%;
 }
 
-#secret_hand img{
+.ja {
+    transform-origin: center 120%;
+}
+
+#secret_hand img {
     width: 40%;
     margin: 0.25rem;
-    
+
     transform-origin: center 120%;
     border-radius: 4px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
@@ -1747,7 +1754,7 @@ h1>input[type="text"] {
 }
 
 
-.secret_card{
+.secret_card {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1769,23 +1776,243 @@ h1>input[type="text"] {
 
 
 
-.hidden{
+.hidden {
     visibility: hidden;
-    position: unset !important; 
+    position: unset !important;
     width: 100% !important;
 }
 
 
-html{
+html {
     overflow-x: hidden;
 }
 
-.selected_vote{
+.selected_vote {
     border: yellow 4px solid;
 }
 
+#introduction_text {
+    display: none;
+}
+#election_screen h3{
+    width: 80%;
+    margin-top: 2.5rem;
+}
+#votes{
+    display: flex;
+    justify-content: center;
+}
 
-h4{
+#election_screen{
+    display: none;
+}
+.voter_template{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 100px;
+    align-items: center;
+}
+
+.voter_template:first-child{
+    display: none;
+}
+
+.voter_template img{
+    height: auto;
+    width: 75%;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.25s ease-in;
+}
+.ribbon {
+    width: 400px;
+    height: 60px;
+    margin: 0px auto 0px;
+    position: relative;
+    color: #fff;
+    font: 28px/60px sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    background: #3D79D0;
+
+    -webkit-animation: main 250ms;
+    -moz-animation: main 250ms;
+    -ms-animation: main 250ms;
+    animation: main 250ms;
+}
+
+.ribbon i {
+    position: absolute;
+}
+
+.ribbon i:first-child,
+.ribbon i:nth-child(2) {
+    position: absolute;
+    left: -20px;
+    bottom: -20px;
+    z-index: -1;
+    border: 20px solid transparent;
+    border-right-color: #043140;
+
+    -webkit-animation: edge 500ms;
+    -moz-animation: edge 500ms;
+    -ms-animation: edge 500ms;
+    animation: edge 500ms;
+}
+
+.ribbon i:nth-child(2) {
+    left: auto;
+    right: -20px;
+    border-right-color: transparent;
+    border-left-color: #043140;
+}
+
+.ribbon i:nth-child(3),
+.ribbon i:last-child {
+    width: 20px;
+    bottom: -20px;
+    left: -60px;
+    z-index: -2;
+    border: 30px solid #1D53C0;
+    border-left-color: transparent;
+
+    -webkit-animation: back 600ms;
+    -moz-animation: back 600ms;
+    -ms-animation: back 600ms;
+    animation: back 600ms;
+
+    -webkit-transform-origin: 100% 0;
+    -moz-transform-origin: 100% 0;
+    -ms-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+}
+
+.ribbon i:last-child {
+    bottom: -20px;
+    left: auto;
+    right: -60px;
+    border: 30px solid #1D53C0;
+    border-right-color: transparent;
+
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+p {
+    text-align: center;
+    color: #aaa;
+}
+
+/* animations */
+
+@-webkit-keyframes main {
+    0% {
+        -webkit-transform: scaleX(0);
+    }
+
+    100% {
+        -webkit-transform: scaleX(1);
+    }
+}
+
+@-webkit-keyframes edge {
+
+    0%,
+    50% {
+        -webkit-transform: scaleY(0);
+    }
+
+    100% {
+        -webkit-transform: scaleY(1);
+    }
+}
+
+@-webkit-keyframes back {
+
+    0%,
+    75% {
+        -webkit-transform: scaleX(0);
+    }
+
+    100% {
+        -webkit-transform: scaleX(1);
+    }
+}
+
+
+@-moz-keyframes main {
+    0% {
+        -moz-transform: scaleX(0);
+    }
+
+    100% {
+        -moz-transform: scaleX(1);
+    }
+}
+
+@-moz-keyframes edge {
+
+    0%,
+    50% {
+        -moz-transform: scaleY(0);
+    }
+
+    100% {
+        -moz-transform: scaleY(1);
+    }
+}
+
+@-moz-keyframes back {
+
+    0%,
+    75% {
+        -moz-transform: scaleX(0);
+    }
+
+    100% {
+        -moz-transform: scaleX(1);
+    }
+}
+
+
+@keyframes main {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes edge {
+
+    0%,
+    50% {
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes back {
+
+    0%,
+    75% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+h4 {
     display: block;
     margin-block-start: 0em;
     margin-block-end: 0em;
@@ -1794,34 +2021,53 @@ h4{
     font-weight: bold;
 }
 
-#game_text{
+#game_text {
     display: none;
     width: 100%;
 }
 
 
-#game_text ul{
+#game_text ul {
     column-count: 2;
     list-style-type: none;
     padding: 0;
 }
 
-#vote .secret_card{
+#vote .secret_card, #president_selection .secret_card, #chan_selection .secret_card {
     pointer-events: none;
 }
 
-#vote .secret_card img{
+#vote .secret_card img, #president_selection .secret_card img  , #chan_selection .secret_card img {
     pointer-events: all;
 }
+
 .selectedItem {
     border: black 2px solid;
     border-radius: 4px;
     break-inside: avoid-column;
 }
 
+#failed_elections{
+    display: inline;
+}
 
-#vote{
+
+#vote, #president_selection, #chan_selection {
     display: none;
+}
+
+.liberal_background{
+    background-image: url("/resources/images/secret_hitler/liberal_policy.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+
+.fascist_background{
+    background-image: url("/resources/images/secret_hitler/fascist_policy.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
 }
 @media all and (max-width: 660px) {
     #secret_hitler_title {
@@ -1849,6 +2095,7 @@ h4{
         margin-right: auto;
         display: none;
     }
+
     #secret_join {
         margin-left: auto;
         margin-right: auto;
