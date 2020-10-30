@@ -174,11 +174,15 @@ h3 {
   color: #fff !important;
 }
 .python {
-  background-color: #366d9c !important;
+  background-color: #FFDF76 !important;
+  color: #000 !important;
+}
+.azure {
+  background-color: #3177B0 !important;
   color: #fff !important;
 }
 .mxchip {
-  background-color: #0042b4 !important;
+  background-color: #6330AA !important;
   color: #fff !important;
 }
 .shell {
@@ -460,6 +464,10 @@ li > a:only-child:after {
     opacity: 1;
     height: 32px;
   }
+}
+
+.imageBox picture{
+  width:100% !important;
 }
 
 .imageCaptionBox {

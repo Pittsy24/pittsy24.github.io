@@ -1,6 +1,13 @@
 {
     "articles": [
         {
+            "headline": "Creating a light alarm clock with Azure",
+            "summary": "In this blog post we will be building upon our LED strip and creating a light alarm clock!",
+            "link": "/blog/creating-a-light-alarm-clock-with-azure.html",
+            "date": 1603986908,
+            "tags": ["Azure", "Python", "MXChip"]
+        },
+        {
             "headline": "Guide for using WS2812B LED Strips with MXChip",
             "summary": "A guide on how to control a WS2812B LED Strip with the MXChip",
             "link": "/blog/guide-for-using-ws2812b-led-strips-with-mxchip.html",
