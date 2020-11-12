@@ -175,9 +175,18 @@
         let colorPicker = document.getElementById("colour")
         colorPicker.addEventListener("change", watchColorPicker, false);
 
+        function hexToRgb(hex) {
+          var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+          return result ? {
+            r: parseInt(result[1], 16),
+            g: parseInt(result[2], 16),
+            b: parseInt(result[3], 16)
+          } : null;
+        }
+
         function watchColorPicker(event) {
-            let rgb = event.target.value.match(/[A-Za-z0-9]{2}/g).map(function(v) { return parseInt(v, 16) })
-            fetch(`https://updateleds.azurewebsites.net/api/lightDemo?r=${rgb[0]}&g=${rgb[1]}&b=${rgb[2]}&d=false&br=100`)
+            let rgb = hexToRgb(event.target.value);
+            fetch(`https://updateleds.azurewebsites.net/api/lightDemo?r=${rgb.r}&g=${rgb.g}&b=${rgb.b}&d=false&br=50`)
             .catch(function (error) {
                 alert("Changed colour!")
             });
