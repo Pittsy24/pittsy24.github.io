@@ -1,0 +1,26 @@
+{
+  "name": "pittsy24.github.io",
+  "version": "1.0.0",
+  "description": "Website",
+  "main": "postcss.config.js",
+  "dependencies": {
+    "autoprefixer": "^10.0.2",
+    "postcss": "^8.1.8",
+    "tailwindcss": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "postcss styles.css -o out.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pittsy24/pittsy24.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pittsy24/pittsy24.github.io/issues"
+  },
+  "homepage": "https://github.com/Pittsy24/pittsy24.github.io#readme"
+}
