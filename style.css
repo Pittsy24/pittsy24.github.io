@@ -173,6 +173,12 @@ h3 {
   background-color: #6891d5 !important;
   color: #fff !important;
 }
+
+.advent{
+  background-color: #B3000C !important;
+  color: #fff !important;
+}
+
 .python {
   background-color: #366d9c !important;
   color: #fff !important;
@@ -489,6 +495,8 @@ li > a:only-child:after {
 .codeSnippet {
   background-color: var(--blog-shadow);
   position: relative;
+  border-radius: 0.25rem;
+  margin: 1rem 0 1rem 0;
 }
 .codeSnippet pre {
   overflow: auto;
