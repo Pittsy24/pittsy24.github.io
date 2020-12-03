@@ -1,6 +1,13 @@
 {
     "articles": [
         {
+            "headline": "Advent of Code Day #03",
+            "summary": "Day three of the advent of code 2020!",
+            "link": "/blog/advent-of-code-day-03.html",
+            "date": 1607007683,
+            "tags": ["Advent", "Python"]
+        },
+        {
             "headline": "Advent of Code Day #02",
             "summary": "Day two of the advent of code 2020!",
             "link": "/blog/advent-of-code-day-02.html",
