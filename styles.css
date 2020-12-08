@@ -11,3 +11,48 @@
     font-named-instance: 'Regular';
     src: url('./fonts/Inter-roman-latin.var.woff2') format('woff2');
 }
+
+
+#article h1{
+    @apply text-2xl;
+    @apply sm:text-3xl;
+    @apply lg:text-5xl;
+    @apply leading-none;
+    @apply font-extrabold;
+    @apply text-gray-900;
+    @apply dark:text-gray-50;
+    @apply mt-10;
+    @apply mb-2;
+    @apply sm:mt-14;
+    @apply sm:mb-3;
+}
+
+#article h2{
+    @apply text-xl;
+    @apply sm:text-2xl;
+    @apply lg:text-3xl;
+    @apply leading-none;
+    @apply font-extrabold;
+    @apply text-gray-900;
+    @apply dark:text-gray-50;
+    @apply mt-5;
+    @apply mb-2;
+    @apply sm:mt-6;
+    @apply sm:mb-3;
+    @apply pb-2;
+    @apply border-b;
+    @apply border-gray-200;
+    @apply dark:border-gray-600;
+}
+
+#article p{
+    @apply font-medium;
+    @apply mb-10;
+    @apply text-gray-600;
+    @apply dark:text-gray-300;
+    @apply text-base;
+    @apply sm:text-base;
+    @apply md:text-lg;
+    @apply lg:text-xl;
+}
+
