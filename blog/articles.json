@@ -1,6 +1,13 @@
 {
     "articles": [
         {
+            "headline": "Advent of Code Day #09",
+            "summary": "Day Nine: Encoding Error | Advent of Code 2020",
+            "link": "/blog/advent-of-code-day-09.html",
+            "date": 1607510160,
+            "tags": ["Advent", "Python"]
+        },
+        {
             "headline": "Advent of Code Day #08",
             "summary": "Day Eight: Handheld Halting | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-08.html",
