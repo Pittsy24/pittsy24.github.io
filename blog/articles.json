@@ -1,5 +1,13 @@
 {
     "articles": [
+        
+        {
+            "headline": "Creating a light alarm clock with Azure",
+            "summary": "In this blog post we will be building upon our MXChip controlled LED strip and creating a light alarm clock!",
+            "link": "/blog/creating-a-light-alarm-clock-with-azure.html",
+            "date": 1607525220,
+            "tags": ["Azure", "Python", "MXChip"]
+        },
         {
             "headline": "Advent of Code Day #09",
             "summary": "Day Nine: Encoding Error | Advent of Code 2020",
