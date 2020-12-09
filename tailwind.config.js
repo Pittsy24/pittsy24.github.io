@@ -5,13 +5,15 @@ const { default: flattenColorPalette } = require('tailwindcss/lib/util/flattenCo
 const { toRgba } = require('tailwindcss/lib/util/withAlphaVariable')
 
 module.exports = {
+    important: true,
     darkMode: 'media',
     purge: [
         './*.html'
     ],
     theme: {
         maxWidth: {
-            '1/3': '30%'
+            '1/3': '30%',
+            '3/5': '60%'
         },
         colors: {
             transparent: 'transparent',

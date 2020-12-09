@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/9bfa0f1f0f.js" crossorigin="anonymous"></script>
     <link href="/out.css" rel="stylesheet">
+    <link rel="stylesheet" href="/prism/prism.css"/>
+    <script src="/prism/prism.js"></script>
+
 </head>
 
-<body class="lg:px-56 md:px-24 px-8 flex flex-col h-screen dark:bg-gray-900">
+<body class="lg:px-56 md:px-24 px-4 flex flex-col h-screen dark:bg-gray-900 ">
 
     <header>
         <div class="border-b border-gray-200 dark:border-gray-600 flex items-center justify-between py-6 ">
@@ -31,7 +34,7 @@
 
     </header>
 
-    <div id="article" class="mb-auto mx-auto md:w-4/5">
+    <div id="article" class="mb-auto mx-auto md:w-3/5 w-full">
 
         <h1>Advent of Code: Day #08 <span class="hidden sm:inline-block">-</span> Handheld Halting</h1>
 
@@ -44,7 +47,7 @@
         <h2>Introduction</h2>
         <p>Today we had to implement a very small instruction set with just three instructions, nop, acc and jmp.</p>
 
-        <h2>Task One</h2>
+        <h2>🌟 Task One</h2>
         <p>For task one we're given a set of instructions that are stuck in an infinite loop and tasked to return the
             value in the
             accumulator before any instruction was ran for a second time</p>
@@ -53,6 +56,18 @@
         <p>I read the data into an array of sub-arrays where each sub array was in the form ["instruction", number]
             where
             instruction is nop, acc or jmp and number is a positive or negative integer.</p>
+        
+        <pre class="overflow-auto w-auto p-2"><code class="language-python text-sm">
+def read_data(path):
+  dataset = []
+    
+  with open(path, "r") as file:
+      for line in file.readlines():
+      dataset.append(line.strip().split(" "))
+      dataset[-1][1] = int(dataset[-1][1])
+  
+  return dataset
+        </code></pre>
 
         <h3>Computer Class</h3>
         <p>I have a feeling we may be asked to expand upon this instruction set in the coming days and weeks so I
