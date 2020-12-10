@@ -1,6 +1,12 @@
 {
     "articles": [
-        
+        {
+            "headline": "Advent of Code Day #10",
+            "summary": "Day Eight: Adapter Array | Advent of Code 2020",
+            "link": "/blog/advent-of-code-day-10.html",
+            "date": 1607601843,
+            "tags": ["Advent", "Python"]
+        },
         {
             "headline": "Creating a light alarm clock with Azure",
             "summary": "In this blog post we will be building upon our MXChip controlled LED strip and creating a light alarm clock!",
@@ -13,13 +19,6 @@
             "summary": "Day Nine: Encoding Error | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-09.html",
             "date": 1607510160,
-            "tags": ["Advent", "Python"]
-        },
-        {
-            "headline": "Advent of Code Day #10",
-            "summary": "Day Eight: Adapter Array | Advent of Code 2020",
-            "link": "/blog/advent-of-code-day-10.html",
-            "date": 1607601843,
             "tags": ["Advent", "Python"]
         },
         {
