@@ -1,6 +1,13 @@
 {
     "articles": [
         {
+            "headline": "Advent of Code Day #10",
+            "summary": "Day Eight: Adapter Array | Advent of Code 2020",
+            "link": "/blog/advent-of-code-day-10.html",
+            "date": 1607601843,
+            "tags": ["Advent", "Python"]
+        },
+        {
             "headline": "Advent of Code Day #08",
             "summary": "Day Eight: Handheld Halting | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-08.html",
