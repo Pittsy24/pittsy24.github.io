@@ -1,8 +1,22 @@
 {
     "articles": [
         {
+            "headline": "Advent of Code Day #12 ",
+            "summary": "Day Twelve: Rain Risk | Advent of Code 2020",
+            "link": "/blog/advent-of-code-day-12.html",
+            "date": 1607785005,
+            "tags": ["Advent", "Python"]
+        },
+        {
+            "headline": "Advent of Code Day #11 ",
+            "summary": "Day Eleven: Adapter Array | Advent of Code 2020",
+            "link": "/blog/advent-of-code-day-11.html",
+            "date": 1607783723,
+            "tags": ["Advent", "Python"]
+        },
+        {
             "headline": "Advent of Code Day #10",
-            "summary": "Day Eight: Adapter Array | Advent of Code 2020",
+            "summary": "Day Ten: Adapter Array | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-10.html",
             "date": 1607601843,
             "tags": ["Advent", "Python"]
