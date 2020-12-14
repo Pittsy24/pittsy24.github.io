@@ -1,6 +1,13 @@
 {
     "articles": [
         {
+            "headline": "Advent of Code Day #14",
+            "summary": "Day Fourteen: Docking Data | Advent of Code 2020",
+            "link": "/blog/advent-of-code-day-14.html",
+            "date": 1607946497,
+            "tags": ["Advent", "Python"]
+        },
+        {
             "headline": "Advent of Code Day #13",
             "summary": "Day Thirteen: Shuttle Search | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-13.html",
