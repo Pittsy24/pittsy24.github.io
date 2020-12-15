@@ -1,123 +1,187 @@
 {
     "articles": [
         {
+            "headline": "Advent of Code Day #15",
+            "summary": "Day Fifteen: Rambunctious Recitation | Advent of Code 2020",
+            "link": "/blog/advent-of-code-day-15.html",
+            "date": 1608035728,
+            "tags": [
+                "Advent",
+                "Python"
+            ]
+        },
+        {
             "headline": "Advent of Code Day #14",
             "summary": "Day Fourteen: Docking Data | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-14.html",
             "date": 1607946497,
-            "tags": ["Advent", "Python"]
+            "tags": [
+                "Advent",
+                "Python"
+            ]
         },
         {
             "headline": "Advent of Code Day #13",
             "summary": "Day Thirteen: Shuttle Search | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-13.html",
             "date": 1607869045,
-            "tags": ["Advent", "Python"]
+            "tags": [
+                "Advent",
+                "Python"
+            ]
         },
         {
             "headline": "Advent of Code Day #12",
             "summary": "Day Twelve: Rain Risk | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-12.html",
             "date": 1607785005,
-            "tags": ["Advent", "Python"]
+            "tags": [
+                "Advent",
+                "Python"
+            ]
         },
         {
             "headline": "Advent of Code Day #11",
             "summary": "Day Eleven: Adapter Array | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-11.html",
             "date": 1607783723,
-            "tags": ["Advent", "Python"]
+            "tags": [
+                "Advent",
+                "Python"
+            ]
         },
         {
             "headline": "Advent of Code Day #10",
             "summary": "Day Ten: Adapter Array | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-10.html",
             "date": 1607601843,
-            "tags": ["Advent", "Python"]
+            "tags": [
+                "Advent",
+                "Python"
+            ]
         },
         {
             "headline": "Creating a light alarm clock with Azure",
             "summary": "In this blog post we will be building upon our MXChip controlled LED strip and creating a light alarm clock!",
             "link": "/blog/creating-a-light-alarm-clock-with-azure.html",
             "date": 1607525220,
-            "tags": ["Azure", "Python", "MXChip"]
+            "tags": [
+                "Azure",
+                "Python",
+                "MXChip"
+            ]
         },
         {
             "headline": "Advent of Code Day #09",
             "summary": "Day Nine: Encoding Error | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-09.html",
             "date": 1607510160,
-            "tags": ["Advent", "Python"]
+            "tags": [
+                "Advent",
+                "Python"
+            ]
         },
         {
             "headline": "Advent of Code Day #08",
             "summary": "Day Eight: Handheld Halting | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-08.html",
             "date": 1607424328,
-            "tags": ["Advent", "Python"]
+            "tags": [
+                "Advent",
+                "Python"
+            ]
         },
         {
             "headline": "Advent of Code Day #07",
             "summary": "Day Seven: Handy Haversacks | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-07.html",
             "date": 1607344729,
-            "tags": ["Advent", "Python"]
+            "tags": [
+                "Advent",
+                "Python"
+            ]
         },
         {
             "headline": "Advent of Code Day #06",
             "summary": "Day Six: Custom Customs | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-06.html",
             "date": 1607256827,
-            "tags": ["Advent", "Python"]
+            "tags": [
+                "Advent",
+                "Python"
+            ]
         },
         {
             "headline": "Advent of Code Day #05",
             "summary": "Day Five: Binary Boarding | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-05.html",
             "date": 1607172859,
-            "tags": ["Advent", "Python"]
+            "tags": [
+                "Advent",
+                "Python"
+            ]
         },
         {
             "headline": "Advent of Code Day #04",
             "summary": "Day Four: Passport Processing | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-04.html",
             "date": 1607098975,
-            "tags": ["Advent", "Python"]
+            "tags": [
+                "Advent",
+                "Python"
+            ]
         },
         {
             "headline": "Advent of Code Day #03",
             "summary": "Day Three: Toboggan Trajectory | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-03.html",
             "date": 1607007683,
-            "tags": ["Advent", "Python"]
+            "tags": [
+                "Advent",
+                "Python"
+            ]
         },
         {
             "headline": "Advent of Code Day #02",
             "summary": "Day Two: Password Philosophy | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-02.html",
             "date": 1606903366,
-            "tags": ["Advent", "Python"]
+            "tags": [
+                "Advent",
+                "Python"
+            ]
         },
         {
             "headline": "Advent of Code Day #01",
             "summary": "Day One: Report Repair | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-01.html",
             "date": 1606820458,
-            "tags": ["Advent", "Python"]
+            "tags": [
+                "Advent",
+                "Python"
+            ]
         },
         {
             "headline": "Guide for using WS2812B LED Strips with MXChip",
             "summary": "A guide on how to control a WS2812B LED Strip with the MXChip",
             "link": "/blog/guide-for-using-ws2812b-led-strips-with-mxchip.html",
             "date": 1597881600,
-            "tags": ["C++", "MXChip"]
+            "tags": [
+                "C++",
+                "MXChip"
+            ]
         },
         {
             "headline": "Create automatic display rotation with MXChip",
             "summary": "MXChip/Arduino project that automatically rotates your screens display when you rotate your monitor.",
             "link": "/blog/create-automatic-display-rotation-with-mxchip.html",
             "date": 1593302400,
-            "tags": ["C++", "Python", "Shell", "MXChip"]
+            "tags": [
+                "C++",
+                "Python",
+                "Shell",
+                "MXChip"
+            ]
         }
     ]
 }
