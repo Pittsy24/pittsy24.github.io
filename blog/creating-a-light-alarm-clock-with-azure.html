@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "TechArticle",
+                "headline": "Creating a light alarm clock with the MXChip!",
+                "datePublished": "2020-12-09",
+                "image": "https://JoePitts.co.uk/resources/images/alarm.jpeg",
+                "author": {
+                    "@type": "Person",
+                    "name": "Joe Pitts",
+                    "additionalName": "David",
+                    "affiliation": "University of Lincoln",
+                    "jobTitle": "Developer",
+                    "url": "https://JoePitts.co.uk",
+                    "sameAs": [
+                        "https://www.facebook.com/Joe.Pittsy",
+                        "https://www.linkedin.com/in/JoePittsy",
+                        "https://twitter.com/JoePittsy",
+                        "https://www.instagram.com/JoePittsy/",
+                        "https://github.com/JoePittsy"
+                    ]
+                },
+                "description": "How to made an light alarm clock with an MXChip, LED Strip and Azure Cloud!"
+            }
+        </script>
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@JoePittsy" />
+    <meta name="twitter:description" content="How to made an light alarm clock with an MXChip, LED Strip and Azure Cloud!" name="description" />
+    <meta name="twitter:title" content="Joe Pitts | Creating a light alarm clock with the MXChip!" />
+    <meta name="twitter:creator" content="@JoePittsy" />
+    <meta name="twitter:image" content="https://joepitts.co.uk/resources/images/alarm.jpeg"/>
+
+
+    <meta property="og:image" content="https://joepitts.co.uk/resources/images/alarm.jpeg" />
+
+    <meta property="og:title" content="Creating a light alarm clock with the MXChip!" />
+    <meta property="og:description" content="How to made an light alarm clock with an MXChip, LED Strip and Azure Cloud!" />
+    <meta property="og:url" content="https://joepitts.co.uk/blog/creating-a-light-alarm-clock-with-azure.html" />
+    <meta name="author" content="Joe Pitts" />
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114382787-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "UA-114382787-2");
+    </script>
+    <script src="/js/darkMode.js" type="text/javascript"></script>
+    <script src="/js/clipboard.min.js"></script>
+    <link href="/resources/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="/resources/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="/resources/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+    <link href="/resources/site.webmanifest" rel="manifest" />
+    <link href="/resources/safari-pinned-tab.svg" rel="mask-icon" />
+    <meta content="#da532c" name="msapplication-TileColor" />
+    <meta content="#ffffff" name="theme-color" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Joe Pitts | Creating a light alarm clock with the MXChip!</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+    <meta
+        content="Website of Joe Pitts, a 20 year old Developer and Student of Computer Science at the University of Lincoln UK"
+        name="description" />
+    <meta lang="en-gb" />
+    <noscript>
+        <style>
+            .jsonly {
+                display: none;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body link="black" style="height: auto">
+    <div class="content" id="content">
+        <header>
+            <div id="containter">
+                <div id="header">
+                    <img alt="Joe Pitts" id="logo" src="/resources/JoePitts.jpg" title="Joe Pitts" width="10%" />
+                    <a href="/" id="title">
+                        <p>Joe Pitts</p>
+                    </a>
+                    <div class="burger" onclick="document.getElementById('drop').click();">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <aside>
+                <nav id="burger">
+                    <label class="toggle" for="drop" style="pointer-events: none"></label>
+                    <input id="drop" type="checkbox" />
+                    <ul class="menu" id="burger_menu">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/blog">Blog</a>
+                        </li>
+                        <li>
+                            <a href="/work.html">My Work</a>
+                        </li>
+                        <li>
+                            <a href="/games/">Games</a>
+                        </li>
+
+                        <li>
+                            <a href="/instagram.html">Photography</a>
+                        </li>
+                        <li>
+                            <a class="toggleDark" onclick="toggleNightMode();">Dark Mode</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav id="normalMenu">
+                    <ul class="menu">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/blog">Blog</a>
+                        </li>
+                        <li>
+                            <a href="/work.html">My Work</a>
+                        </li>
+                        <li>
+                            <a href="/games/">Games</a>
+                        </li>
+
+                        <li>
+                            <a href="/instagram.html">Photography</a>
+                        </li>
+                        <li>
+                            <a class="toggleDark" onclick="toggleNightMode();">Dark Mode</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+        </header>
+        <hr />
+        <div class="blogPost">
+            <h1>Creating an light alarm clock with the MXChip!</h1>
+            <span id="readingTime">
+                <date>9th of December 2020</date> |
+                <p>7 - 9 minutes</p>
+            </span>
+            <a class="anchor" href="#introduction">
+                <h2 id="introduction">Introduction</h2>
+            </a>
+            <p>
+                This project uses a WS2812B LED strip controlled by an
+                MXChip, if you want to see how this is done read this
+                <a href="./guide-for-using-ws2812b-led-strips-with-mxchip.html">
+                    blog post </a>first.
+            </p>
+            <p>
+                Now I don't know about you but I hate waking up to a blaring
+                alarm, it's definitely not the way I want to be starting the
+                day. A light alarm clock tries to remedy this by waking you
+                up gradually with light, rather then all at once with sound.
+                And now that we have the MXChip set up and controlling the
+                LED strip it seemed like the perfect project (especially now
+                i'm back to University and 9ams)!
+            </p>
+
+            <a class="anchor" href="#plan">
+                <h2 id="plan">First Step: Remote control</h2>
+            </a>
+            <p>
+                The first step to this project is developing a way to
+                control the colour and brightness of the LED strip without
+                having to re-flash the MXChip every time. I found the
+                solution in Jim Bennets great blog post about
+                <a href="https://www.jimbobbennett.io/controlling-an-iot-device-from-your-phone/">controlling an IoT
+                    device from your phone.</a>
+                He writes about using devices twins to set an RGB and
+                brightness value on the cloud and then writing a small
+                amount of code on the MXChip to pull that information and
+                set the LED colours accordingly.
+            </p>
+            <div class="codeSnippet">
+                <div class="double-val-label">
+                    <span class="cpp">C++</span>
+                    <span data-clipboard-target="#getRot" id="rotCopy">Copy</span>
+                </div>
+                <pre><div id="getRot" style="color: #383a42;/*! background-color: #fafafa; */font-family: 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback';font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;" spellcheck="false"><div style="color: #383a42;/*! background-color: #fafafa; */font-family: 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback';font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;"><div><span style="color: #a626a4;">void</span><span style="color: #383a42;"> </span><span style="color: #4078f2;">parseTwinMessage</span><span style="color: #383a42;">(</span><span style="color: #c18401;">DEVICE_TWIN_UPDATE_STATE</span><span style="color: #383a42;"> updateState,</span></div><div><span style="color: #383a42;"> </span><span style="color: #a626a4;">                     const</span><span style="color: #383a42;"> </span><span style="color: #a626a4;">char</span><span style="color: #383a42;"> </span><span style="color: #a626a4;">*</span><span style="color: #383a42;">message)</span></div><div><span style="color: #383a42;">{</span></div><div><span style="color: #383a42;">    </span><span style="color: #e45649;">Serial</span><span style="color: #383a42;">.</span><span style="color: #4078f2;">printf</span><span style="color: #383a42;">(</span><span style="color: #50a14f;">"Time to decode this</span><span style="color: #0184bc;">\n</span><span style="color: #50a14f;">"</span><span style="color: #383a42;">);</span></div><div><span style="color: #383a42;">    rgbLEDR </span><span style="color: #a626a4;">=</span><span style="color: #383a42;"> </span><span style="color: #4078f2;">getTwinData</span><span style="color: #383a42;">(updateState, message, </span><span style="color: #50a14f;">"rgbLEDR"</span><span style="color: #383a42;">);</span></div><div><span style="color: #383a42;">    rgbLEDG </span><span style="color: #a626a4;">=</span><span style="color: #383a42;"> </span><span style="color: #4078f2;">getTwinData</span><span style="color: #383a42;">(updateState, message, </span><span style="color: #50a14f;">"rgbLEDG"</span><span style="color: #383a42;">);</span></div><div><span style="color: #383a42;">    rgbLEDB </span><span style="color: #a626a4;">=</span><span style="color: #383a42;"> </span><span style="color: #4078f2;">getTwinData</span><span style="color: #383a42;">(updateState, message, </span><span style="color: #50a14f;">"rgbLEDB"</span><span style="color: #383a42;">);</span></div><div><span style="color: #383a42;">    dither </span><span style="color: #a626a4;">=</span><span style="color: #383a42;"> </span><span style="color: #4078f2;">getTwinData</span><span style="color: #383a42;">(updateState, message, </span><span style="color: #50a14f;">"rgbDither"</span><span style="color: #383a42;">);</span></div><div><span style="color: #383a42;">    brightness </span><span style="color: #a626a4;">=</span><span style="color: #383a42;"> </span><span style="color: #4078f2;">getTwinData</span><span style="color: #383a42;">(updateState, message, </span><span style="color: #50a14f;">"rgbBrightness"</span><span style="color: #383a42;">);</span></div><br><div><span style="color: #383a42;">    </span><span style="color: #e45649;">Serial</span><span style="color: #383a42;">.</span><span style="color: #4078f2;">printf</span><span style="color: #383a42;">(</span><span style="color: #50a14f;">"Red: </span><span style="color: #986801;">%d</span><span style="color: #50a14f;">, Green: </span><span style="color: #986801;">%d</span><span style="color: #50a14f;">, Blue: </span><span style="color: #986801;">%d</span><span style="color: #0184bc;">\n</span><span style="color: #50a14f;">"</span><span style="color: #383a42;">, rgbLEDR, rgbLEDG, rgbLEDB);</span></div><br><div><span style="color: #383a42;">    </span><span style="color: #e45649;">rgbLed</span><span style="color: #383a42;">.</span><span style="color: #4078f2;">setColor</span><span style="color: #383a42;">(rgbLEDR, rgbLEDG, rgbLEDB);</span></div><div><span style="color: #383a42;">    </span><span style="color: #4078f2;">showColour</span><span style="color: #383a42;">(rgbLEDR, rgbLEDG, rgbLEDB, dither, brightness);</span></div><br><br><div><span style="color: #383a42;">    </span><span style="color: #e45649;">Screen</span><span style="color: #383a42;">.</span><span style="color: #4078f2;">print</span><span style="color: #383a42;">(</span><span style="color: #986801;">3</span><span style="color: #383a42;">, </span><span style="color: #50a14f;">" &gt; Updating..."</span><span style="color: #383a42;">);</span></div><div><span style="color: #383a42;">}</span></div></div></div></pre>
+            </div>
+            <p>
+                This code is only a snippet of whats needed. The full code
+                will be available to downloaded at the end.
+            </p>
+            <a class="anchor" href="#plan">
+                <h2 id="plan">HTTP Endpoint</h2>
+            </a>
+            <p>
+                Now while technically we can remotely change the colour of
+                the lights we have to do so by updating a JSON file
+                manually. Thankfully we can automate this with a little bit
+                of Node.js and the azure-iothub package.
+            </p>
+            <div class="codeSnippet">
+                <div class="double-val-label">
+                    <span class="js">Node.js</span>
+                    <span data-clipboard-target="#getNode" id="rotCopy">Copy</span>
+                </div>
+                <pre><div id="getNode" spellcheck="false" style="color: #383a42;/*! background-color: #fafafa; */font-family: 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback';font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;"><div style="color: #383a42;/*! background-color: #fafafa; */font-family: 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback';font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;" spellcheck="false"><div><span style="color: #a626a4;">var</span><span style="color: #383a42;"> iothub </span><span style="color: #0184bc;">=</span><span style="color: #383a42;"> </span><span style="color: #0184bc;">require</span><span style="color: #383a42;">(</span><span style="color: #50a14f;">'azure-iothub'</span><span style="color: #383a42;">);</span></div><div><span style="color: #a626a4;">var</span><span style="color: #383a42;"> connectionString </span><span style="color: #0184bc;">=</span><span style="color: #383a42;"> </span><span style="color: #50a14f;">'Your connection string'</span><span style="color: #383a42;">;</span></div><div><span style="color: #a626a4;">var</span><span style="color: #383a42;"> registry </span><span style="color: #0184bc;">=</span><span style="color: #383a42;"> iothub.</span><span style="color: #e45649;">Registry</span><span style="color: #383a42;">.</span><span style="color: #4078f2;">fromConnectionString</span><span style="color: #383a42;">(connectionString);</span></div><br><div><span style="color: #383a42;">registry.</span><span style="color: #4078f2;">getTwin</span><span style="color: #383a42;">(</span><span style="color: #50a14f;">'JoesMXChip'</span><span style="color: #383a42;">, </span><span style="color: #a626a4;">function</span><span style="color: #383a42;"> (err, twin) {</span></div><div><span style="color: #383a42;">  </span><span style="color: #a626a4;">if</span><span style="color: #383a42;"> (err) {</span></div><div><span style="color: #383a42;">    </span><span style="color: #c18401;">console</span><span style="color: #383a42;">.</span><span style="color: #0184bc;">error</span><span style="color: #383a42;">(err.</span><span style="color: #e45649;">constructor</span><span style="color: #383a42;">.</span><span style="color: #e45649;">name</span><span style="color: #383a42;"> </span><span style="color: #0184bc;">+</span><span style="color: #383a42;"> </span><span style="color: #50a14f;">': '</span><span style="color: #383a42;"> </span><span style="color: #0184bc;">+</span><span style="color: #383a42;"> err.</span><span style="color: #e45649;">message</span><span style="color: #383a42;">);</span></div><div><span style="color: #383a42;">  } </span><span style="color: #a626a4;">else</span><span style="color: #383a42;"> {</span></div><div><span style="color: #383a42;">    </span><span style="color: #a626a4;">var</span><span style="color: #383a42;"> patch </span><span style="color: #0184bc;">=</span><span style="color: #383a42;"> {</span></div><div><span style="color: #383a42;">      </span><span style="color: #e45649;">properties</span><span style="color: #0184bc;">:</span><span style="color: #383a42;"> {</span></div><div><span style="color: #383a42;">        </span><span style="color: #e45649;">desired</span><span style="color: #0184bc;">:</span><span style="color: #383a42;"> {</span></div><div><span style="color: #383a42;">          </span><span style="color: #50a14f;">"rgbLEDR"</span><span style="color: #0184bc;">:</span><span style="color: #383a42;"> </span><span style="color: #0184bc;">255</span><span style="color: #383a42;">,</span></div><div><span style="color: #383a42;">          </span><span style="color: #50a14f;">"rgbLEDG"</span><span style="color: #0184bc;">:</span><span style="color: #383a42;"> </span><span style="color: #0184bc;">128</span><span style="color: #383a42;">,</span></div><div><span style="color: #383a42;">          </span><span style="color: #50a14f;">"rgbLEDB"</span><span style="color: #0184bc;">:</span><span style="color: #383a42;"> </span><span style="color: #0184bc;">64</span><span style="color: #383a42;">,</span></div><div><span style="color: #383a42;">          </span><span style="color: #50a14f;">"rgbDither"</span><span style="color: #0184bc;">:</span><span style="color: #383a42;"> false</span><span style="color: #383a42;">,</span></div><div><span style="color: #383a42;">          </span><span style="color: #50a14f;">"rgbBrightness"</span><span style="color: #0184bc;">:</span><span style="color: #383a42;"> </span><span style="color: #0184bc;">100</span><span style="color: #383a42;"></span></div><div><span style="color: #383a42;">        }</span></div><div><span style="color: #383a42;">      }</span></div><div><span style="color: #383a42;">    };</span></div><br><div><span style="color: #383a42;">    twin.</span><span style="color: #4078f2;">update</span><span style="color: #383a42;">(patch, </span><span style="color: #a626a4;">function</span><span style="color: #383a42;"> (err) {</span></div><div><span style="color: #383a42;">      </span><span style="color: #a626a4;">if</span><span style="color: #383a42;"> (err) {</span></div><div><span style="color: #383a42;">        </span><span style="color: #c18401;">console</span><span style="color: #383a42;">.</span><span style="color: #0184bc;">error</span><span style="color: #383a42;">(</span><span style="color: #50a14f;">'Could not update twin: '</span><span style="color: #383a42;"> </span><span style="color: #0184bc;">+</span></div><div><span style="color: #0184bc;"></span><span style="color: #383a42;">                       err.</span><span style="color: #e45649;">constructor</span><span style="color: #383a42;">.</span><span style="color: #e45649;">name</span><span style="color: #383a42;"> </span><span style="color: #0184bc;">+</span><span style="color: #383a42;"> </span><span style="color: #50a14f;">': '</span><span style="color: #383a42;"> </span><span style="color: #0184bc;">+</span></div><div><span style="color: #0184bc;">                      </span><span style="color: #383a42;"> err.</span><span style="color: #e45649;">message</span><span style="color: #383a42;">);</span></div><div><span style="color: #383a42;">      } </span><span style="color: #a626a4;">else</span><span style="color: #383a42;"> {</span></div><div><span style="color: #383a42;">        </span><span style="color: #c18401;">console</span><span style="color: #383a42;">.</span><span style="color: #0184bc;">log</span><span style="color: #383a42;">(twin.</span><span style="color: #e45649;">deviceId</span><span style="color: #383a42;"> </span><span style="color: #0184bc;">+</span><span style="color: #383a42;"> </span><span style="color: #50a14f;">' twin updated successfully'</span><span style="color: #383a42;">);</span></div><div><span style="color: #383a42;">      }</span></div><div><span style="color: #383a42;">    });</span></div><div><span style="color: #383a42;">  }</span></div><div><span style="color: #383a42;">});</span></div></div></div></pre>
+            </div>
+            <p>
+                Now we can update the lights by typing the colours into a
+                JavaScript file! Ok ok so not much of an improvement but
+                thats where the cloud comes in, by using Azures serverless
+                solution we can expose this JavaScript to a HTTP endpoint
+                and update the LEDs by making a request and including the
+                RGB and brightness values as URL parameters.
+            </p>
+
+            <p>
+                Azure makes creating a serverless function a breeze, it's as
+                easy as creating a new Function App resource, assigning it
+                to a resource group and choosing what runtime stack you want
+                (.NET, Python, Java, e.t.c) in this case we want Node.js.
+            </p>
+            <p>
+                Now we have a Function app we only have to make a few small
+                changes to our code. First we need to change the hardcoded
+                RGB values to the data thats being passed in with the HTML
+                requests, this can be done like so
+                <code>parseInt(req.query.r)</code> for each of the values.
+                Secondly we need to export the function by simply wrapping
+                it in
+                <code>module.exports async function (context, req) {}</code>
+            </p>
+            <p>
+                When all is done you will have a URL like this
+                example.azurewebsites.net/api/example?r=255&g=100&b=0&d=false&br=1
+                and by changing the RGB values in the URL you should be able
+                to update the physical LED strip!
+            </p>
+            <a class="anchor" href="#alarm">
+                <h2 id="alarm">The alarm clock</h2>
+            </a>
+            <p>
+                Now we can change the LEDs colour (and more importantly for
+                this application brightness) we need to trigger the lights
+                to come on and gradually increase in brightness to wake us
+                up. This can be achieved with an Azure Logic App. Logic Apps
+                have a trigger and then work through a series of steps and
+                trigger APIs. For this project we will be using a time
+                trigger and setting the logic app to run every day at 6:50.
+                From there we will make a HTTP request to the endpoint we
+                just made to turn the lights on with a brightness of 1%.
+                From there we can string together a delay and another HTTP
+                call gradually increasing the brightness of the lights!.
+            </p>
+
+            <figure class="imageCaptionBox imageBox">
+                <picture id="mqttImage">
+                    <source srcset="/resources/images/logic_app.png" type="image/png" />
+                    <source srcset="/resources/images/mqtt.jpg" type="image/jpeg" />
+                    <img src="/resources/images/logic_app.png" />
+                </picture>
+            </figure>
+
+            <h4>Conclusion</h4>
+            <p>
+                Overall we have created an Azure function and exposed it to
+                a HTTP endpoint to change the colour and brightness of the
+                LED strip and a logic app to send requests to this endpoint
+                periodicity to gradually increase the brightness, and let me
+                tell you it works great!
+            </p>
+            </P </div>
+            <div id="disqus_thread"></div>
+            <script>
+                (function () {
+                    // DON'T EDIT BELOW THIS LINEx
+                    var d = document,
+                        s = d.createElement("script");
+                    s.src = "https://joepitts-co-uk.disqus.com/embed.js";
+                    s.setAttribute("data-timestamp", +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the
+                <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+
+        <div class="footer">
+            <p align="center">
+                <a href="https://linkedin.com/in/JoePittsy">LinkedIn</a>&nbsp;&nbsp;
+                <a href="https://twitter.com/JoePittsy">Twitter</a>&nbsp;&nbsp;<a
+                    href="https://instagram.com/JoePittsy">Instagram</a>&nbsp;&nbsp;<a
+                    href="https://github.com/JoePittsy">GitHub</a>
+            </p>
+            <p id="copyright">Copyright © 2018-2020 Joe Pitts</p>
+        </div>
+        <script defer>
+            (function () {
+                new ClipboardJS("#rotCopy, #mosCopy, #pyCopy");
+            })();
+        </script>
+</body>
+
+</html>

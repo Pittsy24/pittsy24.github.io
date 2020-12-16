@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "TechArticle",
+        "headline": "Advent of Code Day 15: Rambunctious Recitation",
+        "datePublished": "2020-12-15",
+        "author": {
+          "@type": "Person",
+          "name": "Joe Pitts",
+          "additionalName": "David",
+          "affiliation": "University of Lincoln",
+          "jobTitle": "Developer",
+          "url": "https://JoePitts.co.uk",
+          "sameAs": [
+            "https://www.facebook.com/Joe.Pittsy",
+            "https://www.linkedin.com/in/JoePittsy",
+            "https://twitter.com/JoePittsy",
+            "https://www.instagram.com/JoePittsy/",
+            "https://github.com/JoePittsy"
+          ]
+        },
+        "description": "Day Fifteen of Advent of Code 2020!",
+        "image": "https://joepitts.co.uk/resources/images/xmas/15.jpg"
+   
+      }
+    </script>
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@JoePittsy" />
+    <meta name="twitter:description" content="Rambunctious Recitation | Advent of Code 2020!" name="description" />
+    <meta name="twitter:title" content="Joe Pitts | Advent of Code Day 15" />
+    <meta name="twitter:creator" content="@JoePittsy" />
+    <meta property="og:image" content="https://joepitts.co.uk/resources/images/xmas/15.jpg" />
+
+    <meta property="og:title" content="Advent of Code Day 15" />
+    <meta property="og:description" content="Day Fourteen of Advent of Code 2020!" />
+    <meta property="og:url" content="https://joepitts.co.uk/blog/advent-of-code-day-15.html" />
+    <meta name="author" content="Joe Pitts" />
+
+    <meta name="twitter:image" content="https://joepitts.co.uk/resources/images/xmas/15.jpg" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114382787-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "UA-114382787-2");
+    </script>
+    <script src="/js/darkMode.js" type="text/javascript"></script>
+    <script src="/js/clipboard.min.js"></script>
+    <link href="/resources/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="/resources/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="/resources/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+    <link href="/resources/site.webmanifest" rel="manifest" />
+    <link href="/resources/safari-pinned-tab.svg" rel="mask-icon" />
+    <meta content="#da532c" name="msapplication-TileColor" />
+    <meta content="#ffffff" name="theme-color" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Joe Pitts | Advent of Code Day 15</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+    <meta content="Advent of Code Day 15!" name="description" />
+    <meta lang="en-gb" />
+    <noscript>
+        <style>
+            .jsonly {
+                display: none;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body link="black" style="height: auto;">
+    <div class="content" id="content">
+        <header>
+            <div id="containter">
+                <div id="header">
+                    <img alt="Joe Pitts" id="logo" src="/resources/JoePitts.jpg" title="Joe Pitts" width="10%" />
+                    <a href="/" id="title">
+                        <p>Joe Pitts</p>
+                    </a>
+                    <div class="burger" onclick="document.getElementById('drop').click();">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <aside>
+                <nav id="burger">
+                    <label class="toggle" for="drop" style="pointer-events: none;"></label>
+                    <input id="drop" type="checkbox" />
+                    <ul class="menu" id="burger_menu">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/blog">Blog</a>
+                        </li>
+                        <li>
+                            <a href="/work.html">My Work</a>
+                        </li>
+                        <li>
+                            <a href="/games/">Games</a>
+                        </li>
+
+                        <li>
+                            <a href="/instagram.html">Photography</a>
+                        </li>
+                        <li>
+                            <a class="toggleDark" onclick="toggleNightMode();">Dark Mode</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav id="normalMenu">
+                    <ul class="menu">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/blog">Blog</a>
+                        </li>
+                        <li>
+                            <a href="/work.html">My Work</a>
+                        </li>
+                        <li>
+                            <a href="/games/">Games</a>
+                        </li>
+
+                        <li>
+                            <a href="/instagram.html">Photography</a>
+                        </li>
+                        <li>
+                            <a class="toggleDark" onclick="toggleNightMode();">Dark Mode</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+        </header>
+        <hr />
+        <div class="blogPost">
+            <h1>Advent of Code: Day #15 - Rambunctious Recitation</h1>
+            <span id="readingTime">
+                <date>15th of December 2020</date> |
+                <p>3 - 4 minutes</p>
+            </span>
+            <a class="anchor" href="#introduction">
+                <h2 id="introduction">Introduction</h2>
+            </a>
+            <p>
+                Today we are challenged to implementing <a href="https://oeis.org/A181391">Van Eck's sequence</a>.
+            </p>
+
+            <a class="anchor" href="#one">
+                <h2 id="one">Task One & Two</h2>
+            </a>
+            <p>
+                For n >= 1, if there exists an m < n such that a(m)=a(n), take the largest such m and set a(n+1)=n-m;
+                    otherwise a(n+1)=0. </p>
+                    <h3>Reading in the data</h3>
+                    <p>Todays input was just a list of 6 numbers so I just defined them in an array in code.</p>
+
+                    <h3>The Solution</h3>
+                    <p>
+                        I created a dictionary that will hold all numbers that have been said as keys with the value
+                        being a list of indices of when the number was last spoken. We then run a loop until we get
+                        to the specified turn (2020 for Part One and 30000000 for Part Two). Each iteration we increment
+                        the
+                        turn, get the age array from memory or None if the number hasn't be spoken before, we then add
+                        the last time the
+                        number was spoken to memory and finally calculate the age (Or last time we saw the number).
+                    </p>
+                    <div class="codeSnippet">
+                        <div class="double-val-label">
+                            <span class="python">Python</span>
+                            <span data-clipboard-target="#getTaskOne" id="oneCopy">Copy</span>
+                        </div>
+                        <pre id="getTaskOne"
+                            spellcheck="false"><div style="color: #383a42;font-family: 'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback';font-weight: normal;font-size: 15px;line-height: 20px;white-space: pre;" spellcheck="false" contenteditable="false"><div><div><span style="color: #a626a4;">def</span><span style="color: #383a42;"> </span><span style="color: #4078f2;">tasks</span><span style="color: #383a42;">(</span><span style="color: #986801;">numbers</span><span style="color: #383a42;">,</span><span style="color: #986801;"> limit</span><span style="color: #383a42;">):</span></div><div><span style="color: #383a42;">    memory = {num: [index + </span><span style="color: #986801;">1</span><span style="color: #383a42;">] </span><span style="color: #a626a4;">for</span><span style="color: #383a42;"> index, num </span><span style="color: #a626a4;">in</span><span style="color: #383a42;"> </span><span style="color: #0184bc;">enumerate</span><span style="color: #383a42;">(numbers)}</span></div><div><span style="color: #383a42;">    turn = </span><span style="color: #0184bc;">len</span><span style="color: #383a42;">(numbers)</span></div><div><span style="color: #383a42;">    last_spoken = numbers[-</span><span style="color: #986801;">1</span><span style="color: #383a42;">]</span></div><div><span style="color: #383a42;">    memory[last_spoken] = [</span><span style="color: #986801;">None</span><span style="color: #383a42;">]</span></div><div><br></div><div><span style="color: #383a42;">    </span><span style="color: #a626a4;">while</span><span style="color: #383a42;"> turn &lt; limit:</span></div><div><span style="color: #383a42;">        turn += </span><span style="color: #986801;">1</span></div><div><span style="color: #383a42;">        </span><span style="color: #a0a1a7;font-style: italic;"># Faster than memory.get()</span></div><div><span style="color: #383a42;">        </span><span style="color: #a626a4;">try</span><span style="color: #383a42;">:</span></div><div><span style="color: #383a42;">            age = memory[last_spoken]</span></div><div><span style="color: #383a42;">        </span><span style="color: #a626a4;">except</span><span style="color: #383a42;"> </span><span style="color: #0184bc;">KeyError</span><span style="color: #383a42;">:</span></div><div><span style="color: #383a42;">            age = [</span><span style="color: #986801;">None</span><span style="color: #383a42;">]</span></div><br><div><span style="color: #383a42;">        </span><span style="color: #a626a4;">if</span><span style="color: #383a42;"> age[</span><span style="color: #986801;">0</span><span style="color: #383a42;">] </span><span style="color: #a626a4;">is</span><span style="color: #383a42;"> </span><span style="color: #986801;">None</span><span style="color: #383a42;">:</span></div><div><span style="color: #383a42;">            memory[last_spoken] = [turn - </span><span style="color: #986801;">1</span><span style="color: #383a42;">]</span></div><div><span style="color: #383a42;">            age = </span><span style="color: #986801;">0</span></div><div><span style="color: #383a42;">        </span><span style="color: #a626a4;">else</span><span style="color: #383a42;">:</span></div><div><span style="color: #383a42;">            age.append(turn - </span><span style="color: #986801;">1</span><span style="color: #383a42;">)</span></div><div><span style="color: #383a42;">            </span><span style="color: #a0a1a7;font-style: italic;"># If RAM is an issue un-comment the lines below</span></div><div><span style="color: #383a42;">            </span><span style="color: #a0a1a7;font-style: italic;"># if len(age) &gt;= 3:</span></div><div><span style="color: #383a42;">            </span><span style="color: #a0a1a7;font-style: italic;">#     age = age[1:]</span></div><div><span style="color: #383a42;">            memory[last_spoken] = age</span></div><div><span style="color: #383a42;">            age = age[-</span><span style="color: #986801;">1</span><span style="color: #383a42;">] - age[-</span><span style="color: #986801;">2</span><span style="color: #383a42;">]</span></div><br><div><span style="color: #383a42;">        last_spoken = age</span></div><br><div><span style="color: #383a42;">    </span><span style="color: #a626a4;">return</span><span style="color: #383a42;"> last_spoken</span></div></div></div></pre>
+                    </div>
+
+
+                    <a class="anchor" href="#links">
+                        <h2 id="links">Links</h2>
+                    </a>
+                    <div class="download">
+                        <p><a href="https://adventofcode.com/2020/leaderboard/private">Leaderboard Code:</a>
+                            <small>353270-1fc6ef28</small>
+                        </p>
+                    </div>
+
+                    <div class="download">
+                        <p><a href="https://www.github.com/JoePittsy/AdventOfCode/">Github Repository</a>
+                            <small>A link to the github repo containing all the days.</small>
+                        </p>
+                    </div>
+                    <div class="download">
+                        <p><a href="https://raw.githubusercontent.com/JoePittsy/AdventOfCode/main/Day 15/main.py"
+                                download>main.py</a>
+                            <small>A direct download of the main.py script</small>
+                        </p>
+                        <p class="download__instructions">
+                            <small class="download__properties">1.0<abbr title="Kilobytes">Kb</abbr></small>
+                        </p>
+                    </div>
+
+
+        </div>
+        <p></p>
+        <div id="disqus_thread"></div>
+        <script>
+            (function () {
+                // DON'T EDIT BELOW THIS LINEx
+                var d = document,
+                    s = d.createElement("script");
+                s.src = "https://joepitts-co-uk.disqus.com/embed.js";
+                s.setAttribute("data-timestamp", +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    <div class="footer">
+        <p align="center">
+            <a href="https://linkedin.com/in/JoePittsy">LinkedIn</a>&nbsp;&nbsp;
+            <a href="https://twitter.com/JoePittsy">Twitter</a>&nbsp;&nbsp;<a
+                href="https://instagram.com/JoePittsy">Instagram</a>&nbsp;&nbsp;<a
+                href="https://github.com/JoePittsy">GitHub</a>
+        </p>
+        <p id="copyright">Copyright © 2018-2020 Joe Pitts</p>
+    </div>
+    <script defer>
+        (function () {
+            new ClipboardJS("#dataCopy, #oneCopy, #twoCopy, #compCopy");
+        })();
+    </script>
+</body>
+
+</html>
