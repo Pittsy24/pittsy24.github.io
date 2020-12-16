@@ -1,6 +1,16 @@
 {
     "articles": [
         {
+            "headline": "Advent of Code Day #16",
+            "summary": "Day Sixteen: Ticket Translation | Advent of Code 2020",
+            "link": "/blog/advent-of-code-day-16.html",
+            "date": 1608128433,
+            "tags": [
+                "Advent",
+                "Python"
+            ]
+        },
+        {
             "headline": "Advent of Code Day #15",
             "summary": "Day Fifteen: Rambunctious Recitation | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-15.html",
