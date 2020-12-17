@@ -1,6 +1,16 @@
 {
     "articles": [
         {
+            "headline": "Advent of Code Day #17",
+            "summary": "Day Seventeen: Conway Cubes | Advent of Code 2020",
+            "link": "/blog/advent-of-code-day-17.html",
+            "date": 1608206568,
+            "tags": [
+                "Advent",
+                "Python"
+            ]
+        },
+        {
             "headline": "Advent of Code Day #16",
             "summary": "Day Sixteen: Ticket Translation | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-16.html",
