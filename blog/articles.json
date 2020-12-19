@@ -1,6 +1,16 @@
 {
     "articles": [
         {
+            "headline": "Advent of Code Day #19",
+            "summary": "Day Nineteen: Monster Messages | Advent of Code 2020",
+            "link": "/blog/advent-of-code-day-19.html",
+            "date": 1608378718,
+            "tags": [
+                "Advent",
+                "Python"
+            ]
+        },
+        {
             "headline": "Advent of Code Day #18",
             "summary": "Day Eighteen: Operation Order | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-18.html",
