@@ -1,6 +1,16 @@
 {
     "articles": [
         {
+            "headline": "Advent of Code Day #21",
+            "summary": "Day Twenty One: Allergen Assessment | Advent of Code 2020",
+            "link": "/blog/advent-of-code-day-21.html",
+            "date": 1608550618,
+            "tags": [
+                "Advent",
+                "Python"
+            ]
+        },
+        {
             "headline": "Advent of Code Day #19",
             "summary": "Day Nineteen: Monster Messages | Advent of Code 2020",
             "link": "/blog/advent-of-code-day-19.html",
