@@ -849,6 +849,21 @@ small {
     z-index: 1;
     opacity: 0.6;
 }
+    input:focus, textarea:focus, select:focus{
+        outline: none;
+    }
+
+.guess-who-cover{
+  position: absolute;
+  width: 75px;
+  height: 110px;
+  content: "https://i.pinimg.com/originals/c8/86/81/c8868117b1ee55709ce00b2bcc2abfaa.png";
+  background-color: #feca4a;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 11px 0px rgba(168,168,168,1);
+
+}
 
   
 #workCardContainer .blog-container {
@@ -962,3 +977,4 @@ h1>input[type="text"]{
     animation-delay: 0.2s;
   }
 }
+
